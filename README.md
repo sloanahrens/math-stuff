@@ -1,6 +1,6 @@
 # Physics Stuff
 
-Mathematical physics notes with LaTeX. 41 interlinked documents covering mathematical foundations through advanced topics.
+Mathematical physics notes with LaTeX. 45 interlinked documents covering mathematical foundations through advanced topics.
 
 ## Documents
 
@@ -19,6 +19,10 @@ Mathematical physics notes with LaTeX. 41 interlinked documents covering mathema
 | [Tensor Calculus](math-foundations/tensor-calculus.md) | Indices, metrics, covariant derivatives |
 | [Differential Forms](math-foundations/differential-forms.md) | Exterior calculus, Stokes' theorem |
 | [Lie Groups](math-foundations/lie-groups.md) | Symmetries, representations, algebras |
+| [Complex Analysis](math-foundations/complex-analysis.md) | Contour integrals, residues, conformal maps |
+| [Fourier Analysis](math-foundations/fourier-analysis.md) | Fourier series/transforms, convolution, FFT |
+| [Special Functions](math-foundations/special-functions.md) | Bessel, Legendre, spherical harmonics, Hermite |
+| [Green's Functions](math-foundations/greens-functions.md) | Impulse response, propagators, boundary problems |
 
 ### Classical Mechanics
 | Document | Topic |
@@ -140,7 +144,8 @@ Probability ──────────────────────�
 | **Relativity** | [Special Relativity](relativity/special-relativity.md) → [General Relativity](relativity/general-relativity.md) → [Schwarzschild](relativity/schwarzschild-solution.md) → [Geodesics](relativity/geodesics.md) → [Kerr](relativity/kerr-metric.md) |
 | **Classical** | [Newtonian](classical-mechanics/newtonian-mechanics.md) → [Central Forces](classical-mechanics/central-forces.md) → [Lagrangian](classical-mechanics/lagrangian-mechanics.md) → [Hamiltonian](classical-mechanics/hamiltonian-mechanics.md) |
 | **EM** | [Electrostatics](electromagnetism/electrostatics.md) → [Maxwell's Equations](electromagnetism/maxwell-equations.md) → [EM Waves](electromagnetism/electromagnetic-waves.md) → [Maxwell Covariant](electromagnetism/maxwell-covariant.md) |
-| **Math** | [Tensor Calculus](math-foundations/tensor-calculus.md) → [Differential Forms](math-foundations/differential-forms.md) → [Lie Groups](math-foundations/lie-groups.md) |
+| **Math** | [Complex Analysis](math-foundations/complex-analysis.md) → [Fourier Analysis](math-foundations/fourier-analysis.md) → [Special Functions](math-foundations/special-functions.md) → [Green's Functions](math-foundations/greens-functions.md) |
+| **Advanced Math** | [Tensor Calculus](math-foundations/tensor-calculus.md) → [Differential Forms](math-foundations/differential-forms.md) → [Lie Groups](math-foundations/lie-groups.md) |
 | **Thermo** | [Thermodynamics](thermodynamics/thermodynamics.md) → [Entropy](thermodynamics/entropy.md) → [Statistical Mechanics](thermodynamics/statistical-mechanics.md) |
 | **Information** | [Information Theory](information-theory/information-theory.md) → [Data Compression](information-theory/data-compression.md) ↔ [Entropy](thermodynamics/entropy.md) |
 

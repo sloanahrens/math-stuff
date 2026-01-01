@@ -422,10 +422,10 @@ $$
 
 | Document | Phase | Status | Dependencies Met |
 |----------|-------|--------|------------------|
-| complex-analysis.md | 1 | Not started | Yes |
-| fourier-analysis.md | 1 | Not started | Yes |
-| special-functions.md | 1 | Not started | Needs complex-analysis |
-| greens-functions.md | 1 | Not started | Needs special-functions |
+| complex-analysis.md | 1 | Complete | Yes |
+| fourier-analysis.md | 1 | Complete | Yes |
+| special-functions.md | 1 | Complete | Yes |
+| greens-functions.md | 1 | Complete | Yes |
 | magnetostatics.md | 2 | Not started | Yes |
 | em-in-matter.md | 2 | Not started | Yes |
 | boundary-value-problems.md | 2 | Not started | Needs special-functions |
