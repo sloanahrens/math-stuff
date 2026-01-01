@@ -1,6 +1,6 @@
 # The Kerr Metric
 
-The Kerr metric is the unique stationary, axially symmetric vacuum solution to Einstein's field equations. It describes the spacetime geometry outside a rotating, uncharged black hole. We use [natural units](../math-foundations/natural-units.md) where $G = c = 1$. This document uses [tensor calculus](../math-foundations/tensor-calculus.md) notation. For orbital motion and light paths, see [geodesics](geodesics.md); for thermodynamic properties, see [black hole thermodynamics](black-hole-thermodynamics.md); for dynamical aspects, see [gravitational waves](gravitational-waves.md).
+The Kerr metric is the unique stationary, axially symmetric vacuum solution to Einstein's field equations. It describes the spacetime geometry outside a rotating, uncharged black hole. This document requires understanding of [general relativity](general-relativity.md) and uses [tensor calculus](../math-foundations/tensor-calculus.md) notation. We use [natural units](../math-foundations/natural-units.md) where $G = c = 1$. For orbital motion and light paths, see [geodesics](geodesics.md); for thermodynamic properties, see [black hole thermodynamics](black-hole-thermodynamics.md); for dynamical aspects, see [gravitational waves](gravitational-waves.md).
 
 ## The Metric
 

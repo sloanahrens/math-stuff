@@ -1,6 +1,6 @@
 # Physics Stuff
 
-Mathematical physics notes with LaTeX. 38 interlinked documents covering prerequisites through advanced topics.
+Mathematical physics notes with LaTeX. 40 interlinked documents covering prerequisites through advanced topics.
 
 ## Documents
 
@@ -37,6 +37,8 @@ Mathematical physics notes with LaTeX. 38 interlinked documents covering prerequ
 | Document | Topic |
 |----------|-------|
 | [Special Relativity](relativity/special-relativity.md) | Lorentz transformations, 4-vectors |
+| [General Relativity](relativity/general-relativity.md) | Equivalence principle, curved spacetime, Einstein equations |
+| [Einstein Field Equations](relativity/einstein-field-equations.md) | Full derivation from Einstein-Hilbert action |
 | [Schwarzschild Solution](relativity/schwarzschild-solution.md) | Non-rotating black holes |
 | [Kerr Metric](relativity/kerr-metric.md) | Rotating black holes |
 | [Geodesics](relativity/geodesics.md) | Orbits, light bending, ISCO |
@@ -135,7 +137,7 @@ Probability ──────────────────────�
 | Track | Path |
 |-------|------|
 | **Quantum** | [Quantum Mechanics](quantum-mechanics/quantum-mechanics.md) → [Spin](quantum-mechanics/spin-angular-momentum.md) → [Hydrogen](quantum-mechanics/hydrogen-atom.md) → [Dirac](quantum-mechanics/dirac-equation.md) |
-| **Relativity** | [Special Relativity](relativity/special-relativity.md) → [Schwarzschild](relativity/schwarzschild-solution.md) → [Geodesics](relativity/geodesics.md) → [Kerr](relativity/kerr-metric.md) |
+| **Relativity** | [Special Relativity](relativity/special-relativity.md) → [General Relativity](relativity/general-relativity.md) → [Schwarzschild](relativity/schwarzschild-solution.md) → [Geodesics](relativity/geodesics.md) → [Kerr](relativity/kerr-metric.md) |
 | **Classical** | [Newtonian](classical-mechanics/newtonian-mechanics.md) → [Central Forces](classical-mechanics/central-forces.md) → [Lagrangian](classical-mechanics/lagrangian-mechanics.md) → [Hamiltonian](classical-mechanics/hamiltonian-mechanics.md) |
 | **EM** | [Electrostatics](electromagnetism/electrostatics.md) → [Maxwell's Equations](electromagnetism/maxwell-equations.md) → [EM Waves](electromagnetism/electromagnetic-waves.md) → [Maxwell Covariant](electromagnetism/maxwell-covariant.md) |
 | **Math** | [Tensor Calculus](math-foundations/tensor-calculus.md) → [Differential Forms](math-foundations/differential-forms.md) → [Lie Groups](math-foundations/lie-groups.md) |
