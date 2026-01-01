@@ -1,6 +1,6 @@
 # Calculus Primer
 
-This document covers the essential calculus needed for physics: derivatives, integrals, and their multivariable extensions. These tools underpin [Lagrangian mechanics](lagrangian-mechanics.md), [Hamiltonian mechanics](hamiltonian-mechanics.md), [quantum mechanics](quantum-mechanics.md), and virtually every physics document in this collection.
+This document covers the essential calculus needed for physics: derivatives, integrals, and their multivariable extensions. These tools underpin [Lagrangian mechanics](lagrangian-mechanics.md), [Hamiltonian mechanics](hamiltonian-mechanics.md), [quantum mechanics](quantum-mechanics.md), and virtually every physics document in this collection. Prerequisites: [algebra](algebra-primer.md) (exponents, logarithms, polynomials) and [trigonometry](trigonometry-primer.md) (sine, cosine, identities).
 
 ## Derivatives
 

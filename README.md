@@ -1,12 +1,14 @@
 # Math Stuff
 
-Mathematical physics notes with LaTeX. 27 interlinked documents covering prerequisites through advanced topics.
+Mathematical physics notes with LaTeX. 29 interlinked documents covering prerequisites through advanced topics.
 
 ## Documents
 
 ### Prerequisites
 | Document | Topic |
 |----------|-------|
+| [Algebra Primer](algebra-primer.md) | Exponents, logarithms, polynomials, complex numbers |
+| [Trigonometry Primer](trigonometry-primer.md) | Unit circle, identities, Euler's formula |
 | [Calculus Primer](calculus-primer.md) | Derivatives, integrals, partial derivatives, Taylor series |
 | [Vector Calculus](vector-calculus.md) | Gradient, divergence, curl, Laplacian, integral theorems |
 | [Linear Algebra](linear-algebra.md) | Vectors, matrices, eigenvalues, inner products |
@@ -97,7 +99,7 @@ Probability ──────────────────────�
 ## Reading Order
 
 **New to physics math?** Start with the prerequisites:
-- [Calculus Primer](calculus-primer.md) → [Vector Calculus](vector-calculus.md) for differential equations and field theory
+- [Algebra Primer](algebra-primer.md) → [Trigonometry Primer](trigonometry-primer.md) → [Calculus Primer](calculus-primer.md) → [Vector Calculus](vector-calculus.md) for differential equations and field theory
 - [Linear Algebra](linear-algebra.md) for quantum mechanics and tensors
 - [Probability & Statistics](probability-statistics.md) for quantum mechanics and statistical mechanics
 
