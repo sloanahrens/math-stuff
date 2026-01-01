@@ -1,6 +1,6 @@
 # The Schwarzschild Solution
 
-The Schwarzschild solution is the unique spherically symmetric vacuum solution to Einstein's field equations. It describes the spacetime geometry outside a non-rotating, uncharged, spherically symmetric mass. This document uses [tensor calculus](tensor-calculus.md) notation and connects to [gravitational waves](gravitational-waves.md) as the dynamical aspect of general relativity.
+The Schwarzschild solution is the unique spherically symmetric vacuum solution to Einstein's field equations. It describes the spacetime geometry outside a non-rotating, uncharged, spherically symmetric mass. This document uses [tensor calculus](tensor-calculus.md) notation. For motion in this spacetime, see [geodesics](geodesics.md); for thermodynamic properties, see [black hole thermodynamics](black-hole-thermodynamics.md); for dynamical aspects, see [gravitational waves](gravitational-waves.md).
 
 ## Einstein Field Equations
 

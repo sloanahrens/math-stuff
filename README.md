@@ -19,14 +19,23 @@ Mathematical physics notes with embedded LaTeX.
 | [Lagrangian Mechanics](lagrangian-mechanics.md) | Principle of least action, Euler-Lagrange equations, Noether's theorem |
 | [Hamiltonian Mechanics](hamiltonian-mechanics.md) | Phase space, Poisson brackets, symplectic structure |
 
-### General Relativity
+### Special Relativity
+
+| Document | Topic |
+|----------|-------|
+| [Special Relativity](special-relativity.md) | Lorentz transformations, 4-vectors, spacetime intervals |
+
+### General Relativity & Cosmology
 
 | Document | Topic |
 |----------|-------|
 | [Natural Units](natural-units.md) | Using and converting $G = c = 1$ and $\hbar = 1$ units |
 | [Schwarzschild Solution](schwarzschild-solution.md) | Vacuum solution for non-rotating black holes |
 | [Kerr Metric](kerr-metric.md) | Rotating black hole spacetime geometry |
+| [Geodesics](geodesics.md) | Motion in curved spacetime, orbits, light bending |
 | [Gravitational Waves](gravitational-waves.md) | Linearized gravity, polarizations, LIGO detection |
+| [Black Hole Thermodynamics](black-hole-thermodynamics.md) | Hawking radiation, entropy, information paradox |
+| [Friedmann Equations](friedmann-equations.md) | Cosmology, expansion, dark energy |
 
 ### Electromagnetism
 
@@ -38,20 +47,82 @@ Mathematical physics notes with embedded LaTeX.
 
 | Document | Topic |
 |----------|-------|
-| [Quantum Mechanics](quantum-mechanics.md) | Wave functions, uncertainty, entanglement, many-worlds (with explanations) |
+| [Quantum Mechanics](quantum-mechanics.md) | Wave functions, uncertainty, entanglement (with explanations) |
 | [Quantum Math](quantum-math.md) | Concise version with equations only |
+| [Spin & Angular Momentum](spin-angular-momentum.md) | Orbital and spin angular momentum, Clebsch-Gordan coefficients |
+| [Hydrogen Atom](hydrogen-atom.md) | Exact solution, quantum numbers, fine structure |
+| [Dirac Equation](dirac-equation.md) | Relativistic quantum mechanics, spinors, antimatter |
+| [Path Integrals](path-integrals.md) | Feynman's formulation, propagators, stationary phase |
+
+### Statistical Mechanics
+
+| Document | Topic |
+|----------|-------|
+| [Statistical Mechanics](statistical-mechanics.md) | Ensembles, partition functions, quantum statistics |
 
 ## Document Relationships
 
 ```
-Tensor Calculus ──┬──► Differential Forms ──► Maxwell Covariant
-                  │
-                  └──► Gravitational Waves ──► Schwarzschild/Kerr
+                    ┌─────────────────────────────────────────────────────────────────┐
+                    │                    MATHEMATICAL FOUNDATIONS                      │
+                    │                                                                  │
+                    │  Tensor Calculus ─────► Differential Forms                       │
+                    │        │                      │                                  │
+                    │        ▼                      ▼                                  │
+                    │  Lie Groups ◄───────── Symmetries ─────► Gauge Theories          │
+                    └───┬───────────────────────────────────────────────────────────────┘
+                        │
+        ┌───────────────┼───────────────────────────────────────┐
+        ▼               ▼                                       ▼
+┌───────────────┐ ┌─────────────────────────────────────┐ ┌─────────────────┐
+│   CLASSICAL   │ │         SPECIAL RELATIVITY          │ │    QUANTUM      │
+│               │ │                                     │ │   MECHANICS     │
+│ Lagrangian    │ │  4-vectors, Lorentz transformations │ │                 │
+│     │         │ │              │                      │ │ Wave functions  │
+│     ▼         │ │              │                      │ │      │          │
+│ Hamiltonian ──┼─┼──────────────┼──────────────────────┼─┤      ▼          │
+│     │         │ │              │                      │ │ Path Integrals  │
+│     │         │ │              ▼                      │ │      │          │
+│     ▼         │ │       ┌──────┴──────┐               │ │      ▼          │
+│ Poisson ≈─────┼─┼───────┤ Commutators ├───────────────┼─► Spin/Angular   │
+│ Brackets      │ │       └─────────────┘               │ │ Momentum        │
+└───────────────┘ │                                     │ │      │          │
+                  │              │                      │ │      ▼          │
+                  └──────────────┼──────────────────────┘ │ Hydrogen Atom   │
+                                 │                        │      │          │
+                                 ▼                        │      ▼          │
+                    ┌────────────────────────┐            │ Dirac Equation  │
+                    │   GENERAL RELATIVITY   │            └────────┬────────┘
+                    │                        │                     │
+                    │ Schwarzschild ◄── Kerr │                     │
+                    │      │            │    │                     │
+                    │      ▼            ▼    │                     │
+                    │    Geodesics          │                     │
+                    │      │                │                     │
+                    │      ▼                │                     ▼
+                    │ Gravitational Waves   │            ┌─────────────────┐
+                    │                       │            │   STATISTICAL   │
+                    │ Black Hole ◄──────────┼────────────│   MECHANICS     │
+                    │ Thermodynamics        │            │                 │
+                    │      │                │            │  Quantum Stats  │
+                    │      ▼                │            │  (Fermi/Bose)   │
+                    │ Friedmann Equations   │            └─────────────────┘
+                    │ (Cosmology)           │
+                    └────────────────────────┘
 
-Lagrangian ──► Hamiltonian ──► Quantum Mechanics ◄── Lie Groups
-                    │
-                    └──► Poisson Brackets ≈ Commutators
+Maxwell Covariant: Differential Forms + Special Relativity + Tensor Calculus
 ```
+
+## Prerequisites
+
+Suggested reading order for newcomers:
+
+1. **Start here:** [Natural Units](natural-units.md) → [Special Relativity](special-relativity.md)
+2. **Classical foundations:** [Lagrangian](lagrangian-mechanics.md) → [Hamiltonian](hamiltonian-mechanics.md)
+3. **Math tools:** [Tensor Calculus](tensor-calculus.md) → [Lie Groups](lie-groups.md)
+4. **Quantum track:** [Quantum Mechanics](quantum-mechanics.md) → [Spin](spin-angular-momentum.md) → [Hydrogen](hydrogen-atom.md) → [Dirac](dirac-equation.md)
+5. **GR track:** [Schwarzschild](schwarzschild-solution.md) → [Geodesics](geodesics.md) → [Kerr](kerr-metric.md) → [Gravitational Waves](gravitational-waves.md)
+6. **Advanced:** [Path Integrals](path-integrals.md), [Black Hole Thermodynamics](black-hole-thermodynamics.md), [Friedmann Equations](friedmann-equations.md)
 
 ## LaTeX Rendering
 

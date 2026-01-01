@@ -1,6 +1,6 @@
 # Gravitational Waves
 
-Gravitational waves are ripples in spacetime that propagate at the speed of light, predicted by general relativity and directly detected by LIGO in 2015. This document uses [tensor calculus](tensor-calculus.md) and [natural units](natural-units.md) with $G = c = 1$.
+Gravitational waves are ripples in spacetime that propagate at the speed of light, predicted by general relativity and directly detected by LIGO in 2015. This document uses [tensor calculus](tensor-calculus.md), [special relativity](special-relativity.md), and [natural units](natural-units.md) with $G = c = 1$.
 
 ## Overview
 
