@@ -1,6 +1,6 @@
 # Physics Stuff
 
-Mathematical physics notes with LaTeX. 45 interlinked documents covering mathematical foundations through advanced topics.
+Mathematical physics notes with LaTeX. 49 interlinked documents covering mathematical foundations through advanced topics.
 
 ## Documents
 
@@ -54,6 +54,10 @@ Mathematical physics notes with LaTeX. 45 interlinked documents covering mathema
 | [Maxwell's Equations](electromagnetism/maxwell-equations.md) | The four equations, differential/integral forms |
 | [Electromagnetic Waves](electromagnetism/electromagnetic-waves.md) | Wave equation, polarization, energy |
 | [Maxwell Covariant](electromagnetism/maxwell-covariant.md) | Relativistic tensor formulation |
+| [Magnetostatics](electromagnetism/magnetostatics.md) | Biot-Savart, Ampere, vector potential, inductance |
+| [EM in Matter](electromagnetism/em-in-matter.md) | Dielectrics, dispersion, Fresnel equations |
+| [Boundary Value Problems](electromagnetism/boundary-value-problems.md) | Separation of variables, images, multipoles |
+| [Radiation](electromagnetism/radiation.md) | Retarded potentials, Larmor formula, antennas |
 
 ### Quantum Mechanics
 | Document | Topic |
@@ -143,7 +147,7 @@ Probability ──────────────────────�
 | **Quantum** | [Quantum Mechanics](quantum-mechanics/quantum-mechanics.md) → [Spin](quantum-mechanics/spin-angular-momentum.md) → [Hydrogen](quantum-mechanics/hydrogen-atom.md) → [Dirac](quantum-mechanics/dirac-equation.md) |
 | **Relativity** | [Special Relativity](relativity/special-relativity.md) → [General Relativity](relativity/general-relativity.md) → [Schwarzschild](relativity/schwarzschild-solution.md) → [Geodesics](relativity/geodesics.md) → [Kerr](relativity/kerr-metric.md) |
 | **Classical** | [Newtonian](classical-mechanics/newtonian-mechanics.md) → [Central Forces](classical-mechanics/central-forces.md) → [Lagrangian](classical-mechanics/lagrangian-mechanics.md) → [Hamiltonian](classical-mechanics/hamiltonian-mechanics.md) |
-| **EM** | [Electrostatics](electromagnetism/electrostatics.md) → [Maxwell's Equations](electromagnetism/maxwell-equations.md) → [EM Waves](electromagnetism/electromagnetic-waves.md) → [Maxwell Covariant](electromagnetism/maxwell-covariant.md) |
+| **EM** | [Electrostatics](electromagnetism/electrostatics.md) → [Magnetostatics](electromagnetism/magnetostatics.md) → [Maxwell's Equations](electromagnetism/maxwell-equations.md) → [EM Waves](electromagnetism/electromagnetic-waves.md) → [Radiation](electromagnetism/radiation.md) |
 | **Math** | [Complex Analysis](math-foundations/complex-analysis.md) → [Fourier Analysis](math-foundations/fourier-analysis.md) → [Special Functions](math-foundations/special-functions.md) → [Green's Functions](math-foundations/greens-functions.md) |
 | **Advanced Math** | [Tensor Calculus](math-foundations/tensor-calculus.md) → [Differential Forms](math-foundations/differential-forms.md) → [Lie Groups](math-foundations/lie-groups.md) |
 | **Thermo** | [Thermodynamics](thermodynamics/thermodynamics.md) → [Entropy](thermodynamics/entropy.md) → [Statistical Mechanics](thermodynamics/statistical-mechanics.md) |

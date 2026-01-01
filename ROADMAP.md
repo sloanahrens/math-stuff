@@ -426,10 +426,10 @@ $$
 | fourier-analysis.md | 1 | Complete | Yes |
 | special-functions.md | 1 | Complete | Yes |
 | greens-functions.md | 1 | Complete | Yes |
-| magnetostatics.md | 2 | Not started | Yes |
-| em-in-matter.md | 2 | Not started | Yes |
-| boundary-value-problems.md | 2 | Not started | Needs special-functions |
-| radiation.md | 2 | Not started | Yes |
+| magnetostatics.md | 2 | Complete | Yes |
+| em-in-matter.md | 2 | Complete | Yes |
+| boundary-value-problems.md | 2 | Complete | Yes |
+| radiation.md | 2 | Complete | Yes |
 | perturbation-theory.md | 3 | Not started | Yes |
 | scattering-theory.md | 3 | Not started | Needs perturbation |
 | qft-introduction.md | 3 | Not started | Yes |
