@@ -1,6 +1,6 @@
 # Physics Stuff
 
-Mathematical physics notes with LaTeX. 29 interlinked documents covering prerequisites through advanced topics.
+Mathematical physics notes with LaTeX. 34 interlinked documents covering prerequisites through advanced topics.
 
 ## Documents
 
@@ -26,6 +26,8 @@ Mathematical physics notes with LaTeX. 29 interlinked documents covering prerequ
 ### Classical Mechanics
 | Document | Topic |
 |----------|-------|
+| [Newtonian Mechanics](classical-mechanics/newtonian-mechanics.md) | Newton's laws, forces, energy, momentum |
+| [Central Forces](classical-mechanics/central-forces.md) | Kepler problem, orbits, effective potential |
 | [Harmonic Oscillator](classical-mechanics/harmonic-oscillator.md) | Classical, quantum, and thermodynamic treatments |
 | [Lagrangian Mechanics](classical-mechanics/lagrangian-mechanics.md) | Action principle, Euler-Lagrange, Noether |
 | [Hamiltonian Mechanics](classical-mechanics/hamiltonian-mechanics.md) | Phase space, Poisson brackets |
@@ -45,6 +47,9 @@ Mathematical physics notes with LaTeX. 29 interlinked documents covering prerequ
 ### Electromagnetism
 | Document | Topic |
 |----------|-------|
+| [Electrostatics](electromagnetism/electrostatics.md) | Coulomb, Gauss, potential, capacitance |
+| [Maxwell's Equations](electromagnetism/maxwell-equations.md) | The four equations, differential/integral forms |
+| [Electromagnetic Waves](electromagnetism/electromagnetic-waves.md) | Wave equation, polarization, energy |
 | [Maxwell Covariant](electromagnetism/maxwell-covariant.md) | Relativistic tensor formulation |
 
 ### Quantum Mechanics
@@ -122,7 +127,8 @@ Probability ──────────────────────�
 |-------|------|
 | **Quantum** | [Quantum Mechanics](quantum-mechanics/quantum-mechanics.md) → [Spin](quantum-mechanics/spin-angular-momentum.md) → [Hydrogen](quantum-mechanics/hydrogen-atom.md) → [Dirac](quantum-mechanics/dirac-equation.md) |
 | **Relativity** | [Special Relativity](relativity/special-relativity.md) → [Schwarzschild](relativity/schwarzschild-solution.md) → [Geodesics](relativity/geodesics.md) → [Kerr](relativity/kerr-metric.md) |
-| **Classical** | [Lagrangian](classical-mechanics/lagrangian-mechanics.md) → [Hamiltonian](classical-mechanics/hamiltonian-mechanics.md) → [Path Integrals](classical-mechanics/path-integrals.md) |
+| **Classical** | [Newtonian](classical-mechanics/newtonian-mechanics.md) → [Central Forces](classical-mechanics/central-forces.md) → [Lagrangian](classical-mechanics/lagrangian-mechanics.md) → [Hamiltonian](classical-mechanics/hamiltonian-mechanics.md) |
+| **EM** | [Electrostatics](electromagnetism/electrostatics.md) → [Maxwell's Equations](electromagnetism/maxwell-equations.md) → [EM Waves](electromagnetism/electromagnetic-waves.md) → [Maxwell Covariant](electromagnetism/maxwell-covariant.md) |
 | **Math** | [Tensor Calculus](math-foundations/tensor-calculus.md) → [Differential Forms](math-foundations/differential-forms.md) → [Lie Groups](math-foundations/lie-groups.md) |
 
 **Advanced topics:** [Gravitational Waves](relativity/gravitational-waves.md), [Black Hole Thermodynamics](relativity/black-hole-thermodynamics.md), [Friedmann Equations](relativity/friedmann-equations.md), [Statistical Mechanics](thermodynamics/statistical-mechanics.md)
