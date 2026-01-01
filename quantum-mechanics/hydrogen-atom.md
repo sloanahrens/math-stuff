@@ -362,6 +362,110 @@ $$
 
 **What this means:** The Dirac equation naturally incorporates spin and gives the fine structure exactly. It predicts $2s_{1/2}$ and $2p_{1/2}$ are exactly degenerate—the Lamb shift (a QED effect) actually breaks this degeneracy.
 
+## Worked Examples
+
+### Example 1: Transition Rate for Lyman-α
+
+Calculate the spontaneous emission rate for the 2p → 1s transition (Lyman-α line).
+
+**Solution:**
+
+The spontaneous emission rate is given by:
+$$
+A_{21} = \frac{\omega^3}{3\pi\epsilon_0\hbar c^3}|\langle 1s|e\mathbf{r}|2p\rangle|^2
+$$
+
+For the 2p → 1s transition, we need the dipole matrix element. Using $|2p, m=0\rangle$:
+$$
+\langle 1s|z|2p_0\rangle = \int_0^\infty R_{10}^* r R_{21} r^2 dr \int Y_0^{0*} \cos\theta Y_1^0 d\Omega
+$$
+
+The angular integral gives $\sqrt{1/3}$. The radial integral:
+$$
+\int_0^\infty R_{10} r R_{21} r^2 dr = \frac{2^7}{3^5}\sqrt{6} \, a_0 = 1.29 \, a_0
+$$
+
+Combined: $|\langle 1s|\mathbf{r}|2p\rangle|^2 = 3 \times (1.29 \, a_0/\sqrt{3})^2 = 1.67 \, a_0^2$
+
+The transition energy: $\hbar\omega = 13.6(1 - 1/4) = 10.2$ eV, so $\omega = 1.55 \times 10^{16}$ rad/s.
+
+$$
+A_{21} = \frac{(1.55 \times 10^{16})^3}{3\pi\epsilon_0\hbar c^3} \times e^2 \times 1.67 a_0^2 \approx 6.3 \times 10^8 \text{ s}^{-1}
+$$
+
+The lifetime: $\tau = 1/A_{21} \approx 1.6$ ns.
+
+The wavelength: $\lambda = hc/\Delta E = 121.6$ nm (far UV).
+
+---
+
+### Example 2: Expectation Value of 1/r
+
+Find $\langle 1/r \rangle$ for the ground state of hydrogen.
+
+**Solution:**
+
+For the 1s state: $\psi_{100} = \frac{1}{\sqrt{\pi}a_0^{3/2}} e^{-r/a_0}$
+
+$$
+\langle 1/r \rangle = \int |\psi_{100}|^2 \frac{1}{r} d^3r = \frac{1}{\pi a_0^3} \int_0^\infty e^{-2r/a_0} \frac{1}{r} \cdot 4\pi r^2 dr
+$$
+
+$$
+= \frac{4}{a_0^3} \int_0^\infty r e^{-2r/a_0} dr = \frac{4}{a_0^3} \cdot \frac{a_0^2}{4} = \frac{1}{a_0}
+$$
+
+$$
+\boxed{\langle 1/r \rangle_{1s} = \frac{1}{a_0}}
+$$
+
+**General formula:** For state $|nlm\rangle$:
+$$
+\langle 1/r \rangle = \frac{1}{n^2 a_0}
+$$
+
+This is useful for calculating the average potential energy: $\langle V \rangle = -e^2\langle 1/r \rangle/(4\pi\epsilon_0) = -27.2/n^2$ eV.
+
+---
+
+### Example 3: Stark Effect for n=2
+
+Find the first-order Stark effect energy shifts for the n=2 states in an electric field $\mathbf{E} = E\hat{z}$.
+
+**Solution:**
+
+The perturbation is $\hat{H}' = eEz = eEr\cos\theta$.
+
+The n=2 states are 4-fold degenerate: $|2s\rangle$, $|2p_0\rangle$, $|2p_{+1}\rangle$, $|2p_{-1}\rangle$.
+
+By symmetry, $|2p_{\pm 1}\rangle$ don't couple to other states (wrong $m$ values). We focus on the $|2s\rangle$-$|2p_0\rangle$ subspace.
+
+The matrix element:
+$$
+\langle 2s|eEr\cos\theta|2p_0\rangle = eE \int R_{20}^* r R_{21} r^2 dr \int Y_0^{0*}\cos\theta Y_1^0 d\Omega
+$$
+
+Radial integral: $\int_0^\infty R_{20} r R_{21} r^2 dr = -3a_0$
+
+Angular integral: $\int Y_0^0 \cos\theta Y_1^0 d\Omega = \sqrt{1/3}$
+
+$$
+\langle 2s|H'|2p_0\rangle = -3eEa_0/\sqrt{3} = -\sqrt{3}eEa_0
+$$
+
+The 2×2 matrix in the $\{|2s\rangle, |2p_0\rangle\}$ basis:
+$$
+W = \begin{pmatrix} 0 & -\sqrt{3}eEa_0 \\ -\sqrt{3}eEa_0 & 0 \end{pmatrix}
+$$
+
+Eigenvalues: $E^{(1)} = \pm\sqrt{3}eEa_0 = \pm 3eEa_0$
+
+$$
+\boxed{\Delta E = \pm 3eEa_0}
+$$
+
+The states split linearly with electric field strength (linear Stark effect).
+
 ## Summary
 
 | Quantity | Formula | Meaning |

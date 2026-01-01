@@ -1,6 +1,6 @@
 # Statistical Mechanics
 
-Statistical mechanics bridges microscopic physics and macroscopic thermodynamics. It explains why ice melts, why gases expand, and why entropy increases—all from the statistics of many particles. This document requires [probability and statistics](../math-foundations/probability-statistics.md) (distributions, expectation values, entropy) and [calculus](../math-foundations/calculus-primer.md). It connects to [quantum mechanics](../quantum-mechanics/quantum-mechanics.md), [path integrals](../classical-mechanics/path-integrals.md), and [black hole thermodynamics](../relativity/black-hole-thermodynamics.md).
+Statistical mechanics bridges microscopic physics and macroscopic thermodynamics. It explains why ice melts, why gases expand, and why entropy increases—all from the statistics of many particles. This document requires [probability and statistics](../math-foundations/probability-statistics.md) (distributions, expectation values, entropy) and [calculus](../math-foundations/calculus-primer.md). It connects to [quantum mechanics](../quantum-mechanics/quantum-mechanics.md), [path integrals](../classical-mechanics/path-integrals.md), and [black hole thermodynamics](../relativity/black-hole-thermodynamics.md). For computational approaches, see [numerical methods](../math-foundations/numerical-methods.md) (especially Monte Carlo).
 
 ## The Central Idea
 

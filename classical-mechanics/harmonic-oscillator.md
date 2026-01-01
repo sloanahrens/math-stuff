@@ -383,6 +383,106 @@ General motion is a superposition of normal modes.
 | QFT | Field mode | $\ddot{\phi}_k + \omega_k^2 \phi_k = 0$ |
 | Cosmology | Scalar field | $\ddot{\phi} + 3H\dot{\phi} + m^2\phi = 0$ |
 
+## Worked Examples
+
+### Example 1: Driven Damped Oscillator
+
+A 0.5 kg mass on a spring ($k = 200$ N/m) experiences damping $b = 2$ kg/s and is driven by $F(t) = 10\cos(20t)$ N. Find the steady-state amplitude.
+
+**Solution:**
+
+Natural frequency: $\omega_0 = \sqrt{k/m} = \sqrt{200/0.5} = 20$ rad/s
+
+Damping coefficient: $\gamma = b/(2m) = 2/(2 \times 0.5) = 2$ rad/s
+
+Driving frequency: $\omega_d = 20$ rad/s (at resonance!)
+
+Amplitude formula:
+$$
+A = \frac{F_0/m}{\sqrt{(\omega_0^2 - \omega_d^2)^2 + (2\gamma\omega_d)^2}}
+$$
+
+At resonance ($\omega_d = \omega_0$):
+$$
+A = \frac{10/0.5}{\sqrt{0 + (2 \times 2 \times 20)^2}} = \frac{20}{80} = 0.25 \text{ m}
+$$
+
+Q-factor: $Q = \omega_0/(2\gamma) = 20/4 = 5$
+
+The amplitude at resonance can also be written as $A = QF_0/(m\omega_0^2) = 5 \times 10/(0.5 \times 400) = 0.25$ m. ✓
+
+---
+
+### Example 2: Quantum Oscillator Expectation Values
+
+For the quantum harmonic oscillator in state $|n\rangle$, find $\langle x^2 \rangle$ and $\langle p^2 \rangle$.
+
+**Solution:**
+
+Express $\hat{x}$ and $\hat{p}$ in terms of ladder operators:
+$$
+\hat{x} = \sqrt{\frac{\hbar}{2m\omega}}(\hat{a} + \hat{a}^\dagger), \quad \hat{p} = i\sqrt{\frac{m\omega\hbar}{2}}(\hat{a}^\dagger - \hat{a})
+$$
+
+For $\hat{x}^2$:
+$$
+\hat{x}^2 = \frac{\hbar}{2m\omega}(\hat{a} + \hat{a}^\dagger)^2 = \frac{\hbar}{2m\omega}(\hat{a}^2 + \hat{a}^{\dagger 2} + \hat{a}\hat{a}^\dagger + \hat{a}^\dagger\hat{a})
+$$
+
+Using $\hat{a}\hat{a}^\dagger = \hat{a}^\dagger\hat{a} + 1 = \hat{n} + 1$:
+$$
+\langle n|\hat{x}^2|n\rangle = \frac{\hbar}{2m\omega}\langle n|2\hat{n} + 1|n\rangle = \frac{\hbar}{2m\omega}(2n + 1)
+$$
+
+$$
+\boxed{\langle x^2 \rangle = \frac{\hbar(2n+1)}{2m\omega}}
+$$
+
+Similarly:
+$$
+\boxed{\langle p^2 \rangle = \frac{m\omega\hbar(2n+1)}{2}}
+$$
+
+Check: $\langle E \rangle = \frac{\langle p^2\rangle}{2m} + \frac{1}{2}m\omega^2\langle x^2\rangle = \frac{\hbar\omega(2n+1)}{4} + \frac{\hbar\omega(2n+1)}{4} = \hbar\omega(n + \frac{1}{2})$ ✓
+
+---
+
+### Example 3: Coupled Pendulums
+
+Two identical pendulums of length $L$ and mass $m$ are coupled by a spring of constant $k$ attached at distance $d$ from the pivot. Find the normal mode frequencies.
+
+**Solution:**
+
+For small angles, the equations of motion are:
+$$
+mL^2\ddot{\theta}_1 = -mgL\theta_1 - kd^2(\theta_1 - \theta_2)
+$$
+$$
+mL^2\ddot{\theta}_2 = -mgL\theta_2 - kd^2(\theta_2 - \theta_1)
+$$
+
+Define $\omega_0^2 = g/L$ and $\omega_c^2 = kd^2/(mL^2)$.
+
+**Symmetric mode** ($\theta_1 = \theta_2$): The coupling term vanishes:
+$$
+\omega_1 = \omega_0 = \sqrt{g/L}
+$$
+
+**Antisymmetric mode** ($\theta_1 = -\theta_2$): The coupling doubles:
+$$
+\omega_2 = \sqrt{\omega_0^2 + 2\omega_c^2} = \sqrt{\frac{g}{L} + \frac{2kd^2}{mL^2}}
+$$
+
+For $L = 1$ m, $m = 0.1$ kg, $k = 10$ N/m, $d = 0.5$ m:
+$$
+\omega_1 = \sqrt{9.8} = 3.13 \text{ rad/s}
+$$
+$$
+\omega_2 = \sqrt{9.8 + 2 \times 10 \times 0.25/(0.1 \times 1)} = \sqrt{9.8 + 50} = 7.73 \text{ rad/s}
+$$
+
+The beat frequency when both modes are excited: $\Delta\omega = \omega_2 - \omega_1 = 4.6$ rad/s.
+
 ## Summary
 
 | Aspect | Classical | Quantum |

@@ -1,6 +1,6 @@
 # Physics Stuff
 
-Mathematical physics notes with LaTeX. 55 interlinked documents covering mathematical foundations through advanced topics.
+Mathematical physics notes with LaTeX. 57 interlinked documents covering mathematical foundations through advanced topics.
 
 ## Documents
 
@@ -23,6 +23,8 @@ Mathematical physics notes with LaTeX. 55 interlinked documents covering mathema
 | [Fourier Analysis](math-foundations/fourier-analysis.md) | Fourier series/transforms, convolution, FFT |
 | [Special Functions](math-foundations/special-functions.md) | Bessel, Legendre, spherical harmonics, Hermite |
 | [Green's Functions](math-foundations/greens-functions.md) | Impulse response, propagators, boundary problems |
+| [Numerical Methods](math-foundations/numerical-methods.md) | Root finding, ODE integration, Monte Carlo |
+| [Physical Constants](math-foundations/physical-constants.md) | CODATA values, unit conversions, natural units |
 
 ### Classical Mechanics
 | Document | Topic |

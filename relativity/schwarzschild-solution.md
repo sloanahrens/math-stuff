@@ -131,6 +131,106 @@ $$
 V_{\text{eff}}(r) = \left(1 - \frac{2M}{r}\right)\left(1 + \frac{L^2}{r^2}\right)
 $$
 
+## Worked Examples
+
+### Example 1: Orbital Period of a Circular Orbit
+
+**Problem:** Find the orbital period of a test particle in a circular orbit at radius $r$ around a mass $M$.
+
+**Solution:** For a circular orbit, we need $dV_{\text{eff}}/dr = 0$. For the effective potential:
+
+$$
+V_{\text{eff}} = \left(1 - \frac{2M}{r}\right)\left(1 + \frac{L^2}{r^2}\right)
+$$
+
+Taking the derivative and setting to zero (for circular orbits with $r \gg 2M$):
+
+$$
+\frac{L^2}{r^2} = \frac{M}{r - 3M} \approx \frac{M}{r}
+$$
+
+The angular velocity is $\omega = d\phi/dt = (d\phi/d\tau)(d\tau/dt)$. Using the conserved quantities:
+
+$$
+\omega = \frac{L/r^2}{E/(1 - 2M/r)} = \frac{L(1 - 2M/r)}{Er^2}
+$$
+
+For nearly Newtonian orbits ($r \gg 2M$), this gives $\omega^2 = M/r^3$, so:
+
+$$
+\boxed{T = 2\pi\sqrt{\frac{r^3}{M}} = 2\pi\sqrt{\frac{r^3}{GM}} \text{ (in SI units)}}
+$$
+
+This is Kepler's third law, valid for $r \gg r_s$.
+
+---
+
+### Example 2: Perihelion Precession of Mercury
+
+**Problem:** Calculate the perihelion precession per orbit for a planet with semi-major axis $a$ and eccentricity $e$.
+
+**Solution:** The orbital equation for a test particle, derived from the geodesic equations, is:
+
+$$
+\frac{d^2 u}{d\phi^2} + u = \frac{M}{L^2} + 3Mu^2
+$$
+
+where $u = 1/r$. The last term is the relativistic correction.
+
+Using perturbation theory, the precession per orbit is:
+
+$$
+\Delta\phi = \frac{6\pi M}{L^2/M} = \frac{6\pi M}{a(1-e^2)}
+$$
+
+In SI units:
+
+$$
+\boxed{\Delta\phi = \frac{6\pi GM}{c^2 a(1-e^2)} \text{ radians per orbit}}
+$$
+
+**For Mercury:** $a = 5.79 \times 10^{10}$ m, $e = 0.206$, $M = M_\odot$:
+
+$$
+\Delta\phi = \frac{6\pi (6.67 \times 10^{-11})(2 \times 10^{30})}{(3 \times 10^8)^2 (5.79 \times 10^{10})(1 - 0.042)} \approx 5 \times 10^{-7} \text{ rad/orbit}
+$$
+
+Over 100 years (~415 orbits): $\Delta\phi_{\text{total}} \approx 43''$ (arcseconds per century), matching observations.
+
+---
+
+### Example 3: Gravitational Redshift
+
+**Problem:** A photon is emitted at radius $r_1$ and observed at radius $r_2 > r_1$. Find the redshift.
+
+**Solution:** For a stationary emitter and observer, the photon's conserved energy is:
+
+$$
+E = \left(1 - \frac{2M}{r}\right) \frac{dt}{d\lambda}
+$$
+
+where $\lambda$ is an affine parameter. The energy measured by a stationary observer at radius $r$ is proportional to $E/\sqrt{-g_{tt}} = E/\sqrt{1 - 2M/r}$.
+
+The ratio of observed to emitted frequencies:
+
+$$
+\frac{\nu_2}{\nu_1} = \frac{\sqrt{1 - 2M/r_1}}{\sqrt{1 - 2M/r_2}}
+$$
+
+The gravitational redshift is:
+
+$$
+\boxed{z = \frac{\nu_1 - \nu_2}{\nu_2} = \sqrt{\frac{1 - 2M/r_1}{1 - 2M/r_2}} - 1}
+$$
+
+For weak fields ($r \gg 2M$), this becomes:
+
+$$
+z \approx \frac{M}{r_1} - \frac{M}{r_2} = \frac{GM}{c^2}\left(\frac{1}{r_1} - \frac{1}{r_2}\right)
+$$
+
+**Example:** Photon from Sun's surface to Earth: $z \approx GM_\odot/(c^2 R_\odot) \approx 2 \times 10^{-6}$.
+
 ## Historical Note
 
 Karl Schwarzschild derived this solution in 1916, just months after Einstein published his field equations, while serving in the German army during World War I. He died shortly thereafter. The solution was the first exact solution to the Einstein equations and remains one of the most important in general relativity.

@@ -229,6 +229,119 @@ $$
 
 where $F^{\mu\nu}$ is the electromagnetic field tensor.
 
+## Worked Examples
+
+### Example 1: Electromagnetic Wave in a Conductor
+
+**Problem:** Find the skin depth $\delta$ for an EM wave in a good conductor with conductivity $\sigma$.
+
+**Solution:** In a conductor, Ohm's law gives $\mathbf{J} = \sigma \mathbf{E}$. For a plane wave $\mathbf{E} = E_0 e^{i(kz - \omega t)}\hat{x}$, Maxwell's equations become:
+
+From Faraday: $ik E = i\omega B$, so $B = kE/\omega$
+
+From Ampère-Maxwell: $-ikB = \mu_0\sigma E - i\omega\mu_0\epsilon_0 E$
+
+Substituting and solving for $k^2$:
+
+$$
+k^2 = i\omega\mu_0\sigma + \omega^2\mu_0\epsilon_0
+$$
+
+For a good conductor ($\sigma \gg \omega\epsilon_0$), the first term dominates:
+
+$$
+k^2 \approx i\omega\mu_0\sigma \implies k = \sqrt{\frac{\omega\mu_0\sigma}{2}}(1 + i)
+$$
+
+The imaginary part gives exponential decay. The skin depth is:
+
+$$
+\boxed{\delta = \sqrt{\frac{2}{\omega\mu_0\sigma}} = \sqrt{\frac{1}{\pi f \mu_0\sigma}}}
+$$
+
+**Example:** Copper ($\sigma = 5.8 \times 10^7$ S/m) at 60 Hz:
+
+$$
+\delta = \sqrt{\frac{1}{\pi(60)(4\pi \times 10^{-7})(5.8 \times 10^7)}} \approx 8.5 \text{ mm}
+$$
+
+At 1 GHz: $\delta \approx 2 \text{ μm}$ (only surface conducts!).
+
+---
+
+### Example 2: TE Modes in a Rectangular Waveguide
+
+**Problem:** Find the cutoff frequency for the TE$_{10}$ mode in a waveguide of dimensions $a \times b$ ($a > b$).
+
+**Solution:** Inside the waveguide (no charges or currents), Maxwell's equations give the wave equation:
+
+$$
+\nabla^2 \mathbf{E} = \mu_0\epsilon_0 \frac{\partial^2 \mathbf{E}}{\partial t^2}
+$$
+
+For TE modes, $E_z = 0$. With conducting walls, boundary conditions require:
+- $E_{\text{tangential}} = 0$ at walls
+
+For propagation in the $z$-direction with $e^{i(k_z z - \omega t)}$ dependence, the transverse components satisfy:
+
+$$
+k_x^2 + k_y^2 + k_z^2 = \frac{\omega^2}{c^2}
+$$
+
+Boundary conditions give $k_x = m\pi/a$ and $k_y = n\pi/b$ for integers $m, n$.
+
+For TE$_{mn}$ modes:
+
+$$
+k_z = \sqrt{\frac{\omega^2}{c^2} - \left(\frac{m\pi}{a}\right)^2 - \left(\frac{n\pi}{b}\right)^2}
+$$
+
+Propagation requires $k_z$ real, so:
+
+$$
+\boxed{f_c = \frac{c}{2}\sqrt{\left(\frac{m}{a}\right)^2 + \left(\frac{n}{b}\right)^2}}
+$$
+
+The TE$_{10}$ mode (lowest cutoff for $a > b$) has:
+
+$$
+\boxed{f_c^{(10)} = \frac{c}{2a}}
+$$
+
+**Example:** Standard WR-90 waveguide ($a = 2.286$ cm): $f_c = 6.56$ GHz.
+
+---
+
+### Example 3: Radiation Pressure
+
+**Problem:** Find the radiation pressure on a perfectly reflecting surface from a plane wave with intensity $I$.
+
+**Solution:** The Poynting vector magnitude for a plane wave is:
+
+$$
+S = \frac{1}{\mu_0}EB = \frac{E^2}{\mu_0 c} = \frac{cB^2}{\mu_0}
+$$
+
+The momentum density is $g = S/c^2$. For light incident on a surface:
+- Absorbed light transfers momentum $p = U/c$ (where $U$ is energy)
+- Reflected light transfers $p = 2U/c$ (momentum reverses)
+
+The pressure (force per area) equals momentum flux:
+- Absorption: $P = S/c = I/c$
+- Perfect reflection: $P = 2S/c = 2I/c$
+
+$$
+\boxed{P = \frac{2I}{c} \text{ (perfect reflection)}}
+$$
+
+**Example:** Sunlight intensity $I \approx 1400$ W/m²:
+
+$$
+P = \frac{2 \times 1400}{3 \times 10^8} \approx 9 \times 10^{-6} \text{ Pa}
+$$
+
+Small, but measurable—and the basis for solar sails!
+
 ## Summary
 
 | Equation | Differential | What It Describes |
