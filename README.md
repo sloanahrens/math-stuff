@@ -1,4 +1,4 @@
-# Math Stuff
+# Physics Stuff
 
 Mathematical physics notes with LaTeX. 29 interlinked documents covering prerequisites through advanced topics.
 
@@ -64,7 +64,7 @@ Mathematical physics notes with LaTeX. 29 interlinked documents covering prerequ
 ## Folder Structure
 
 ```
-math-stuff/
+physics-stuff/
 ├── prerequisites/          # Foundational math
 ├── math-foundations/       # Advanced mathematical tools
 ├── classical-mechanics/    # Lagrangian, Hamiltonian, oscillators
