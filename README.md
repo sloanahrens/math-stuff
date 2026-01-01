@@ -1,6 +1,6 @@
 # Math Stuff
 
-Mathematical physics notes with LaTeX. 25 interlinked documents covering prerequisites through advanced topics.
+Mathematical physics notes with LaTeX. 27 interlinked documents covering prerequisites through advanced topics.
 
 ## Documents
 
@@ -11,6 +11,7 @@ Mathematical physics notes with LaTeX. 25 interlinked documents covering prerequ
 | [Vector Calculus](vector-calculus.md) | Gradient, divergence, curl, Laplacian, integral theorems |
 | [Linear Algebra](linear-algebra.md) | Vectors, matrices, eigenvalues, inner products |
 | [Probability & Statistics](probability-statistics.md) | Distributions, expectation values, central limit theorem |
+| [Gaussian Integral](gaussian-integral.md) | The $\int e^{-ax^2}dx$ proof and generalizations |
 
 ### Mathematical Foundations
 | Document | Topic |
@@ -23,6 +24,7 @@ Mathematical physics notes with LaTeX. 25 interlinked documents covering prerequ
 ### Classical Mechanics
 | Document | Topic |
 |----------|-------|
+| [Harmonic Oscillator](harmonic-oscillator.md) | Classical, quantum, and thermodynamic treatments |
 | [Lagrangian Mechanics](lagrangian-mechanics.md) | Action principle, Euler-Lagrange, Noether |
 | [Hamiltonian Mechanics](hamiltonian-mechanics.md) | Phase space, Poisson brackets |
 

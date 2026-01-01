@@ -61,7 +61,7 @@ For $\delta S = 0$ for all $\eta(t)$, the bracket must vanish—giving the Euler
 
 ## Example: Simple Harmonic Oscillator
 
-For a mass $m$ on a spring with spring constant $k$:
+See [harmonic oscillator](harmonic-oscillator.md) for a comprehensive treatment. For a mass $m$ on a spring with spring constant $k$:
 
 $$
 T = \frac{1}{2} m \dot{x}^2, \qquad V = \frac{1}{2} k x^2

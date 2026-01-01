@@ -114,6 +114,8 @@ This matches the Schrödinger equation solution for a free particle and gives th
 
 ## The Harmonic Oscillator
 
+See [harmonic oscillator](harmonic-oscillator.md) for a comprehensive treatment. Here we compute the path integral.
+
 ### Action
 
 $$

@@ -101,7 +101,7 @@ $$
 \boxed{\int_{-\infty}^{\infty} e^{-ax^2} dx = \sqrt{\frac{\pi}{a}}}
 $$
 
-This appears in [quantum mechanics](quantum-mechanics.md), [statistical mechanics](statistical-mechanics.md), and [path integrals](path-integrals.md).
+This appears in [quantum mechanics](quantum-mechanics.md), [statistical mechanics](statistical-mechanics.md), and [path integrals](path-integrals.md). See [Gaussian integral](gaussian-integral.md) for the proof and generalizations.
 
 ### Integration by Parts
 

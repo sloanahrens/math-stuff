@@ -237,6 +237,8 @@ This is the origin of the Heisenberg [uncertainty principle](quantum-mechanics.m
 
 ## Example: Harmonic Oscillator
 
+See [harmonic oscillator](harmonic-oscillator.md) for a comprehensive treatment including the quantum case.
+
 ### Lagrangian
 
 $$
