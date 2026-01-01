@@ -16,7 +16,7 @@ $$
 R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} = 8\pi T_{\mu\nu}
 $$
 
-where $R$ is the Ricci scalar and $g_{\mu\nu}$ is the metric tensor. We use units where $G = c = 1$.
+where $R$ is the Ricci scalar and $g_{\mu\nu}$ is the metric tensor. We use [natural units](natural-units.md) where $G = c = 1$.
 
 ## The Schwarzschild Metric
 
