@@ -40,17 +40,17 @@ The equivalence principle immediately implies:
 
 In special relativity, spacetime is flat. The interval between events is:
 
-$$
+```math
 ds^2 = -dt^2 + dx^2 + dy^2 + dz^2 = \eta_{\mu\nu} dx^\mu dx^\nu
-$$
+```
 
 where $\eta_{\mu\nu} = \text{diag}(-1, 1, 1, 1)$ is the Minkowski metric.
 
 In general relativity, spacetime can curve. The interval becomes:
 
-$$
+```math
 \boxed{ds^2 = g_{\mu\nu}(x) \, dx^\mu dx^\nu}
-$$
+```
 
 where $g_{\mu\nu}(x)$ is the **metric tensor**—a field that varies from point to point.
 
@@ -82,15 +82,15 @@ Curvature is measured by the **Riemann curvature tensor** $R^\rho{}_{\sigma\mu\n
 
 For a metric $g_{\mu\nu}$, first compute the Christoffel symbols:
 
-$$
+```math
 \Gamma^\rho_{\mu\nu} = \frac{1}{2} g^{\rho\sigma} \left( \partial_\mu g_{\nu\sigma} + \partial_\nu g_{\mu\sigma} - \partial_\sigma g_{\mu\nu} \right)
-$$
+```
 
 Then the Riemann tensor is:
 
-$$
+```math
 R^\rho{}_{\sigma\mu\nu} = \partial_\mu \Gamma^\rho_{\nu\sigma} - \partial_\nu \Gamma^\rho_{\mu\sigma} + \Gamma^\rho_{\mu\lambda} \Gamma^\lambda_{\nu\sigma} - \Gamma^\rho_{\nu\lambda} \Gamma^\lambda_{\mu\sigma}
-$$
+```
 
 **What this means:** If $R^\rho{}_{\sigma\mu\nu} = 0$ everywhere, spacetime is flat (just Minkowski in disguise). Nonzero Riemann means genuine curvature—tidal forces, gravitational effects.
 
@@ -111,15 +111,15 @@ The **Einstein tensor** $G_{\mu\nu}$ is special: it satisfies $\nabla_\mu G^{\mu
 
 Einstein's field equations relate spacetime curvature to matter and energy:
 
-$$
+```math
 \boxed{G_{\mu\nu} = 8\pi T_{\mu\nu}}
-$$
+```
 
 or equivalently:
 
-$$
+```math
 R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R = 8\pi T_{\mu\nu}
-$$
+```
 
 **What this means:** The left side is pure geometry (curvature). The right side is matter and energy. Mass-energy curves spacetime; the curvature is proportional to the energy density.
 
@@ -127,9 +127,9 @@ $$
 
 Including the cosmological constant $\Lambda$:
 
-$$
+```math
 \boxed{G_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi T_{\mu\nu}}
-$$
+```
 
 The $\Lambda$ term acts like a constant energy density of empty space—dark energy.
 
@@ -148,12 +148,12 @@ The $\Lambda$ term acts like a constant energy density of empty space—dark ene
 
 The **stress-energy tensor** $T_{\mu\nu}$ describes the density and flux of energy and momentum:
 
-$$
+```math
 T_{\mu\nu} = \begin{pmatrix}
 \text{energy density} & \text{energy flux} \\
 \text{momentum density} & \text{stress (pressure, shear)}
 \end{pmatrix}
-$$
+```
 
 ### Components
 
@@ -167,9 +167,9 @@ $$
 ### Common Sources
 
 **Perfect fluid:**
-$$
+```math
 T_{\mu\nu} = (\rho + p) u_\mu u_\nu + p \, g_{\mu\nu}
-$$
+```
 
 where $\rho$ is energy density, $p$ is pressure, and $u^\mu$ is 4-velocity.
 
@@ -184,9 +184,9 @@ where $\rho$ is energy density, $p$ is pressure, and $u^\mu$ is 4-velocity.
 ### Conservation
 
 Energy-momentum is conserved:
-$$
+```math
 \nabla_\mu T^{\mu\nu} = 0
-$$
+```
 
 This follows automatically from $\nabla_\mu G^{\mu\nu} = 0$ and the field equations.
 
@@ -196,9 +196,9 @@ This follows automatically from $\nabla_\mu G^{\mu\nu} = 0$ and the field equati
 
 Free particles follow **geodesics**—the straightest possible paths in curved spacetime:
 
-$$
+```math
 \boxed{\frac{d^2 x^\mu}{d\tau^2} + \Gamma^\mu_{\rho\sigma} \frac{dx^\rho}{d\tau} \frac{dx^\sigma}{d\tau} = 0}
-$$
+```
 
 **What this means:** In flat spacetime, geodesics are straight lines. In curved spacetime, they curve—but they're still the "straightest" paths. What we perceive as gravitational attraction is just geodesic motion through curved spacetime.
 
@@ -219,20 +219,20 @@ See [geodesics](geodesics.md) for orbital motion, light bending, and the ISCO.
 For weak fields and slow motion, GR reduces to Newtonian gravity.
 
 In the weak-field limit:
-$$
+```math
 g_{00} \approx -(1 + 2\Phi)
-$$
+```
 
 where $\Phi$ is the Newtonian gravitational potential. The geodesic equation becomes:
 
-$$
+```math
 \frac{d^2 \vec{x}}{dt^2} = -\nabla \Phi
-$$
+```
 
 And the field equation becomes Poisson's equation:
-$$
+```math
 \nabla^2 \Phi = 4\pi \rho
-$$
+```
 
 **What this means:** Newton's theory isn't wrong—it's the weak-field, slow-motion limit of GR. Einstein's theory extends it to strong fields and relativistic speeds.
 

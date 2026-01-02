@@ -31,31 +31,31 @@ Instead of quantizing particles, quantize fields. Particles emerge as field exci
 A classical field $\phi(x,t)$ has Lagrangian density $\mathcal{L}(\phi, \partial_\mu\phi)$.
 
 **Action:**
-$$
+```math
 S = \int \mathcal{L} \, d^4x
-$$
+```
 
 **Euler-Lagrange equation:**
-$$
+```math
 \partial_\mu\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)} - \frac{\partial\mathcal{L}}{\partial\phi} = 0
-$$
+```
 
 **Conjugate momentum:**
-$$
+```math
 \pi = \frac{\partial\mathcal{L}}{\partial\dot{\phi}}
-$$
+```
 
 ### Quantization Prescription
 
 Promote fields to operators with equal-time commutation relations:
 
-$$
+```math
 \boxed{[\hat{\phi}(\mathbf{x},t), \hat{\pi}(\mathbf{x}',t)] = i\hbar\delta^3(\mathbf{x} - \mathbf{x}')}
-$$
+```
 
-$$
+```math
 [\hat{\phi}(\mathbf{x},t), \hat{\phi}(\mathbf{x}',t)] = [\hat{\pi}(\mathbf{x},t), \hat{\pi}(\mathbf{x}',t)] = 0
-$$
+```
 
 This is the field-theoretic analog of $[\hat{x}, \hat{p}] = i\hbar$.
 
@@ -65,15 +65,15 @@ This is the field-theoretic analog of $[\hat{x}, \hat{p}] = i\hbar$.
 
 The simplest relativistic field. Lagrangian density:
 
-$$
+```math
 \mathcal{L} = \frac{1}{2}(\partial_\mu\phi)(\partial^\mu\phi) - \frac{1}{2}m^2\phi^2
-$$
+```
 
 Equation of motion (Klein-Gordon):
 
-$$
+```math
 (\Box + m^2)\phi = 0
-$$
+```
 
 where $\Box = \partial_\mu\partial^\mu = \partial_t^2 - \nabla^2$ (in units $\hbar = c = 1$).
 
@@ -81,21 +81,21 @@ where $\Box = \partial_\mu\partial^\mu = \partial_t^2 - \nabla^2$ (in units $\hb
 
 The field operator:
 
-$$
+```math
 \hat{\phi}(x) = \int \frac{d^3p}{(2\pi)^3}\frac{1}{\sqrt{2\omega_p}}\left[\hat{a}_\mathbf{p}e^{-ip\cdot x} + \hat{a}_\mathbf{p}^\dagger e^{ip\cdot x}\right]
-$$
+```
 
 where $\omega_p = \sqrt{\mathbf{p}^2 + m^2}$ and $p \cdot x = \omega_p t - \mathbf{p}\cdot\mathbf{x}$.
 
 ### Creation and Annihilation Operators
 
-$$
+```math
 [\hat{a}_\mathbf{p}, \hat{a}_\mathbf{p'}^\dagger] = (2\pi)^3\delta^3(\mathbf{p} - \mathbf{p}')
-$$
+```
 
-$$
+```math
 [\hat{a}_\mathbf{p}, \hat{a}_\mathbf{p'}] = [\hat{a}_\mathbf{p}^\dagger, \hat{a}_\mathbf{p'}^\dagger] = 0
-$$
+```
 
 **What this means:** Each momentum mode is an independent harmonic oscillator. $\hat{a}^\dagger_\mathbf{p}$ creates a particle with momentum $\mathbf{p}$; $\hat{a}_\mathbf{p}$ destroys one.
 
@@ -111,9 +111,9 @@ The complete Hilbert space (Fock space) is the direct sum of n-particle spaces.
 
 ### The Hamiltonian
 
-$$
+```math
 \hat{H} = \int \frac{d^3p}{(2\pi)^3}\omega_p\hat{a}^\dagger_\mathbf{p}\hat{a}_\mathbf{p} + E_0
-$$
+```
 
 where $E_0$ is an (infinite) vacuum energy—typically subtracted by normal ordering.
 
@@ -121,9 +121,9 @@ where $E_0$ is an (infinite) vacuum energy—typically subtracted by normal orde
 
 ### Lagrangian
 
-$$
+```math
 \mathcal{L} = \bar{\psi}(i\gamma^\mu\partial_\mu - m)\psi
-$$
+```
 
 where $\bar{\psi} = \psi^\dagger\gamma^0$.
 
@@ -131,17 +131,17 @@ where $\bar{\psi} = \psi^\dagger\gamma^0$.
 
 For fermions, we need anticommutators:
 
-$$
+```math
 \boxed{\{\hat{\psi}_\alpha(\mathbf{x},t), \hat{\psi}^\dagger_\beta(\mathbf{x}',t)\} = \delta_{\alpha\beta}\delta^3(\mathbf{x}-\mathbf{x}')}
-$$
+```
 
 This ensures the Pauli exclusion principle and the spin-statistics theorem.
 
 ### Mode Expansion
 
-$$
+```math
 \hat{\psi}(x) = \int \frac{d^3p}{(2\pi)^3}\frac{1}{\sqrt{2\omega_p}}\sum_{s=1,2}\left[\hat{a}^s_\mathbf{p}u^s(\mathbf{p})e^{-ip\cdot x} + \hat{b}^{s\dagger}_\mathbf{p}v^s(\mathbf{p})e^{ip\cdot x}\right]
-$$
+```
 
 - $\hat{a}^s_\mathbf{p}$: annihilates particle (electron) with spin $s$
 - $\hat{b}^{s\dagger}_\mathbf{p}$: creates antiparticle (positron) with spin $s$
@@ -153,9 +153,9 @@ $$
 
 ### Lagrangian
 
-$$
+```math
 \mathcal{L} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}
-$$
+```
 
 where $F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu$.
 
@@ -165,9 +165,9 @@ Quantizing requires fixing a gauge (e.g., Coulomb: $\nabla\cdot\mathbf{A} = 0$).
 
 The photon field:
 
-$$
+```math
 \hat{A}^\mu(x) = \int \frac{d^3k}{(2\pi)^3}\frac{1}{\sqrt{2\omega_k}}\sum_{\lambda=1,2}\left[\epsilon^\mu_\lambda(\mathbf{k})\hat{a}_{\mathbf{k},\lambda}e^{-ik\cdot x} + \text{h.c.}\right]
-$$
+```
 
 where $\epsilon^\mu_\lambda$ are polarization vectors.
 
@@ -183,17 +183,17 @@ where $\epsilon^\mu_\lambda$ are polarization vectors.
 
 The QED Lagrangian:
 
-$$
+```math
 \mathcal{L}_{\text{QED}} = \bar{\psi}(i\gamma^\mu D_\mu - m)\psi - \frac{1}{4}F_{\mu\nu}F^{\mu\nu}
-$$
+```
 
 where $D_\mu = \partial_\mu + ieA_\mu$ is the covariant derivative.
 
 Interaction term:
 
-$$
+```math
 \mathcal{L}_{\text{int}} = -e\bar{\psi}\gamma^\mu\psi A_\mu = -ej^\mu A_\mu
-$$
+```
 
 **What this means:** Electrons couple to photons through the current $j^\mu = \bar{\psi}\gamma^\mu\psi$. This is the vertex of Feynman diagrams.
 
@@ -201,9 +201,9 @@ $$
 
 Expand in powers of the coupling $e$:
 
-$$
+```math
 \langle f | \hat{S} | i \rangle = \langle f | T\exp\left(-i\int\hat{H}_{\text{int}}d^4x\right) | i \rangle
-$$
+```
 
 Each term corresponds to Feynman diagrams with increasing numbers of vertices.
 
@@ -225,9 +225,9 @@ Each term corresponds to Feynman diagrams with increasing numbers of vertices.
 Møller scattering at tree level: one photon exchange.
 
 Amplitude:
-$$
+```math
 i\mathcal{M} = (-ie)^2\bar{u}(p_3)\gamma^\mu u(p_1)\frac{-ig_{\mu\nu}}{q^2}\bar{u}(p_4)\gamma^\nu u(p_2)
-$$
+```
 
 where $q = p_1 - p_3$ is the momentum transfer.
 
@@ -239,9 +239,9 @@ These often diverge! **Renormalization** absorbs infinities into redefinitions o
 
 **Running coupling:** The effective charge depends on energy scale:
 
-$$
+```math
 \alpha(Q^2) = \frac{\alpha(0)}{1 - \frac{\alpha(0)}{3\pi}\ln(Q^2/m_e^2)}
-$$
+```
 
 At higher energies, the electromagnetic coupling grows.
 
@@ -257,9 +257,9 @@ At higher energies, the electromagnetic coupling grows.
 
 ### Gauge Groups
 
-$$
+```math
 SU(3)_C \times SU(2)_L \times U(1)_Y
-$$
+```
 
 - $SU(3)_C$: Quantum chromodynamics (strong force)
 - $SU(2)_L \times U(1)_Y$: Electroweak (breaks to $U(1)_{\text{EM}}$)
@@ -277,9 +277,9 @@ $$
 
 Between parallel conducting plates, vacuum fluctuations create a force:
 
-$$
+```math
 \frac{F}{A} = -\frac{\pi^2\hbar c}{240a^4}
-$$
+```
 
 where $a$ is plate separation. This has been measured!
 

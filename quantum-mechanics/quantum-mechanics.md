@@ -1,8 +1,8 @@
 # Quantum Mechanics: An Overview (Extended Edition)
 
-$$
+```math
 \boxed{i\hbar \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m} \nabla^2 \psi + V \psi}
-$$
+```
 
 The **Schrödinger equation**—the master equation of quantum mechanics. It governs how the wave function $\psi$ evolves in time, where $\hbar = 1.055 \times 10^{-34}$ J·s is Planck's reduced constant, $m$ is the particle mass, and $V$ is the potential energy.
 
@@ -18,17 +18,17 @@ The **wave function** $\psi(x, t)$ is the fundamental object in quantum mechanic
 
 For a single particle in one dimension:
 
-$$
+```math
 \psi: \mathbb{R} \times \mathbb{R} \to \mathbb{C}
-$$
+```
 
 **What this means:** The wave function takes a position $x$ and time $t$ as inputs, and outputs a complex number. You can think of it as a "field" that exists everywhere in space, with a value at each point. The complex number contains both an amplitude (how "strong" the wave is there) and a phase (where the wave is in its cycle). Unlike a classical particle that has a definite position, a quantum particle is described by this spread-out wave.
 
 The wave function lives in a **Hilbert space** $\mathcal{H}$—a complex vector space with an inner product:
 
-$$
+```math
 \langle \phi | \psi \rangle = \int_{-\infty}^{\infty} \phi^*(x) \psi(x) \, dx
-$$
+```
 
 **What this means:** This formula measures the "overlap" between two wave functions $\phi$ and $\psi$. Imagine laying one wave on top of another and measuring how much they align. The $\phi^*$ means we take the complex conjugate of $\phi$ (flip the sign of its imaginary part). If two states are completely different (orthogonal), this integral gives zero. If they're identical, it gives 1 (for normalized states). This overlap determines transition probabilities between states.
 
@@ -36,9 +36,9 @@ $$
 
 The wave function must be normalized:
 
-$$
+```math
 \langle \psi | \psi \rangle = \int_{-\infty}^{\infty} |\psi(x)|^2 \, dx = 1
-$$
+```
 
 **What this means:** If you add up $|\psi|^2$ over all of space, you must get exactly 1. This ensures that the particle exists *somewhere* with 100% certainty. The wave function describes probabilities, and all probabilities must sum to 1.
 
@@ -46,9 +46,9 @@ $$
 
 The probability of finding the particle between $x$ and $x + dx$ is:
 
-$$
+```math
 P(x) \, dx = |\psi(x)|^2 \, dx
-$$
+```
 
 **What this means:** To find the probability of locating a particle near position $x$, take the wave function's value at $x$, compute its absolute value squared, and multiply by the small interval $dx$. Where $|\psi|^2$ is large, you're likely to find the particle; where it's small, you're unlikely. This is the **Born rule**—the bridge between the abstract wave function and actual experimental predictions. The wave function itself isn't directly observable; only $|\psi|^2$ connects to measurements.
 
@@ -56,17 +56,17 @@ $$
 
 The wave function evolves according to the **Schrödinger equation**:
 
-$$
+```math
 i \frac{\partial \psi}{\partial t} = \hat{H} \psi
-$$
+```
 
 **What this means:** This equation tells us how the wave function changes over time. The left side is the rate of change of $\psi$. The right side involves the Hamiltonian operator $\hat{H}$, which represents the total energy of the system. In essence: "how fast the wave function changes depends on the system's energy." The $i$ (imaginary unit) makes the evolution oscillatory rather than growing/decaying—this is why quantum states rotate in complex space rather than blowing up or dying out.
 
 where $\hat{H}$ is the Hamiltonian operator. For a non-relativistic particle in a potential $V(x)$:
 
-$$
+```math
 \hat{H} = -\frac{1}{2m} \frac{\partial^2}{\partial x^2} + V(x)
-$$
+```
 
 **What this means:** The Hamiltonian has two parts:
 - The first term ($-\frac{1}{2m} \frac{\partial^2}{\partial x^2}$) is the **kinetic energy**—it measures how "curved" or "wiggly" the wave function is. More wiggles = higher momentum = more kinetic energy.
@@ -74,9 +74,9 @@ $$
 
 giving the full equation:
 
-$$
+```math
 i \frac{\partial \psi}{\partial t} = -\frac{1}{2m} \frac{\partial^2 \psi}{\partial x^2} + V(x) \psi
-$$
+```
 
 **What this means:** This is the complete Schrödinger equation for a single particle. Given the wave function at one moment, this equation uniquely determines how it will evolve. It's completely deterministic—there's no randomness in how $\psi$ changes. The apparent randomness of quantum mechanics only enters when we make measurements.
 
@@ -84,17 +84,17 @@ $$
 
 For stationary states with definite energy $E$:
 
-$$
+```math
 \psi(x, t) = \phi(x) e^{-iEt}
-$$
+```
 
 **What this means:** Some special wave functions just rotate in complex space without changing shape. The spatial part $\phi(x)$ stays fixed while $e^{-iEt}$ spins around the complex plane at a rate proportional to the energy $E$. These are the "stationary states" or energy eigenstates—they have definite, well-defined energy.
 
 The spatial part satisfies:
 
-$$
+```math
 \hat{H} \phi = E \phi
-$$
+```
 
 **What this means:** This is an eigenvalue equation. It says: "applying the energy operator to $\phi$ just gives back $\phi$ multiplied by the number $E$." Not every function satisfies this—only special functions (eigenstates) work, and only for specific values of $E$. This is why energy in quantum systems is often **quantized**—only certain discrete energy values are allowed.
 
@@ -132,9 +132,9 @@ Hermitian operators have the special property that their eigenvalues (possible m
 
 The expected value of an observable $\hat{A}$:
 
-$$
+```math
 \langle A \rangle = \langle \psi | \hat{A} | \psi \rangle = \int \psi^* \hat{A} \psi \, dx
-$$
+```
 
 **What this means:** If you measure observable $A$ on many identical systems all prepared in state $\psi$, this formula gives the average result you'd get. It's not the value of any single measurement, but the statistical average over many measurements.
 
@@ -142,17 +142,17 @@ $$
 
 The **commutator** of two operators:
 
-$$
+```math
 [\hat{A}, \hat{B}] = \hat{A}\hat{B} - \hat{B}\hat{A}
-$$
+```
 
 **What this means:** The commutator asks: "Does it matter which order I apply these operators?" For ordinary numbers, $AB - BA = 0$ always. But for quantum operators, the order often matters—applying $\hat{A}$ then $\hat{B}$ gives a different result than $\hat{B}$ then $\hat{A}$.
 
 The fundamental commutator of quantum mechanics:
 
-$$
+```math
 [\hat{x}, \hat{p}] = i
-$$
+```
 
 **What this means:** Position and momentum don't commute—measuring position then momentum gives a different result than momentum then position. This non-commutativity is the mathematical root of the uncertainty principle. The $i$ (not zero!) on the right side is what makes quantum mechanics fundamentally different from classical physics.
 
@@ -160,9 +160,9 @@ $$
 
 For any two observables $\hat{A}$ and $\hat{B}$, the **uncertainty principle** states:
 
-$$
+```math
 \Delta A \cdot \Delta B \geq \frac{1}{2} |\langle [\hat{A}, \hat{B}] \rangle|
-$$
+```
 
 **What this means:** The product of uncertainties (standard deviations) in two measurements is bounded below by their commutator. If two observables don't commute, you cannot simultaneously know both with arbitrary precision—reducing uncertainty in one necessarily increases uncertainty in the other.
 
@@ -172,9 +172,9 @@ where $\Delta A = \sqrt{\langle A^2 \rangle - \langle A \rangle^2}$ is the stand
 
 For position and momentum:
 
-$$
+```math
 \boxed{\Delta x \cdot \Delta p \geq \frac{1}{2}}
-$$
+```
 
 (In SI units: $\Delta x \cdot \Delta p \geq \frac{\hbar}{2}$)
 
@@ -195,9 +195,9 @@ The uncertainty principle is a theorem about the wave function itself, not about
 
 A quantum system can exist in a **superposition** of states:
 
-$$
+```math
 |\psi\rangle = \alpha |0\rangle + \beta |1\rangle
-$$
+```
 
 where $|\alpha|^2 + |\beta|^2 = 1$.
 
@@ -215,17 +215,17 @@ When two particles interact, their wave functions can become **entangled**—the
 
 **Separable (product) state:**
 
-$$
+```math
 |\psi\rangle = |\phi_A\rangle \otimes |\phi_B\rangle
-$$
+```
 
 **What this means:** In a product state, particle A has its own independent state $|\phi_A\rangle$, and particle B has its own independent state $|\phi_B\rangle$. You can fully describe each particle without mentioning the other. Measuring one tells you nothing about the other.
 
 **Entangled state (Bell state):**
 
-$$
+```math
 |\Phi^+\rangle = \frac{1}{\sqrt{2}} \left( |0\rangle_A |0\rangle_B + |1\rangle_A |1\rangle_B \right)
-$$
+```
 
 **What this means:** In this entangled state, neither particle has a definite state of its own—only the *pair* has a well-defined state. The particles are correlated: if you measure A and find $|0\rangle$, particle B will definitely be $|0\rangle$ too; if A is $|1\rangle$, B is $|1\rangle$. But before measurement, neither has a definite value.
 
@@ -243,9 +243,9 @@ Bell (1964) proved that no **local hidden variable theory** can reproduce all qu
 
 For a pure state, entanglement can be measured by the **von Neumann entropy** of the reduced density matrix:
 
-$$
+```math
 S(\rho_A) = -\text{Tr}(\rho_A \log \rho_A)
-$$
+```
 
 where $\rho_A = \text{Tr}_B(|\psi\rangle\langle\psi|)$.
 
@@ -285,9 +285,9 @@ This works empirically but raises questions:
 
 A quantum system interacting with its environment becomes entangled with it:
 
-$$
+```math
 \left( \alpha |0\rangle + \beta |1\rangle \right) |E_0\rangle \to \alpha |0\rangle |E_0\rangle + \beta |1\rangle |E_1\rangle
-$$
+```
 
 where $|E_0\rangle$ and $|E_1\rangle$ are environment states.
 
@@ -295,17 +295,17 @@ where $|E_0\rangle$ and $|E_1\rangle$ are environment states.
 
 If we ignore (trace out) the environment, the system's **reduced density matrix** becomes:
 
-$$
+```math
 \rho_{\text{system}} = |\alpha|^2 |0\rangle\langle 0| + |\beta|^2 |1\rangle\langle 1| + \underbrace{\alpha\beta^* |0\rangle\langle 1| + \alpha^*\beta |1\rangle\langle 0|}_{\text{off-diagonal terms}}
-$$
+```
 
 **What this means:** The density matrix describes our knowledge of the system. The diagonal terms ($|0\rangle\langle 0|$ and $|1\rangle\langle 1|$) represent classical probabilities of being in each state. The off-diagonal terms represent quantum coherence—the ability to interfere, the "quantumness" of the superposition.
 
 The off-diagonal "coherence" terms decay exponentially fast:
 
-$$
+```math
 \rho_{01}(t) \propto e^{-t/\tau_D}
-$$
+```
 
 where $\tau_D$ is the **decoherence time** (often $< 10^{-20}$ seconds for macroscopic objects).
 
@@ -339,17 +339,17 @@ The **Many-Worlds Interpretation** (MWI), proposed by Hugh Everett (1957), resol
 
 Before measurement:
 
-$$
+```math
 |\text{observer}\rangle \otimes \left( \alpha |0\rangle + \beta |1\rangle \right)
-$$
+```
 
 **What this means:** Before looking, the observer is in a single state, and the particle is in superposition.
 
 After interaction:
 
-$$
+```math
 \alpha |\text{observer sees 0}\rangle |0\rangle + \beta |\text{observer sees 1}\rangle |1\rangle
-$$
+```
 
 **What this means:** After measurement, the observer becomes entangled with the particle. There are now two "versions" of the observer: one who saw 0 and one who saw 1. Both exist in the wave function. Neither is more "real" than the other.
 
@@ -359,9 +359,9 @@ Both terms exist. There are now two "branches" of the observer, each experiencin
 
 Decoherence explains why branches don't interfere:
 
-$$
+```math
 |\psi\rangle = \alpha |0\rangle |E_0\rangle + \beta |1\rangle |E_1\rangle
-$$
+```
 
 If $\langle E_0 | E_1 \rangle \approx 0$, the branches evolve independently—they can't "see" each other.
 

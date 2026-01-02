@@ -12,9 +12,9 @@ In electrodynamics, the potentials must account for the finite propagation speed
 
 The field at position $\mathbf{r}$ and time $t$ depends on the source at position $\mathbf{r}'$ at the **retarded time**:
 
-$$
+```math
 \boxed{t_r = t - \frac{|\mathbf{r} - \mathbf{r}'|}{c}}
-$$
+```
 
 This is the time at which a signal traveling at $c$ would need to leave $\mathbf{r}'$ to arrive at $\mathbf{r}$ at time $t$.
 
@@ -22,13 +22,13 @@ This is the time at which a signal traveling at $c$ would need to leave $\mathbf
 
 The solutions to the wave equations for potentials (in Lorenz gauge):
 
-$$
+```math
 \boxed{\phi(\mathbf{r}, t) = \frac{1}{4\pi\epsilon_0}\int\frac{\rho(\mathbf{r}', t_r)}{|\mathbf{r} - \mathbf{r}'|}d^3r'}
-$$
+```
 
-$$
+```math
 \boxed{\mathbf{A}(\mathbf{r}, t) = \frac{\mu_0}{4\pi}\int\frac{\mathbf{J}(\mathbf{r}', t_r)}{|\mathbf{r} - \mathbf{r}'|}d^3r'}
-$$
+```
 
 **What this means:** The potentials at $(\mathbf{r}, t)$ depend on what the sources were doing at the retarded time—the time it takes light to travel from source to field point.
 
@@ -38,13 +38,13 @@ $$
 
 For a point charge $q$ moving on trajectory $\mathbf{r}_q(t)$ with velocity $\mathbf{v}(t)$:
 
-$$
+```math
 \boxed{\phi(\mathbf{r}, t) = \frac{q}{4\pi\epsilon_0}\frac{1}{|\mathbf{R}| - \mathbf{R}\cdot\boldsymbol{\beta}}\bigg|_{t_r}}
-$$
+```
 
-$$
+```math
 \boxed{\mathbf{A}(\mathbf{r}, t) = \frac{\mu_0 q c}{4\pi}\frac{\boldsymbol{\beta}}{|\mathbf{R}| - \mathbf{R}\cdot\boldsymbol{\beta}}\bigg|_{t_r}}
-$$
+```
 
 where:
 - $\mathbf{R} = \mathbf{r} - \mathbf{r}_q(t_r)$ (vector from retarded position to field point)
@@ -55,25 +55,25 @@ where:
 
 $t_r$ is defined implicitly by:
 
-$$
+```math
 c(t - t_r) = |\mathbf{r} - \mathbf{r}_q(t_r)|
-$$
+```
 
 This must be solved for each field point.
 
 ### Fields from a Moving Charge
 
-$$
+```math
 \mathbf{E} = \frac{q}{4\pi\epsilon_0}\left[\frac{(1-\beta^2)(\hat{\mathbf{R}} - \boldsymbol{\beta})}{(1 - \hat{\mathbf{R}}\cdot\boldsymbol{\beta})^3 R^2} + \frac{\hat{\mathbf{R}} \times [(\hat{\mathbf{R}} - \boldsymbol{\beta}) \times \dot{\boldsymbol{\beta}}]}{c(1 - \hat{\mathbf{R}}\cdot\boldsymbol{\beta})^3 R}\right]_{t_r}
-$$
+```
 
 **First term:** Velocity field—generalizes Coulomb field for moving charge, falls off as $1/R^2$.
 
 **Second term:** Acceleration field—radiation field, falls off as $1/R$, dominates at large distances.
 
-$$
+```math
 \mathbf{B} = \frac{1}{c}\hat{\mathbf{R}} \times \mathbf{E}
-$$
+```
 
 ## Electric Dipole Radiation
 
@@ -85,13 +85,13 @@ A dipole oscillating as $\mathbf{p}(t) = \mathbf{p}_0 \cos(\omega t)$:
 
 In the **radiation zone** ($r \gg \lambda$ and $r \gg$ source size):
 
-$$
+```math
 \boxed{\mathbf{E} = -\frac{\mu_0 c k^2}{4\pi}\frac{(\hat{\mathbf{r}} \times \mathbf{p}) \times \hat{\mathbf{r}}}{r}e^{i(kr-\omega t)}}
-$$
+```
 
-$$
+```math
 \boxed{\mathbf{B} = \frac{1}{c}\hat{\mathbf{r}} \times \mathbf{E}}
-$$
+```
 
 where $k = \omega/c$.
 
@@ -104,17 +104,17 @@ where $k = \omega/c$.
 
 The angular distribution of power:
 
-$$
+```math
 \frac{dP}{d\Omega} = \frac{\mu_0 c k^4 p_0^2}{32\pi^2}\sin^2\theta
-$$
+```
 
 This is the famous "donut" pattern—maximum radiation perpendicular to the dipole axis.
 
 ### Total Radiated Power
 
-$$
+```math
 \boxed{P = \frac{\mu_0 c k^4 p_0^2}{12\pi} = \frac{\mu_0 p_0^2 \omega^4}{12\pi c}}
-$$
+```
 
 The power scales as $\omega^4$—higher frequencies radiate much more efficiently.
 
@@ -124,9 +124,9 @@ The power scales as $\omega^4$—higher frequencies radiate much more efficientl
 
 For a non-relativistic accelerating charge:
 
-$$
+```math
 \boxed{P = \frac{\mu_0 q^2 a^2}{6\pi c} = \frac{q^2 a^2}{6\pi\epsilon_0 c^3}}
-$$
+```
 
 **What this means:** Any accelerating charge radiates. The power depends on the square of acceleration—violent accelerations produce bright radiation.
 
@@ -134,29 +134,29 @@ $$
 
 The acceleration field at angle $\theta$ to the acceleration:
 
-$$
+```math
 |\mathbf{E}_{\text{rad}}| = \frac{qa\sin\theta}{4\pi\epsilon_0 c^2 r}
-$$
+```
 
 The Poynting vector magnitude:
 
-$$
+```math
 S = \frac{1}{\mu_0 c}|E|^2 = \frac{q^2 a^2 \sin^2\theta}{16\pi^2\epsilon_0 c^3 r^2}
-$$
+```
 
 Integrating over a sphere:
 
-$$
+```math
 P = \int S r^2 d\Omega = \frac{q^2 a^2}{6\pi\epsilon_0 c^3}
-$$
+```
 
 ### Relativistic Generalization
 
 For a relativistic particle:
 
-$$
+```math
 P = \frac{\mu_0 q^2 c}{6\pi}\gamma^6\left[(\dot{\boldsymbol{\beta}})^2 - (\boldsymbol{\beta} \times \dot{\boldsymbol{\beta}})^2\right]
-$$
+```
 
 **Linear acceleration:** $P \propto \gamma^6$ for given force.
 
@@ -172,15 +172,15 @@ The radiation fields have the same structure as electric dipole but with $\mathb
 
 ### Power Radiated
 
-$$
+```math
 P_m = \frac{\mu_0 m_0^2 \omega^4}{12\pi c^3}
-$$
+```
 
 ### Comparison
 
-$$
+```math
 \frac{P_m}{P_e} = \frac{m_0^2}{p_0^2 c^2}
-$$
+```
 
 For atomic sources, $m_0 \sim p_0/c$, so magnetic dipole radiation is typically weaker by factor $(v/c)^2$.
 
@@ -188,21 +188,21 @@ For atomic sources, $m_0 \sim p_0/c$, so magnetic dipole radiation is typically 
 
 ### The Quadrupole Moment
 
-$$
+```math
 Q_{ij} = \int (3r_i r_j - r^2\delta_{ij})\rho \, d^3r
-$$
+```
 
 ### Power Radiated
 
-$$
+```math
 P_Q = \frac{\mu_0 c k^6}{180\pi}\sum_{ij}|\ddot{Q}_{ij}|^2
-$$
+```
 
 ### Comparison with Dipole
 
-$$
+```math
 \frac{P_Q}{P_d} \sim (ka)^2 = \left(\frac{a}{\lambda}\right)^2
-$$
+```
 
 where $a$ is the source size. For sources small compared to wavelength, quadrupole is suppressed.
 
@@ -224,9 +224,9 @@ Multiple antennas can be phased to create directional radiation patterns. The ar
 
 ### Antenna Gain
 
-$$
+```math
 G = \frac{\text{Peak intensity}}{\text{Isotropic intensity}} = \frac{4\pi}{P}\left(\frac{dP}{d\Omega}\right)_{\text{max}}
-$$
+```
 
 Half-wave dipole: $G \approx 1.64$ (2.15 dBi).
 
@@ -236,9 +236,9 @@ Half-wave dipole: $G \approx 1.64$ (2.15 dBi).
 
 A relativistic charged particle in circular motion radiates with:
 
-$$
+```math
 P = \frac{\mu_0 q^2 c}{6\pi}\gamma^4\left(\frac{v^2}{R^2}\right)
-$$
+```
 
 where $R$ is the orbit radius.
 
@@ -248,9 +248,9 @@ The radiation is concentrated in a narrow forward cone of angle $\sim 1/\gamma$.
 
 Critical frequency:
 
-$$
+```math
 \omega_c = \frac{3\gamma^3 c}{2R}
-$$
+```
 
 ### Spectrum
 
@@ -268,9 +268,9 @@ The spectrum extends from low frequencies up to $\sim \omega_c$, with a broad pe
 
 A radiating charge experiences a self-force:
 
-$$
+```math
 \mathbf{F}_{\text{rad}} = \frac{\mu_0 q^2}{6\pi c}\dot{\mathbf{a}}
-$$
+```
 
 This is a third-derivative "jerk" term.
 

@@ -8,17 +8,17 @@ Magnetostatics describes magnetic fields produced by steady currents. Just as [e
 
 The magnetic field $\mathbf{B}$ produced by a steady current $I$ flowing through a wire:
 
-$$
+```math
 \boxed{\mathbf{B}(\mathbf{r}) = \frac{\mu_0 I}{4\pi} \int \frac{d\mathbf{l}' \times (\mathbf{r} - \mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|^3}}
-$$
+```
 
 where $d\mathbf{l}'$ is an infinitesimal element of the wire at position $\mathbf{r}'$.
 
 For a volume current density $\mathbf{J}$:
 
-$$
+```math
 \mathbf{B}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int \frac{\mathbf{J}(\mathbf{r}') \times (\mathbf{r} - \mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|^3} d^3r'
-$$
+```
 
 **What this means:** The Biot-Savart law is the magnetic analog of Coulomb's law. But while electric fields point radially from charges, magnetic fields curl around currents.
 
@@ -26,9 +26,9 @@ $$
 
 For current $I$ along the $z$-axis, at distance $s$:
 
-$$
+```math
 \mathbf{B} = \frac{\mu_0 I}{2\pi s} \hat{\boldsymbol{\phi}}
-$$
+```
 
 The field circles the wire with magnitude decreasing as $1/s$.
 
@@ -36,9 +36,9 @@ The field circles the wire with magnitude decreasing as $1/s$.
 
 For a loop of radius $R$ carrying current $I$, on the axis at distance $z$:
 
-$$
+```math
 B_z = \frac{\mu_0 I R^2}{2(R^2 + z^2)^{3/2}}
-$$
+```
 
 At the center ($z = 0$): $B = \mu_0 I / 2R$.
 
@@ -48,17 +48,17 @@ Far away ($z \gg R$): $B \approx \mu_0 I R^2 / 2z^3$ (dipole field).
 
 ### Integral Form
 
-$$
+```math
 \boxed{\oint_C \mathbf{B} \cdot d\mathbf{l} = \mu_0 I_{\text{enc}}}
-$$
+```
 
 where $I_{\text{enc}}$ is the current passing through any surface bounded by the closed loop $C$.
 
 ### Differential Form
 
-$$
+```math
 \boxed{\nabla \times \mathbf{B} = \mu_0 \mathbf{J}}
-$$
+```
 
 **What this means:** Currents are sources of curl for the magnetic field. This is the magnetic analog of Gauss's law, but with curl instead of divergence.
 
@@ -81,9 +81,9 @@ where $n$ = turns per length, $N$ = total turns, $K$ = surface current density.
 
 Since $\nabla \cdot \mathbf{B} = 0$ (no magnetic monopoles), we can write:
 
-$$
+```math
 \boxed{\mathbf{B} = \nabla \times \mathbf{A}}
-$$
+```
 
 where $\mathbf{A}$ is the **magnetic vector potential**.
 
@@ -91,21 +91,21 @@ where $\mathbf{A}$ is the **magnetic vector potential**.
 
 In the Coulomb gauge ($\nabla \cdot \mathbf{A} = 0$):
 
-$$
+```math
 \nabla^2 \mathbf{A} = -\mu_0 \mathbf{J}
-$$
+```
 
 Solution (compare to electrostatic potential):
 
-$$
+```math
 \mathbf{A}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int \frac{\mathbf{J}(\mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|} d^3r'
-$$
+```
 
 For a line current:
 
-$$
+```math
 \mathbf{A}(\mathbf{r}) = \frac{\mu_0 I}{4\pi} \oint \frac{d\mathbf{l}'}{|\mathbf{r} - \mathbf{r}'|}
-$$
+```
 
 **What this means:** The vector potential is to magnetostatics what the scalar potential is to electrostatics. While $\mathbf{A}$ itself isn't directly measurable classically, it has profound significance in quantum mechanics (Aharonov-Bohm effect).
 
@@ -119,9 +119,9 @@ The transformation $\mathbf{A} \to \mathbf{A} + \nabla \chi$ leaves $\mathbf{B}$
 
 For a current loop with area $A$ carrying current $I$:
 
-$$
+```math
 \boxed{\mathbf{m} = I \mathbf{A} = I A \hat{\mathbf{n}}}
-$$
+```
 
 where $\hat{\mathbf{n}}$ is the normal to the loop (right-hand rule).
 
@@ -129,31 +129,31 @@ where $\hat{\mathbf{n}}$ is the normal to the loop (right-hand rule).
 
 Far from the loop ($r \gg$ loop size):
 
-$$
+```math
 \mathbf{B} = \frac{\mu_0}{4\pi} \left[ \frac{3(\mathbf{m} \cdot \hat{\mathbf{r}})\hat{\mathbf{r}} - \mathbf{m}}{r^3} \right]
-$$
+```
 
 This has exactly the same form as the electric dipole field.
 
 ### Vector Potential of a Dipole
 
-$$
+```math
 \mathbf{A} = \frac{\mu_0}{4\pi} \frac{\mathbf{m} \times \hat{\mathbf{r}}}{r^2}
-$$
+```
 
 ### Torque and Energy in External Field
 
 A dipole in a uniform external field $\mathbf{B}$:
 
 **Torque:**
-$$
+```math
 \boldsymbol{\tau} = \mathbf{m} \times \mathbf{B}
-$$
+```
 
 **Potential energy:**
-$$
+```math
 U = -\mathbf{m} \cdot \mathbf{B}
-$$
+```
 
 **What this means:** A magnetic dipole tends to align with the external field, minimizing energy when $\mathbf{m} \parallel \mathbf{B}$.
 
@@ -163,23 +163,23 @@ $$
 
 When a material is placed in a magnetic field, atomic current loops align, producing a net **magnetization**:
 
-$$
+```math
 \mathbf{M} = \frac{d\mathbf{m}}{dV} = \text{magnetic dipole moment per unit volume}
-$$
+```
 
 ### Bound Currents
 
 Magnetization produces effective currents:
 
 **Volume current density:**
-$$
+```math
 \mathbf{J}_b = \nabla \times \mathbf{M}
-$$
+```
 
 **Surface current density:**
-$$
+```math
 \mathbf{K}_b = \mathbf{M} \times \hat{\mathbf{n}}
-$$
+```
 
 These bound currents contribute to the total magnetic field.
 
@@ -187,15 +187,15 @@ These bound currents contribute to the total magnetic field.
 
 We define:
 
-$$
+```math
 \boxed{\mathbf{H} = \frac{\mathbf{B}}{\mu_0} - \mathbf{M}}
-$$
+```
 
 Ampere's law in terms of free currents only:
 
-$$
+```math
 \nabla \times \mathbf{H} = \mathbf{J}_f \qquad \oint \mathbf{H} \cdot d\mathbf{l} = I_{f,\text{enc}}
-$$
+```
 
 **What this means:** $\mathbf{H}$ responds only to free currents (the ones we control), while $\mathbf{B}$ includes contributions from bound currents in the material.
 
@@ -203,13 +203,13 @@ $$
 
 For linear magnetic materials:
 
-$$
+```math
 \mathbf{M} = \chi_m \mathbf{H}
-$$
+```
 
-$$
+```math
 \mathbf{B} = \mu_0(1 + \chi_m)\mathbf{H} = \mu_0 \mu_r \mathbf{H} = \mu \mathbf{H}
-$$
+```
 
 where $\chi_m$ is magnetic susceptibility, $\mu_r = 1 + \chi_m$ is relative permeability.
 
@@ -226,21 +226,21 @@ where $\chi_m$ is magnetic susceptibility, $\mu_r = 1 + \chi_m$ is relative perm
 For a boundary between two magnetic media:
 
 **Normal component:**
-$$
+```math
 B_{1\perp} = B_{2\perp}
-$$
+```
 
 **Tangential component:**
-$$
+```math
 H_{1\parallel} - H_{2\parallel} = K_f
-$$
+```
 
 where $K_f$ is the free surface current density.
 
 If no free surface currents:
-$$
+```math
 \frac{B_{1\parallel}}{\mu_1} = \frac{B_{2\parallel}}{\mu_2}
-$$
+```
 
 ## Inductance
 
@@ -248,27 +248,27 @@ $$
 
 When current $I$ flows through a circuit, it creates a magnetic flux $\Phi_B$ through the circuit itself:
 
-$$
+```math
 \Phi_B = LI
-$$
+```
 
 where $L$ is the **self-inductance**. The induced EMF opposes changes:
 
-$$
+```math
 \mathcal{E} = -L \frac{dI}{dt}
-$$
+```
 
 ### Calculating Inductance
 
 **From flux:**
-$$
+```math
 L = \frac{\Phi_B}{I} = \frac{N\Phi_B}{I} \quad \text{(N turns)}
-$$
+```
 
 **From energy:**
-$$
+```math
 L = \frac{2U_B}{I^2}
-$$
+```
 
 ### Common Inductances
 
@@ -282,16 +282,16 @@ $$
 
 For two circuits:
 
-$$
+```math
 \Phi_{12} = M_{12} I_2
-$$
+```
 
 where $\Phi_{12}$ is flux through circuit 1 due to current in circuit 2.
 
 **Neumann formula:**
-$$
+```math
 M_{12} = \frac{\mu_0}{4\pi} \oint \oint \frac{d\mathbf{l}_1 \cdot d\mathbf{l}_2}{|\mathbf{r}_1 - \mathbf{r}_2|}
-$$
+```
 
 Note: $M_{12} = M_{21} = M$.
 
@@ -299,26 +299,26 @@ Note: $M_{12} = M_{21} = M$.
 
 ### Energy in a Magnetic Field
 
-$$
+```math
 \boxed{U_B = \frac{1}{2\mu_0} \int B^2 \, d^3r}
-$$
+```
 
 In terms of $\mathbf{H}$:
-$$
+```math
 U_B = \frac{1}{2} \int \mathbf{B} \cdot \mathbf{H} \, d^3r
-$$
+```
 
 ### Energy in an Inductor
 
-$$
+```math
 U = \frac{1}{2} L I^2
-$$
+```
 
 ### Energy Density
 
-$$
+```math
 u_B = \frac{B^2}{2\mu_0} = \frac{1}{2}\mathbf{B} \cdot \mathbf{H}
-$$
+```
 
 Compare to electric energy density: $u_E = \frac{1}{2}\epsilon_0 E^2$.
 

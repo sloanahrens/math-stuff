@@ -8,9 +8,9 @@ Most quantum systems cannot be solved exactly. Perturbation theory provides syst
 
 We have a Hamiltonian:
 
-$$
+```math
 \hat{H} = \hat{H}_0 + \lambda \hat{H}'
-$$
+```
 
 where:
 - $\hat{H}_0$ is the **unperturbed Hamiltonian** (exactly solvable)
@@ -19,9 +19,9 @@ where:
 
 We know the eigenstates and eigenvalues of $\hat{H}_0$:
 
-$$
+```math
 \hat{H}_0 |n^{(0)}\rangle = E_n^{(0)} |n^{(0)}\rangle
-$$
+```
 
 We want to find the eigenstates and eigenvalues of the full $\hat{H}$.
 
@@ -29,13 +29,13 @@ We want to find the eigenstates and eigenvalues of the full $\hat{H}$.
 
 Assume the solutions can be expanded in powers of $\lambda$:
 
-$$
+```math
 |n\rangle = |n^{(0)}\rangle + \lambda|n^{(1)}\rangle + \lambda^2|n^{(2)}\rangle + \cdots
-$$
+```
 
-$$
+```math
 E_n = E_n^{(0)} + \lambda E_n^{(1)} + \lambda^2 E_n^{(2)} + \cdots
-$$
+```
 
 ## Time-Independent Perturbation Theory
 
@@ -44,23 +44,23 @@ $$
 When $E_n^{(0)}$ is not equal to any other unperturbed energy:
 
 **First-order energy:**
-$$
+```math
 \boxed{E_n^{(1)} = \langle n^{(0)} | \hat{H}' | n^{(0)} \rangle}
-$$
+```
 
 The first-order correction is just the expectation value of the perturbation.
 
 **First-order state:**
-$$
+```math
 \boxed{|n^{(1)}\rangle = \sum_{m \neq n} \frac{\langle m^{(0)} | \hat{H}' | n^{(0)} \rangle}{E_n^{(0)} - E_m^{(0)}} |m^{(0)}\rangle}
-$$
+```
 
 The perturbed state mixes in other unperturbed states, weighted by matrix elements divided by energy differences.
 
 **Second-order energy:**
-$$
+```math
 \boxed{E_n^{(2)} = \sum_{m \neq n} \frac{|\langle m^{(0)} | \hat{H}' | n^{(0)} \rangle|^2}{E_n^{(0)} - E_m^{(0)}}}
-$$
+```
 
 **What this means:** Second-order corrections are always negative for the ground state (all denominators are negative) and typically positive for excited states. States are pushed apart by perturbations.
 
@@ -76,9 +76,9 @@ When multiple unperturbed states share the same energy, the non-degenerate formu
 
 **Method:** Within the degenerate subspace, diagonalize the matrix:
 
-$$
+```math
 W_{ij} = \langle i^{(0)} | \hat{H}' | j^{(0)} \rangle
-$$
+```
 
 The eigenvalues of $W$ give the first-order energy corrections. The eigenvectors give the correct zeroth-order states.
 
@@ -96,9 +96,9 @@ Linear Stark splitting: $\Delta E = \pm 3eEa_0$
 
 A system in eigenstate of $\hat{H}_0$ is subjected to a time-dependent perturbation $\hat{H}'(t)$.
 
-$$
+```math
 \hat{H}(t) = \hat{H}_0 + \hat{H}'(t)
-$$
+```
 
 We want the transition probability to other states.
 
@@ -106,25 +106,25 @@ We want the transition probability to other states.
 
 Starting in state $|i\rangle$ at $t = 0$, the amplitude to be in state $|f\rangle$ at time $t$:
 
-$$
+```math
 c_f(t) = -\frac{i}{\hbar}\int_0^t \langle f | \hat{H}'(t') | i \rangle e^{i\omega_{fi}t'} dt'
-$$
+```
 
 where $\omega_{fi} = (E_f - E_i)/\hbar$.
 
 ### Transition Probability
 
-$$
+```math
 P_{i \to f}(t) = |c_f(t)|^2
-$$
+```
 
 ### Sinusoidal Perturbation
 
 For $\hat{H}'(t) = \hat{V}e^{-i\omega t} + \hat{V}^\dagger e^{i\omega t}$:
 
-$$
+```math
 c_f(t) = -\frac{i}{\hbar}V_{fi}\frac{e^{i(\omega_{fi} - \omega)t} - 1}{\omega_{fi} - \omega}
-$$
+```
 
 The probability is sharply peaked when $\omega \approx \omega_{fi}$—resonance.
 
@@ -134,9 +134,9 @@ The probability is sharply peaked when $\omega \approx \omega_{fi}$—resonance.
 
 For a perturbation turned on at $t = 0$, the transition rate to a continuum of final states:
 
-$$
+```math
 \boxed{\Gamma_{i \to f} = \frac{2\pi}{\hbar}|\langle f | \hat{H}' | i \rangle|^2 \rho(E_f)}
-$$
+```
 
 where $\rho(E_f)$ is the density of final states at energy $E_f = E_i$ (energy conservation).
 
@@ -169,9 +169,9 @@ For electric dipole transitions ($\hat{H}' \propto \mathbf{r}$):
 
 For any trial wave function $|\psi_{\text{trial}}\rangle$:
 
-$$
+```math
 \boxed{E_{\text{ground}} \leq \frac{\langle \psi_{\text{trial}} | \hat{H} | \psi_{\text{trial}} \rangle}{\langle \psi_{\text{trial}} | \psi_{\text{trial}} \rangle}}
-$$
+```
 
 The expectation value of $\hat{H}$ in any state is an upper bound to the ground state energy.
 
@@ -198,9 +198,9 @@ Common choices:
 
 For slowly varying potentials, the wave function is approximately:
 
-$$
+```math
 \psi(x) \approx \frac{C}{\sqrt{p(x)}} \exp\left(\pm\frac{i}{\hbar}\int p(x) dx\right)
-$$
+```
 
 where $p(x) = \sqrt{2m(E - V(x))}$ is the classical momentum.
 
@@ -208,9 +208,9 @@ where $p(x) = \sqrt{2m(E - V(x))}$ is the classical momentum.
 
 Valid when the wavelength changes slowly:
 
-$$
+```math
 \left|\frac{d\lambda}{dx}\right| \ll 1 \quad \Rightarrow \quad \left|\frac{\hbar}{p^2}\frac{dp}{dx}\right| \ll 1
-$$
+```
 
 Breaks down at classical turning points where $E = V(x)$.
 
@@ -218,17 +218,17 @@ Breaks down at classical turning points where $E = V(x)$.
 
 At turning points, WKB solutions in classically allowed and forbidden regions must be matched using Airy functions:
 
-$$
+```math
 \frac{1}{\sqrt{|p|}}\exp\left(-\frac{1}{\hbar}\int |p| dx\right) \leftrightarrow \frac{2}{\sqrt{p}}\cos\left(\frac{1}{\hbar}\int p\, dx - \frac{\pi}{4}\right)
-$$
+```
 
 ### WKB Quantization
 
 For bound states between turning points $x_1$ and $x_2$:
 
-$$
+```math
 \boxed{\int_{x_1}^{x_2} p(x) dx = \left(n + \frac{1}{2}\right)\pi\hbar}
-$$
+```
 
 This reproduces exact results for harmonic oscillator and gives good approximations for others.
 
@@ -236,9 +236,9 @@ This reproduces exact results for harmonic oscillator and gives good approximati
 
 The tunneling probability through a barrier:
 
-$$
+```math
 T \approx \exp\left(-\frac{2}{\hbar}\int_{x_1}^{x_2} |p(x)| dx\right)
-$$
+```
 
 where the integral is over the classically forbidden region.
 
@@ -250,9 +250,9 @@ When a perturbation is applied instantaneously (faster than any system timescale
 
 The wave function doesn't change; it's suddenly an eigenstate superposition of the new Hamiltonian.
 
-$$
+```math
 P_{n \to m} = |\langle m_{\text{new}} | n_{\text{old}} \rangle|^2
-$$
+```
 
 ### Adiabatic Approximation
 
@@ -260,17 +260,17 @@ When a perturbation is applied infinitely slowly:
 
 The system remains in the corresponding eigenstate of the instantaneous Hamiltonian.
 
-$$
+```math
 |n(t)\rangle = e^{i\gamma_n(t)}|n(t)\rangle_{\text{inst}}
-$$
+```
 
 where $\gamma_n$ is the **geometric (Berry) phase**.
 
 ### Adiabatic Condition
 
-$$
+```math
 \left|\frac{\langle m | \dot{\hat{H}} | n \rangle}{(E_m - E_n)^2}\right| \ll 1
-$$
+```
 
 The rate of change must be small compared to energy gaps.
 

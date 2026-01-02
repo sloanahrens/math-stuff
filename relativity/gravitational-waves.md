@@ -14,9 +14,9 @@ Just as accelerating charges produce electromagnetic waves, accelerating masses 
 
 For weak gravitational fields, write the metric as flat spacetime plus a small perturbation:
 
-$$
+```math
 g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}, \qquad |h_{\mu\nu}| \ll 1
-$$
+```
 
 where $\eta_{\mu\nu} = \text{diag}(-1, 1, 1, 1)$ is the Minkowski metric.
 
@@ -26,9 +26,9 @@ where $\eta_{\mu\nu} = \text{diag}(-1, 1, 1, 1)$ is the Minkowski metric.
 
 Define the **trace-reversed** perturbation:
 
-$$
+```math
 \bar{h}_{\mu\nu} = h_{\mu\nu} - \frac{1}{2} \eta_{\mu\nu} h
-$$
+```
 
 where $h = \eta^{\mu\nu} h_{\mu\nu}$ is the trace.
 
@@ -38,15 +38,15 @@ where $h = \eta^{\mu\nu} h_{\mu\nu}$ is the trace.
 
 The perturbation $h_{\mu\nu}$ isn't unique—we can make coordinate changes (gauge transformations):
 
-$$
+```math
 h_{\mu\nu} \to h_{\mu\nu} - \partial_\mu \xi_\nu - \partial_\nu \xi_\mu
-$$
+```
 
 We choose the **Lorenz gauge** (also called de Donder or harmonic gauge):
 
-$$
+```math
 \partial^\mu \bar{h}_{\mu\nu} = 0
-$$
+```
 
 **What this means:** Just as in electromagnetism we can choose $\partial_\mu A^\mu = 0$, in gravity we can fix the gauge to simplify the equations. This is the gravitational analog of Lorenz gauge.
 
@@ -54,9 +54,9 @@ $$
 
 In Lorenz gauge, the linearized Einstein equations become:
 
-$$
+```math
 \boxed{\Box \bar{h}_{\mu\nu} = -16\pi T_{\mu\nu}}
-$$
+```
 
 where $\Box = -\partial_t^2 + \nabla^2$ is the d'Alembertian (wave operator).
 
@@ -66,15 +66,15 @@ where $\Box = -\partial_t^2 + \nabla^2$ is the d'Alembertian (wave operator).
 
 In vacuum:
 
-$$
+```math
 \Box \bar{h}_{\mu\nu} = 0
-$$
+```
 
 Plane wave solutions:
 
-$$
+```math
 \bar{h}_{\mu\nu} = A_{\mu\nu} e^{ik_\alpha x^\alpha}
-$$
+```
 
 where $k^\mu$ is the wave 4-vector satisfying $k_\mu k^\mu = 0$ (null—waves travel at light speed).
 
@@ -82,9 +82,9 @@ where $k^\mu$ is the wave 4-vector satisfying $k_\mu k^\mu = 0$ (null—waves tr
 
 We can further restrict the gauge to **transverse-traceless (TT) gauge**:
 
-$$
+```math
 h^{TT}_{0\mu} = 0, \qquad h^{TT}_{ii} = 0, \qquad \partial^j h^{TT}_{ij} = 0
-$$
+```
 
 **What this means:**
 - $h_{0\mu} = 0$: No time components (purely spatial)
@@ -97,23 +97,23 @@ This eliminates all gauge freedom, leaving only the physical degrees of freedom.
 
 For a wave traveling in the $z$-direction, the TT perturbation has only two independent components:
 
-$$
+```math
 h^{TT}_{ij} = \begin{pmatrix} h_+ & h_\times & 0 \\ h_\times & -h_+ & 0 \\ 0 & 0 & 0 \end{pmatrix} \cos(\omega t - kz)
-$$
+```
 
 ### Plus Polarization ($h_+$)
 
-$$
+```math
 h^+_{ij} = h_+ \begin{pmatrix} 1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 0 \end{pmatrix}
-$$
+```
 
 **What this means:** Alternately stretches space in the $x$-direction while compressing in $y$, then vice versa. A circle of test particles becomes an ellipse oscillating between horizontal and vertical orientations.
 
 ### Cross Polarization ($h_\times$)
 
-$$
+```math
 h^\times_{ij} = h_\times \begin{pmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}
-$$
+```
 
 **What this means:** Same pattern but rotated 45°. A circle becomes an ellipse oscillating along the diagonal directions.
 
@@ -121,9 +121,9 @@ $$
 
 The two polarizations have **helicity** $\pm 2$:
 
-$$
+```math
 h_R = h_+ + i h_\times, \qquad h_L = h_+ - i h_\times
-$$
+```
 
 **What this means:** Gravitational waves are spin-2 (helicity ±2), while electromagnetic waves are spin-1 (helicity ±1). This is why gravitons, if they exist, are spin-2 particles.
 
@@ -133,9 +133,9 @@ $$
 
 Two nearby freely-falling particles separated by $\xi^i$ experience relative acceleration:
 
-$$
+```math
 \frac{d^2 \xi^i}{dt^2} = \frac{1}{2} \frac{\partial^2 h^{TT}_{ij}}{\partial t^2} \xi^j
-$$
+```
 
 **What this means:** Gravitational waves stretch and squeeze space. The relative distance between test particles oscillates as the wave passes.
 
@@ -143,9 +143,9 @@ $$
 
 The **strain** $h$ is the fractional change in distance:
 
-$$
+```math
 h = \frac{\Delta L}{L}
-$$
+```
 
 For LIGO's first detection (GW150914): $h \sim 10^{-21}$.
 
@@ -157,9 +157,9 @@ For LIGO's first detection (GW150914): $h \sim 10^{-21}$.
 
 Gravitational waves carry energy. The **stress-energy pseudotensor** (averaged over wavelengths):
 
-$$
+```math
 t_{\mu\nu} = \frac{1}{32\pi} \langle \partial_\mu h^{TT}_{ij} \partial_\nu h^{TT}_{ij} \rangle
-$$
+```
 
 **What this means:** "Pseudotensor" because it's not gauge-invariant locally—but the total energy radiated is well-defined. This is a subtle point unique to gravity.
 
@@ -167,9 +167,9 @@ $$
 
 The energy flux (power per unit area) for a wave traveling in the $z$-direction:
 
-$$
+```math
 F = \frac{1}{16\pi} \langle \dot{h}_+^2 + \dot{h}_\times^2 \rangle
-$$
+```
 
 **What this means:** The energy carried by gravitational waves depends on the square of the time derivative of the strain, just as electromagnetic energy depends on $E^2 + B^2$.
 
@@ -179,15 +179,15 @@ $$
 
 The dominant gravitational wave emission comes from the time-varying **mass quadrupole**:
 
-$$
+```math
 Q_{ij} = \int \rho \left( x_i x_j - \frac{1}{3} \delta_{ij} r^2 \right) d^3x
-$$
+```
 
 The radiated power (in natural units):
 
-$$
+```math
 \boxed{P = \frac{1}{5} \langle \dddot{Q}_{ij} \dddot{Q}_{ij} \rangle}
-$$
+```
 
 **What this means:** You need a changing quadrupole moment to radiate gravitational waves. A spinning symmetric sphere doesn't radiate—but two orbiting masses do.
 
@@ -205,9 +205,9 @@ $$
 
 For two masses $m_1, m_2$ in circular orbit with separation $r$ and orbital angular frequency $\omega$:
 
-$$
+```math
 P = \frac{32}{5} \frac{\mu^2 M^3}{r^5}
-$$
+```
 
 where $\mu = m_1 m_2 / M$ is the reduced mass and $M = m_1 + m_2$ is the total mass.
 
@@ -217,9 +217,9 @@ where $\mu = m_1 m_2 / M$ is the reduced mass and $M = m_1 + m_2$ is the total m
 
 To restore factors of $G$ and $c$ (see [natural units](../math-foundations/natural-units.md)):
 
-$$
+```math
 P = \frac{32}{5} \frac{G^4}{c^5} \frac{\mu^2 M^3}{r^5}
-$$
+```
 
 The factor $G^4/c^5 \approx 3.6 \times 10^{-53}$ W·m$^5$/kg$^5$ shows why gravitational waves are so weak.
 
@@ -229,13 +229,13 @@ The factor $G^4/c^5 \approx 3.6 \times 10^{-53}$ W·m$^5$/kg$^5$ shows why gravi
 
 As a binary inspirals, both amplitude and frequency increase—producing a characteristic **chirp**:
 
-$$
+```math
 f(t) \propto (t_c - t)^{-3/8}
-$$
+```
 
-$$
+```math
 h(t) \propto (t_c - t)^{-1/4}
-$$
+```
 
 where $t_c$ is the coalescence time.
 
@@ -245,9 +245,9 @@ where $t_c$ is the coalescence time.
 
 The combination that determines the waveform during inspiral:
 
-$$
+```math
 \mathcal{M} = \frac{(m_1 m_2)^{3/5}}{(m_1 + m_2)^{1/5}} = \mu^{3/5} M^{2/5}
-$$
+```
 
 **What this means:** The chirp mass is the best-measured parameter from gravitational wave observations. Individual masses $m_1, m_2$ are harder to determine.
 
@@ -255,9 +255,9 @@ $$
 
 The simple quadrupole formula breaks down near merger. Corrections are organized as an expansion in $v/c$:
 
-$$
+```math
 h = h_{\text{Newtonian}} \left( 1 + \text{1PN} + \text{1.5PN} + \text{2PN} + \cdots \right)
-$$
+```
 
 where nPN means corrections of order $(v/c)^{2n}$.
 

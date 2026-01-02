@@ -10,22 +10,22 @@ Prerequisites: [thermodynamics](thermodynamics.md), [statistical mechanics](stat
 
 Clausius (1865) defined entropy change as:
 
-$$
+```math
 dS = \frac{\delta Q_{\text{rev}}}{T}
-$$
+```
 
 For a reversible process, the total entropy change is:
 
-$$
+```math
 \Delta S = \int \frac{\delta Q_{\text{rev}}}{T}
-$$
+```
 
 **What this means:** Entropy measures the "dispersal" of energy. When heat flows from hot to cold, total entropy increases.
 
 **The Clausius inequality:** For any cyclic process:
-$$
+```math
 \oint \frac{\delta Q}{T} \leq 0
-$$
+```
 
 with equality only for reversible cycles.
 
@@ -33,9 +33,9 @@ with equality only for reversible cycles.
 
 Boltzmann (1877) provided the microscopic interpretation:
 
-$$
+```math
 \boxed{S = k_B \ln W}
-$$
+```
 
 where:
 - $k_B = 1.38 \times 10^{-23}$ J/K is Boltzmann's constant
@@ -49,16 +49,16 @@ where:
 
 Gibbs generalized to arbitrary probability distributions:
 
-$$
+```math
 \boxed{S = -k_B \sum_i p_i \ln p_i}
-$$
+```
 
 where $p_i$ is the probability of microstate $i$.
 
 **What this means:** This reduces to Boltzmann's formula when all $W$ microstates are equally probable ($p_i = 1/W$):
-$$
+```math
 S = -k_B \sum_{i=1}^W \frac{1}{W} \ln \frac{1}{W} = k_B \ln W
-$$
+```
 
 ## Shannon Entropy: Information Theory
 
@@ -66,9 +66,9 @@ $$
 
 Shannon (1948) defined information entropy:
 
-$$
+```math
 \boxed{H = -\sum_i p_i \log_2 p_i}
-$$
+```
 
 measured in **bits**.
 
@@ -77,30 +77,30 @@ measured in **bits**.
 ### Key Properties
 
 **Maximum entropy:** $H$ is maximized when all outcomes are equally likely:
-$$
+```math
 H_{\max} = \log_2 N
-$$
+```
 
 for $N$ outcomes.
 
 **Zero entropy:** $H = 0$ when one outcome has probability 1 (complete certainty).
 
 **Additivity:** For independent systems:
-$$
+```math
 H(A, B) = H(A) + H(B)
-$$
+```
 
 ### Examples
 
 **Fair coin:** $p_H = p_T = 1/2$
-$$
+```math
 H = -\frac{1}{2}\log_2\frac{1}{2} - \frac{1}{2}\log_2\frac{1}{2} = 1 \text{ bit}
-$$
+```
 
 **Biased coin:** $p_H = 0.9$, $p_T = 0.1$
-$$
+```math
 H = -0.9\log_2(0.9) - 0.1\log_2(0.1) \approx 0.47 \text{ bits}
-$$
+```
 
 **What this means:** A biased coin carries less uncertainty—you can often guess correctly.
 
@@ -118,14 +118,14 @@ Boltzmann and Shannon entropy are mathematically identical:
 | Natural log | Log base 2 |
 
 **The conversion:**
-$$
+```math
 S = k_B \ln(2) \cdot H
-$$
+```
 
 or numerically:
-$$
+```math
 1 \text{ bit} = k_B \ln 2 \approx 10^{-23} \text{ J/K}
-$$
+```
 
 ### Why Are They the Same?
 
@@ -137,9 +137,9 @@ Both measure the same thing: **missing information** about the microstate.
 
 **The Landauer principle** makes this connection physical:
 
-$$
+```math
 \boxed{\text{Erasing 1 bit of information requires at least } k_B T \ln 2 \text{ of energy}}
-$$
+```
 
 **What this means:** Information is physical. Deleting data generates heat. This resolves Maxwell's demon paradox.
 
@@ -154,23 +154,23 @@ $$
 ### The Microcanonical Ensemble
 
 For an isolated system with fixed energy $E$:
-$$
+```math
 S(E) = k_B \ln \Omega(E)
-$$
+```
 
 where $\Omega(E)$ is the number of states with energy $E$.
 
 Temperature emerges from:
-$$
+```math
 \frac{1}{T} = \frac{\partial S}{\partial E}
-$$
+```
 
 ### The Canonical Ensemble
 
 For a system at temperature $T$:
-$$
+```math
 S = -k_B \sum_i p_i \ln p_i = \frac{\langle E \rangle - F}{T}
-$$
+```
 
 where $F = -k_B T \ln Z$ is the Helmholtz free energy.
 
@@ -179,9 +179,9 @@ where $F = -k_B T \ln Z$ is the Helmholtz free energy.
 The equilibrium distribution **maximizes entropy** subject to constraints.
 
 **Example:** Maximizing $S = -k_B \sum p_i \ln p_i$ with constraint $\sum p_i E_i = \langle E \rangle$ gives the Boltzmann distribution:
-$$
+```math
 p_i = \frac{e^{-E_i/k_B T}}{Z}
-$$
+```
 
 **What this means:** Equilibrium isn't special—it's just the overwhelmingly most probable state. The second law follows from statistics, not dynamics.
 
@@ -194,9 +194,9 @@ Consider a gas confined to one half of a box. When the partition is removed:
 - Final state: $W_f = $ (ways to fit $N$ molecules in the whole box)
 
 The ratio:
-$$
+```math
 \frac{W_f}{W_i} = 2^N
-$$
+```
 
 For $N \sim 10^{23}$, this is $2^{10^{23}}$—an incomprehensibly huge number.
 
@@ -214,9 +214,9 @@ For $N \sim 10^{23}$, this is $2^{10^{23}}$—an incomprehensibly huge number.
 
 The "distance" between two probability distributions:
 
-$$
+```math
 D_{KL}(P \| Q) = \sum_i p_i \log \frac{p_i}{q_i}
-$$
+```
 
 **Properties:**
 - $D_{KL} \geq 0$ (Gibbs' inequality)
@@ -231,41 +231,41 @@ $$
 
 ### Thermodynamic Entropy
 
-$$
+```math
 S = \int \frac{\delta Q_{\text{rev}}}{T}
-$$
+```
 
 Measures heat dispersal. Units: J/K.
 
 ### Statistical Entropy
 
-$$
+```math
 S = -k_B \sum p_i \ln p_i
-$$
+```
 
 Counts microstates. Units: J/K.
 
 ### Information Entropy
 
-$$
+```math
 H = -\sum p_i \log_2 p_i
-$$
+```
 
 Measures uncertainty. Units: bits.
 
 ### Von Neumann Entropy (Quantum)
 
-$$
+```math
 S = -\text{Tr}(\rho \ln \rho)
-$$
+```
 
 where $\rho$ is the density matrix. Measures quantum uncertainty and entanglement. See [quantum mechanics](../quantum-mechanics/quantum-mechanics.md).
 
 ### Black Hole Entropy
 
-$$
+```math
 S_{BH} = \frac{k_B c^3 A}{4 G \hbar}
-$$
+```
 
 Proportional to horizon area, not volume. The largest entropy objects in the universe. See [black hole thermodynamics](../relativity/black-hole-thermodynamics.md).
 
@@ -275,18 +275,18 @@ Proportional to horizon area, not volume. The largest entropy objects in the uni
 
 Shannon entropy sets the fundamental limit:
 
-$$
+```math
 \text{Average bits per symbol} \geq H
-$$
+```
 
 You cannot compress below the entropy. See [data compression](../information-theory/data-compression.md).
 
 ### Machine Learning
 
 **Cross-entropy loss:**
-$$
+```math
 L = -\sum_i y_i \log \hat{y}_i
-$$
+```
 
 Used to train neural networks. Minimizing cross-entropy is equivalent to minimizing KL divergence from the true distribution.
 

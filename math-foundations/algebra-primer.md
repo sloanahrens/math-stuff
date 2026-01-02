@@ -52,9 +52,9 @@ For any base $a > 0$ and exponents $m$, $n$:
 
 The **logarithm** is the inverse of exponentiation:
 
-$$
+```math
 \log_a(x) = y \quad \Longleftrightarrow \quad a^y = x
-$$
+```
 
 **What this means:** "What power of $a$ gives $x$?" The answer is $\log_a(x)$.
 
@@ -86,9 +86,9 @@ $$
 
 A **polynomial** in $x$ is a sum of terms $a_n x^n$:
 
-$$
+```math
 p(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
-$$
+```
 
 The **degree** is the highest power with a nonzero coefficient.
 
@@ -108,9 +108,9 @@ The **degree** is the highest power with a nonzero coefficient.
 
 For $ax^2 + bx + c = 0$:
 
-$$
+```math
 \boxed{x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}}
-$$
+```
 
 The **discriminant** $\Delta = b^2 - 4ac$ determines the nature of roots:
 
@@ -126,9 +126,9 @@ The **discriminant** $\Delta = b^2 - 4ac$ determines the nature of roots:
 
 Any quadratic can be written as:
 
-$$
+```math
 ax^2 + bx + c = a\left(x + \frac{b}{2a}\right)^2 + \left(c - \frac{b^2}{4a}\right)
-$$
+```
 
 **What this means:** This reveals the vertex of the parabola and is essential for evaluating [Gaussian integrals](gaussian-integral.md) with linear terms.
 
@@ -138,20 +138,20 @@ $$
 
 For $ax + b = 0$:
 
-$$
+```math
 x = -\frac{b}{a}
-$$
+```
 
 ### Systems of Linear Equations
 
 For two equations in two unknowns:
 
-$$
+```math
 \begin{cases}
 a_1 x + b_1 y = c_1 \\
 a_2 x + b_2 y = c_2
 \end{cases}
-$$
+```
 
 **Methods:**
 - **Substitution:** Solve one equation for one variable, substitute into the other
@@ -191,9 +191,9 @@ A **function** $f: A \to B$ assigns to each input $x \in A$ exactly one output $
 
 If $f$ is one-to-one (each output comes from exactly one input), the **inverse** $f^{-1}$ satisfies:
 
-$$
+```math
 f(f^{-1}(x)) = x \quad \text{and} \quad f^{-1}(f(x)) = x
-$$
+```
 
 **What this means:** The inverse "undoes" the function. For example, $\ln$ and $e^x$ are inverses: $\ln(e^x) = x$ and $e^{\ln x} = x$.
 
@@ -219,9 +219,9 @@ $$
 
 The **absolute value** $|x|$ is the distance from zero:
 
-$$
+```math
 |x| = \begin{cases} x & \text{if } x \geq 0 \\ -x & \text{if } x < 0 \end{cases}
-$$
+```
 
 **Key properties:**
 
@@ -236,13 +236,13 @@ $$
 
 ### Solving Absolute Value Inequalities
 
-$$
+```math
 |x| < a \quad \Longleftrightarrow \quad -a < x < a
-$$
+```
 
-$$
+```math
 |x| > a \quad \Longleftrightarrow \quad x < -a \text{ or } x > a
-$$
+```
 
 ## Complex Numbers
 
@@ -250,9 +250,9 @@ $$
 
 Define $i$ by:
 
-$$
+```math
 i^2 = -1
-$$
+```
 
 A **complex number** has the form $z = a + bi$ where $a$ (real part) and $b$ (imaginary part) are real.
 
@@ -270,9 +270,9 @@ A **complex number** has the form $z = a + bi$ where $a$ (real part) and $b$ (im
 
 ### Euler's Formula
 
-$$
+```math
 \boxed{e^{i\theta} = \cos\theta + i\sin\theta}
-$$
+```
 
 This connects exponentials to [trigonometry](trigonometry-primer.md). See [Euler's formula](euler-formula.md) for derivations and applications.
 
@@ -282,9 +282,9 @@ This connects exponentials to [trigonometry](trigonometry-primer.md). See [Euler
 
 Any complex number can be written as:
 
-$$
+```math
 z = re^{i\theta} = r(\cos\theta + i\sin\theta)
-$$
+```
 
 where $r = |z|$ is the modulus and $\theta = \arg(z)$ is the argument (angle).
 
@@ -294,9 +294,9 @@ where $r = |z|$ is the modulus and $\theta = \arg(z)$ is the argument (angle).
 
 ### Sigma Notation
 
-$$
+```math
 \sum_{k=1}^{n} a_k = a_1 + a_2 + \cdots + a_n
-$$
+```
 
 ### Common Sums
 
@@ -309,46 +309,46 @@ $$
 
 ### Product Notation
 
-$$
+```math
 \prod_{k=1}^{n} a_k = a_1 \cdot a_2 \cdots a_n
-$$
+```
 
 **Factorial:**
-$$
+```math
 n! = \prod_{k=1}^{n} k = 1 \cdot 2 \cdot 3 \cdots n
-$$
+```
 
 ## Binomial Theorem
 
 ### The Binomial Coefficient
 
-$$
+```math
 \binom{n}{k} = \frac{n!}{k!(n-k)!}
-$$
+```
 
 Read as "$n$ choose $k$"—the number of ways to choose $k$ items from $n$.
 
 ### The Theorem
 
-$$
+```math
 (a + b)^n = \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k
-$$
+```
 
 **What this means:** This expands powers of sums. Pascal's triangle gives the coefficients: each entry is the sum of the two above it.
 
 ### First Few Expansions
 
-$$
+```math
 (a+b)^2 = a^2 + 2ab + b^2
-$$
+```
 
-$$
+```math
 (a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3
-$$
+```
 
-$$
+```math
 (a+b)^4 = a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4
-$$
+```
 
 ## Summary
 

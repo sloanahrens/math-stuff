@@ -17,9 +17,9 @@ In [Lagrangian mechanics](../classical-mechanics/lagrangian-mechanics.md), equat
 
 The simplest action satisfying these requirements is:
 
-$$
+```math
 \boxed{S_{EH} = \frac{1}{16\pi} \int R \sqrt{-g} \, d^4x}
-$$
+```
 
 where:
 - $R = g^{\mu\nu} R_{\mu\nu}$ is the Ricci scalar
@@ -32,9 +32,9 @@ where:
 
 Including matter:
 
-$$
+```math
 S = S_{EH} + S_M = \frac{1}{16\pi} \int R \sqrt{-g} \, d^4x + S_M[g_{\mu\nu}, \psi]
-$$
+```
 
 where $S_M$ is the matter action depending on the metric and matter fields $\psi$.
 
@@ -45,9 +45,9 @@ where $S_M$ is the matter action depending on the metric and matter fields $\psi
 We vary the metric: $g_{\mu\nu} \to g_{\mu\nu} + \delta g_{\mu\nu}$
 
 The field equations come from requiring:
-$$
+```math
 \delta S = 0
-$$
+```
 
 for arbitrary variations $\delta g_{\mu\nu}$ that vanish at the boundary.
 
@@ -58,66 +58,66 @@ Before tackling the full action, we establish key identities.
 **Inverse metric:**
 
 From $g^{\mu\rho} g_{\rho\nu} = \delta^\mu_\nu$, varying both sides:
-$$
+```math
 \delta g^{\mu\rho} \cdot g_{\rho\nu} + g^{\mu\rho} \cdot \delta g_{\rho\nu} = 0
-$$
+```
 
 Solving:
-$$
+```math
 \boxed{\delta g^{\mu\nu} = -g^{\mu\rho} g^{\nu\sigma} \delta g_{\rho\sigma}}
-$$
+```
 
 **Metric determinant:**
 
 Using the identity $\ln(\det A) = \text{Tr}(\ln A)$, we have:
-$$
+```math
 \delta g = g \cdot g^{\mu\nu} \delta g_{\mu\nu}
-$$
+```
 
 Therefore:
-$$
+```math
 \boxed{\delta \sqrt{-g} = \frac{1}{2} \sqrt{-g} \, g^{\mu\nu} \delta g_{\mu\nu} = -\frac{1}{2} \sqrt{-g} \, g_{\mu\nu} \delta g^{\mu\nu}}
-$$
+```
 
 ### Variation of the Ricci Scalar
 
 The Ricci scalar is $R = g^{\mu\nu} R_{\mu\nu}$, so:
-$$
+```math
 \delta R = \delta g^{\mu\nu} \cdot R_{\mu\nu} + g^{\mu\nu} \cdot \delta R_{\mu\nu}
-$$
+```
 
 The first term is straightforward. For the second term, we need $\delta R_{\mu\nu}$.
 
 ### The Palatini Identity
 
 The variation of the Riemann tensor gives:
-$$
+```math
 \delta R^\rho{}_{\sigma\mu\nu} = \nabla_\mu (\delta \Gamma^\rho_{\nu\sigma}) - \nabla_\nu (\delta \Gamma^\rho_{\mu\sigma})
-$$
+```
 
 Contracting:
-$$
+```math
 \delta R_{\mu\nu} = \nabla_\rho (\delta \Gamma^\rho_{\nu\mu}) - \nabla_\nu (\delta \Gamma^\rho_{\rho\mu})
-$$
+```
 
 Therefore:
-$$
+```math
 g^{\mu\nu} \delta R_{\mu\nu} = \nabla_\rho \left( g^{\mu\nu} \delta \Gamma^\rho_{\nu\mu} - g^{\rho\mu} \delta \Gamma^\sigma_{\sigma\mu} \right) \equiv \nabla_\rho V^\rho
-$$
+```
 
 This is a total divergence!
 
 ### Variation of the Christoffel Symbols
 
 We need $\delta \Gamma^\rho_{\mu\nu}$ in terms of $\delta g_{\mu\nu}$. From:
-$$
+```math
 \Gamma^\rho_{\mu\nu} = \frac{1}{2} g^{\rho\sigma} (\partial_\mu g_{\nu\sigma} + \partial_\nu g_{\mu\sigma} - \partial_\sigma g_{\mu\nu})
-$$
+```
 
 The variation is:
-$$
+```math
 \delta \Gamma^\rho_{\mu\nu} = \frac{1}{2} g^{\rho\sigma} (\nabla_\mu \delta g_{\nu\sigma} + \nabla_\nu \delta g_{\mu\sigma} - \nabla_\sigma \delta g_{\mu\nu})
-$$
+```
 
 Note: $\delta \Gamma^\rho_{\mu\nu}$ is a tensor (unlike $\Gamma^\rho_{\mu\nu}$ itself).
 
@@ -125,37 +125,37 @@ Note: $\delta \Gamma^\rho_{\mu\nu}$ is a tensor (unlike $\Gamma^\rho_{\mu\nu}$ i
 
 The variation of $S_{EH}$ is:
 
-$$
+```math
 \delta S_{EH} = \frac{1}{16\pi} \int \left[ \delta(g^{\mu\nu}) R_{\mu\nu} \sqrt{-g} + g^{\mu\nu} \delta R_{\mu\nu} \sqrt{-g} + R \, \delta\sqrt{-g} \right] d^4x
-$$
+```
 
 **Term 1:**
-$$
+```math
 \delta g^{\mu\nu} \cdot R_{\mu\nu} \sqrt{-g} = -g^{\mu\rho} g^{\nu\sigma} \delta g_{\rho\sigma} \cdot R_{\mu\nu} \sqrt{-g} = -R^{\rho\sigma} \delta g_{\rho\sigma} \sqrt{-g}
-$$
+```
 
 **Term 2:**
-$$
+```math
 g^{\mu\nu} \delta R_{\mu\nu} \sqrt{-g} = \nabla_\rho V^\rho \sqrt{-g} = \partial_\rho (V^\rho \sqrt{-g})
-$$
+```
 
 This is a total derivative—it vanishes under the integral (boundary terms).
 
 **Term 3:**
-$$
+```math
 R \, \delta\sqrt{-g} = R \cdot \frac{1}{2}\sqrt{-g} \, g^{\mu\nu} \delta g_{\mu\nu} = \frac{1}{2} R g^{\mu\nu} \delta g_{\mu\nu} \sqrt{-g}
-$$
+```
 
 ### Combined Result
 
-$$
+```math
 \delta S_{EH} = \frac{1}{16\pi} \int \left( -R^{\mu\nu} + \frac{1}{2} g^{\mu\nu} R \right) \delta g_{\mu\nu} \sqrt{-g} \, d^4x
-$$
+```
 
 Equivalently:
-$$
+```math
 \delta S_{EH} = -\frac{1}{16\pi} \int G^{\mu\nu} \delta g_{\mu\nu} \sqrt{-g} \, d^4x
-$$
+```
 
 where $G^{\mu\nu} = R^{\mu\nu} - \frac{1}{2} g^{\mu\nu} R$ is the Einstein tensor.
 
@@ -165,22 +165,22 @@ where $G^{\mu\nu} = R^{\mu\nu} - \frac{1}{2} g^{\mu\nu} R$ is the Einstein tenso
 
 The stress-energy tensor is defined as:
 
-$$
+```math
 \boxed{T_{\mu\nu} = -\frac{2}{\sqrt{-g}} \frac{\delta S_M}{\delta g^{\mu\nu}}}
-$$
+```
 
 This definition ensures $T_{\mu\nu}$ is symmetric and covariantly conserved.
 
 ### Variation of the Matter Action
 
-$$
+```math
 \delta S_M = \int \frac{\delta S_M}{\delta g^{\mu\nu}} \delta g^{\mu\nu} \, d^4x = -\frac{1}{2} \int T_{\mu\nu} \delta g^{\mu\nu} \sqrt{-g} \, d^4x
-$$
+```
 
 Or equivalently:
-$$
+```math
 \delta S_M = \frac{1}{2} \int T^{\mu\nu} \delta g_{\mu\nu} \sqrt{-g} \, d^4x
-$$
+```
 
 ## Deriving the Field Equations
 
@@ -188,27 +188,27 @@ $$
 
 Setting $\delta S = \delta S_{EH} + \delta S_M = 0$:
 
-$$
+```math
 \int \left( -\frac{1}{16\pi} G^{\mu\nu} + \frac{1}{2} T^{\mu\nu} \right) \delta g_{\mu\nu} \sqrt{-g} \, d^4x = 0
-$$
+```
 
 Since this must hold for arbitrary $\delta g_{\mu\nu}$:
 
-$$
+```math
 -\frac{1}{16\pi} G^{\mu\nu} + \frac{1}{2} T^{\mu\nu} = 0
-$$
+```
 
 Therefore:
 
-$$
+```math
 \boxed{G_{\mu\nu} = 8\pi T_{\mu\nu}}
-$$
+```
 
 or explicitly:
 
-$$
+```math
 \boxed{R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R = 8\pi T_{\mu\nu}}
-$$
+```
 
 These are the **Einstein field equations**.
 
@@ -218,22 +218,22 @@ These are the **Einstein field equations**.
 
 Including a cosmological constant $\Lambda$:
 
-$$
+```math
 S = \frac{1}{16\pi} \int (R - 2\Lambda) \sqrt{-g} \, d^4x + S_M
-$$
+```
 
 ### Variation
 
 The variation of the $\Lambda$ term:
-$$
+```math
 \delta \int (-2\Lambda) \sqrt{-g} \, d^4x = \int (-2\Lambda) \cdot \frac{1}{2}\sqrt{-g} \, g^{\mu\nu} \delta g_{\mu\nu} \, d^4x = -\int \Lambda g^{\mu\nu} \delta g_{\mu\nu} \sqrt{-g} \, d^4x
-$$
+```
 
 ### Field Equations with $\Lambda$
 
-$$
+```math
 \boxed{G_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi T_{\mu\nu}}
-$$
+```
 
 ## Properties of the Einstein Tensor
 
@@ -244,27 +244,27 @@ $G_{\mu\nu} = G_{\nu\mu}$ (inherited from $R_{\mu\nu}$ and $g_{\mu\nu}$)
 ### The Contracted Bianchi Identity
 
 The Bianchi identity for the Riemann tensor:
-$$
+```math
 \nabla_\lambda R^\rho{}_{\sigma\mu\nu} + \nabla_\mu R^\rho{}_{\sigma\nu\lambda} + \nabla_\nu R^\rho{}_{\sigma\lambda\mu} = 0
-$$
+```
 
 Contracting $\rho = \mu$:
-$$
+```math
 \nabla_\lambda R_{\sigma\nu} - \nabla_\mu R^\mu{}_{\sigma\nu\lambda} + \nabla_\nu R_{\sigma\lambda} = 0
-$$
+```
 
 Contracting again with $g^{\sigma\lambda}$:
-$$
+```math
 \nabla_\lambda R^\lambda{}_\nu - \nabla_\mu R^\mu{}_\nu + \nabla_\nu R = 0
-$$
-$$
+```
+```math
 \nabla^\mu R_{\mu\nu} - \frac{1}{2} \nabla_\nu R = 0
-$$
+```
 
 Therefore:
-$$
+```math
 \boxed{\nabla_\mu G^{\mu\nu} = 0}
-$$
+```
 
 **What this means:** The Einstein tensor is automatically divergence-free. This is a geometric identity, not a consequence of the field equations. It's crucial for consistency.
 
@@ -272,9 +272,9 @@ $$
 
 From $G_{\mu\nu} = 8\pi T_{\mu\nu}$ and $\nabla_\mu G^{\mu\nu} = 0$:
 
-$$
+```math
 \boxed{\nabla_\mu T^{\mu\nu} = 0}
-$$
+```
 
 Energy-momentum conservation follows automatically from the field equations and the Bianchi identity.
 
@@ -283,28 +283,28 @@ Energy-momentum conservation follows automatically from the field equations and 
 ### Taking the Trace
 
 Contract $G_{\mu\nu} = 8\pi T_{\mu\nu}$ with $g^{\mu\nu}$:
-$$
+```math
 g^{\mu\nu} G_{\mu\nu} = 8\pi g^{\mu\nu} T_{\mu\nu}
-$$
+```
 
 The left side:
-$$
+```math
 g^{\mu\nu} \left( R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R \right) = R - \frac{1}{2} \cdot 4 \cdot R = R - 2R = -R
-$$
+```
 
 Therefore:
-$$
+```math
 R = -8\pi T
-$$
+```
 
 where $T = g^{\mu\nu} T_{\mu\nu}$ is the trace of the stress-energy tensor.
 
 ### Alternative Form
 
 Substituting back:
-$$
+```math
 R_{\mu\nu} = 8\pi \left( T_{\mu\nu} - \frac{1}{2} g_{\mu\nu} T \right)
-$$
+```
 
 This is useful for finding solutions.
 
@@ -313,9 +313,9 @@ This is useful for finding solutions.
 ### Vacuum Field Equations
 
 In vacuum, $T_{\mu\nu} = 0$, so:
-$$
+```math
 G_{\mu\nu} = 0 \quad \Rightarrow \quad R_{\mu\nu} = 0
-$$
+```
 
 **Note:** $R_{\mu\nu} = 0$ does NOT imply flat spacetime. The full Riemann tensor $R^\rho{}_{\sigma\mu\nu}$ can be nonzero while its contraction $R_{\mu\nu}$ vanishes.
 
@@ -337,28 +337,28 @@ For weak fields and slow motion:
 ### Linearized Equations
 
 To first order in $h_{\mu\nu}$:
-$$
+```math
 R_{\mu\nu} \approx \frac{1}{2} \left( \partial_\mu \partial_\rho h^\rho{}_\nu + \partial_\nu \partial_\rho h^\rho{}_\mu - \partial_\mu \partial_\nu h - \Box h_{\mu\nu} \right)
-$$
+```
 
 where $h = \eta^{\mu\nu} h_{\mu\nu}$ and $\Box = \eta^{\mu\nu} \partial_\mu \partial_\nu$.
 
 ### The 00 Component
 
 For static fields and $T_{00} = \rho$:
-$$
+```math
 R_{00} \approx -\frac{1}{2} \nabla^2 h_{00}
-$$
+```
 
 The field equation $R_{00} = 8\pi (T_{00} - \frac{1}{2} \eta_{00} T) = 4\pi \rho$ gives:
-$$
+```math
 \nabla^2 h_{00} = -8\pi \rho
-$$
+```
 
 With $h_{00} = -2\Phi$ (where $\Phi$ is the Newtonian potential):
-$$
+```math
 \boxed{\nabla^2 \Phi = 4\pi \rho}
-$$
+```
 
 This is Poisson's equation—Newtonian gravity.
 
@@ -381,9 +381,9 @@ These correspond to the two polarizations of gravitational waves. See [gravitati
 ### Gauge Freedom
 
 The metric transforms under coordinate changes $x^\mu \to x^\mu + \xi^\mu$:
-$$
+```math
 g_{\mu\nu} \to g_{\mu\nu} - \nabla_\mu \xi_\nu - \nabla_\nu \xi_\mu
-$$
+```
 
 Different choices of coordinates give physically equivalent solutions—this is gauge freedom.
 
@@ -392,9 +392,9 @@ Different choices of coordinates give physically equivalent solutions—this is 
 ### The Palatini Formalism
 
 Treat $g_{\mu\nu}$ and $\Gamma^\rho_{\mu\nu}$ as independent variables:
-$$
+```math
 S = \frac{1}{16\pi} \int g^{\mu\nu} R_{\mu\nu}(\Gamma) \sqrt{-g} \, d^4x
-$$
+```
 
 Varying with respect to $\Gamma$ gives the Christoffel symbol formula. Varying with respect to $g$ gives the Einstein equations. The result is the same as the metric formalism.
 

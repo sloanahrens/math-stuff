@@ -8,43 +8,43 @@ Angular momentum in quantum mechanics comes in two varieties: orbital (from moti
 
 In classical mechanics, angular momentum is $\mathbf{L} = \mathbf{r} \times \mathbf{p}$. In [quantum mechanics](quantum-mechanics.md), we promote this to operators:
 
-$$
+```math
 \hat{L}_i = \epsilon_{ijk} \hat{x}_j \hat{p}_k
-$$
+```
 
 or explicitly:
 
-$$
+```math
 \hat{L}_x = \hat{y}\hat{p}_z - \hat{z}\hat{p}_y, \quad \hat{L}_y = \hat{z}\hat{p}_x - \hat{x}\hat{p}_z, \quad \hat{L}_z = \hat{x}\hat{p}_y - \hat{y}\hat{p}_x
-$$
+```
 
 ### Commutation Relations
 
 Using $[\hat{x}_i, \hat{p}_j] = i\hbar\delta_{ij}$, we find:
 
-$$
+```math
 \boxed{[\hat{L}_i, \hat{L}_j] = i\hbar\epsilon_{ijk}\hat{L}_k}
-$$
+```
 
 or equivalently:
 
-$$
+```math
 [\hat{L}_x, \hat{L}_y] = i\hbar\hat{L}_z \quad \text{(and cyclic permutations)}
-$$
+```
 
 **What this means:** You cannot simultaneously know all three components of angular momentum. Measuring $L_x$ disturbs $L_y$ and $L_z$. This is not a limitation of measurement—it's how quantum angular momentum fundamentally works.
 
 ### The Total Angular Momentum Operator
 
-$$
+```math
 \hat{L}^2 = \hat{L}_x^2 + \hat{L}_y^2 + \hat{L}_z^2
-$$
+```
 
 This commutes with all components:
 
-$$
+```math
 [\hat{L}^2, \hat{L}_i] = 0
-$$
+```
 
 **What this means:** We can simultaneously know $L^2$ (the total angular momentum) and one component (conventionally $L_z$). These form a complete set of commuting observables for angular momentum.
 
@@ -52,13 +52,13 @@ $$
 
 The simultaneous eigenstates $|l, m\rangle$ satisfy:
 
-$$
+```math
 \boxed{\hat{L}^2 |l, m\rangle = \hbar^2 l(l+1) |l, m\rangle}
-$$
+```
 
-$$
+```math
 \boxed{\hat{L}_z |l, m\rangle = \hbar m |l, m\rangle}
-$$
+```
 
 where:
 - $l = 0, 1, 2, 3, \ldots$ (orbital quantum number)
@@ -70,21 +70,21 @@ where:
 
 Define raising and lowering operators:
 
-$$
+```math
 \hat{L}_+ = \hat{L}_x + i\hat{L}_y, \quad \hat{L}_- = \hat{L}_x - i\hat{L}_y
-$$
+```
 
 These satisfy:
 
-$$
+```math
 [\hat{L}_z, \hat{L}_\pm] = \pm\hbar\hat{L}_\pm, \quad [\hat{L}_+, \hat{L}_-] = 2\hbar\hat{L}_z
-$$
+```
 
 Acting on eigenstates:
 
-$$
+```math
 \hat{L}_\pm |l, m\rangle = \hbar\sqrt{l(l+1) - m(m\pm 1)} |l, m \pm 1\rangle
-$$
+```
 
 **What this means:** The ladder operators step between $m$ values while keeping $l$ fixed. They're zero at the ends ($m = \pm l$), which is why $m$ is bounded.
 
@@ -92,15 +92,15 @@ $$
 
 In position space, the eigenfunctions are the **spherical harmonics** $Y_l^m(\theta, \phi)$:
 
-$$
+```math
 \hat{L}^2 Y_l^m = \hbar^2 l(l+1) Y_l^m, \quad \hat{L}_z Y_l^m = \hbar m Y_l^m
-$$
+```
 
 The first few:
 
-$$
+```math
 Y_0^0 = \frac{1}{\sqrt{4\pi}}, \quad Y_1^0 = \sqrt{\frac{3}{4\pi}}\cos\theta, \quad Y_1^{\pm 1} = \mp\sqrt{\frac{3}{8\pi}}\sin\theta \, e^{\pm i\phi}
-$$
+```
 
 **What this means:** The spherical harmonics are the angular wave functions of particles with definite angular momentum. They appear everywhere—atomic orbitals, multipole expansions, gravitational waves.
 
@@ -110,17 +110,17 @@ $$
 
 Spin is angular momentum with no classical analog—it doesn't come from motion in space. The spin operators $\hat{S}_i$ satisfy the same algebra:
 
-$$
+```math
 [\hat{S}_i, \hat{S}_j] = i\hbar\epsilon_{ijk}\hat{S}_k
-$$
+```
 
 ### The Crucial Difference
 
 While orbital angular momentum requires integer $l$, spin allows **half-integer** values:
 
-$$
+```math
 s = 0, \frac{1}{2}, 1, \frac{3}{2}, 2, \ldots
-$$
+```
 
 **What this means:** Electrons, protons, and neutrons have spin $s = 1/2$. Photons have spin $s = 1$. The Higgs boson has spin $s = 0$. Half-integer spins are impossible for orbital motion—they're purely quantum.
 
@@ -128,24 +128,24 @@ $$
 
 For spin-1/2 particles (like electrons), the spin operators are:
 
-$$
+```math
 \hat{S}_i = \frac{\hbar}{2}\sigma_i
-$$
+```
 
 where $\sigma_i$ are the **Pauli matrices**:
 
-$$
+```math
 \sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \quad
 \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \quad
 \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}
-$$
+```
 
 The eigenstates of $\hat{S}_z$:
 
-$$
+```math
 |\uparrow\rangle = |+\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \quad
 |\downarrow\rangle = |-\rangle = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
-$$
+```
 
 with eigenvalues $\pm\hbar/2$.
 
@@ -153,32 +153,32 @@ with eigenvalues $\pm\hbar/2$.
 
 ### Properties of Pauli Matrices
 
-$$
+```math
 \sigma_i^2 = I, \quad \sigma_i\sigma_j = i\epsilon_{ijk}\sigma_k \quad (i \neq j)
-$$
+```
 
-$$
+```math
 \{\sigma_i, \sigma_j\} = 2\delta_{ij}I, \quad [\sigma_i, \sigma_j] = 2i\epsilon_{ijk}\sigma_k
-$$
+```
 
-$$
+```math
 \text{Tr}(\sigma_i) = 0, \quad \det(\sigma_i) = -1
-$$
+```
 
 ### Spin in Arbitrary Direction
 
 The operator for spin along direction $\hat{n} = (\sin\theta\cos\phi, \sin\theta\sin\phi, \cos\theta)$:
 
-$$
+```math
 \hat{S}_n = \hat{\mathbf{S}} \cdot \hat{n} = \frac{\hbar}{2}\begin{pmatrix} \cos\theta & \sin\theta \, e^{-i\phi} \\ \sin\theta \, e^{i\phi} & -\cos\theta \end{pmatrix}
-$$
+```
 
 Its eigenstates are:
 
-$$
+```math
 |+\rangle_n = \begin{pmatrix} \cos(\theta/2) \\ \sin(\theta/2) e^{i\phi} \end{pmatrix}, \quad
 |-\rangle_n = \begin{pmatrix} \sin(\theta/2) \\ -\cos(\theta/2) e^{i\phi} \end{pmatrix}
-$$
+```
 
 **What this means:** The probability of measuring spin-up along z when the particle is spin-up along $\hat{n}$ is $|\langle +|+\rangle_n|^2 = \cos^2(\theta/2)$.
 
@@ -188,9 +188,9 @@ $$
 
 The angular momentum operators generate rotations. A rotation by angle $\theta$ about axis $\hat{n}$ is:
 
-$$
+```math
 \hat{R}(\hat{n}, \theta) = e^{-i\theta \hat{n} \cdot \hat{\mathbf{J}}/\hbar}
-$$
+```
 
 where $\hat{\mathbf{J}}$ is the total angular momentum—see [Lie groups](../math-foundations/lie-groups.md).
 
@@ -212,15 +212,15 @@ Different values of $j$ correspond to different **representations** of the rotat
 
 For spin-1/2, a rotation by angle $\theta$ about $\hat{n}$:
 
-$$
+```math
 U(\hat{n}, \theta) = e^{-i\theta \hat{n} \cdot \boldsymbol{\sigma}/2} = \cos\frac{\theta}{2}I - i\sin\frac{\theta}{2}(\hat{n} \cdot \boldsymbol{\sigma})
-$$
+```
 
 **Critical result:** A rotation by $2\pi$ gives:
 
-$$
+```math
 U(\hat{n}, 2\pi) = -I
-$$
+```
 
 **What this means:** Rotating a spinor by 360° gives a minus sign—you need 720° to return to the original state. This is the mathematical origin of fermion statistics and is directly connected to the spin-statistics theorem.
 
@@ -232,23 +232,23 @@ Given two angular momenta $\mathbf{J}_1$ and $\mathbf{J}_2$ with quantum numbers
 
 ### Total Angular Momentum
 
-$$
+```math
 \hat{\mathbf{J}} = \hat{\mathbf{J}}_1 + \hat{\mathbf{J}}_2
-$$
+```
 
 The operators $\hat{J}^2$ and $\hat{J}_z$ commute with $\hat{J}_1^2$ and $\hat{J}_2^2$ (but not with $\hat{J}_{1z}$ or $\hat{J}_{2z}$).
 
 ### Allowed Values
 
-$$
+```math
 \boxed{j = |j_1 - j_2|, |j_1 - j_2| + 1, \ldots, j_1 + j_2 - 1, j_1 + j_2}
-$$
+```
 
 and for each $j$:
 
-$$
+```math
 m = -j, -j+1, \ldots, j-1, j
-$$
+```
 
 **What this means:** Two spin-1/2 particles can combine to give total spin $j = 0$ (singlet) or $j = 1$ (triplet). Two spin-1 particles can give $j = 0, 1, 2$.
 
@@ -256,17 +256,17 @@ $$
 
 The total number of states must be conserved:
 
-$$
+```math
 (2j_1 + 1)(2j_2 + 1) = \sum_{j=|j_1-j_2|}^{j_1+j_2}(2j+1)
-$$
+```
 
 ### Clebsch-Gordan Coefficients
 
 The coupled states $|j, m\rangle$ are related to uncoupled states $|j_1, m_1\rangle|j_2, m_2\rangle$ by:
 
-$$
+```math
 |j, m\rangle = \sum_{m_1, m_2} C_{j_1 m_1; j_2 m_2}^{j m} |j_1, m_1\rangle|j_2, m_2\rangle
-$$
+```
 
 where $C_{j_1 m_1; j_2 m_2}^{j m}$ are the **Clebsch-Gordan coefficients**.
 
@@ -274,29 +274,29 @@ where $C_{j_1 m_1; j_2 m_2}^{j m}$ are the **Clebsch-Gordan coefficients**.
 
 The Clebsch-Gordan coefficients vanish unless:
 
-$$
+```math
 m = m_1 + m_2, \quad |j_1 - j_2| \leq j \leq j_1 + j_2
-$$
+```
 
 ### Example: Two Spin-1/2 Particles
 
 The four uncoupled states combine into:
 
 **Triplet** ($j = 1$):
-$$
+```math
 |1, 1\rangle = |\uparrow\uparrow\rangle
-$$
-$$
+```
+```math
 |1, 0\rangle = \frac{1}{\sqrt{2}}(|\uparrow\downarrow\rangle + |\downarrow\uparrow\rangle)
-$$
-$$
+```
+```math
 |1, -1\rangle = |\downarrow\downarrow\rangle
-$$
+```
 
 **Singlet** ($j = 0$):
-$$
+```math
 |0, 0\rangle = \frac{1}{\sqrt{2}}(|\uparrow\downarrow\rangle - |\downarrow\uparrow\rangle)
-$$
+```
 
 **What this means:** The triplet is symmetric under exchange; the singlet is antisymmetric. This connects directly to the Pauli exclusion principle—identical fermions must be in the antisymmetric singlet if their spatial wave functions are the same.
 
@@ -306,9 +306,9 @@ $$
 
 In atoms, the electron's spin interacts with its orbital motion:
 
-$$
+```math
 \hat{H}_{SO} = \xi(r) \hat{\mathbf{L}} \cdot \hat{\mathbf{S}}
-$$
+```
 
 where $\xi(r) \propto \frac{1}{r}\frac{dV}{dr}$ depends on the central potential.
 
@@ -316,23 +316,23 @@ where $\xi(r) \propto \frac{1}{r}\frac{dV}{dr}$ depends on the central potential
 
 With spin-orbit coupling, $\hat{\mathbf{L}}$ and $\hat{\mathbf{S}}$ are not separately conserved. The conserved quantity is:
 
-$$
+```math
 \hat{\mathbf{J}} = \hat{\mathbf{L}} + \hat{\mathbf{S}}
-$$
+```
 
 ### Evaluating $\hat{\mathbf{L}} \cdot \hat{\mathbf{S}}$
 
 Using $\hat{\mathbf{J}}^2 = (\hat{\mathbf{L}} + \hat{\mathbf{S}})^2$:
 
-$$
+```math
 \hat{\mathbf{L}} \cdot \hat{\mathbf{S}} = \frac{1}{2}(\hat{\mathbf{J}}^2 - \hat{\mathbf{L}}^2 - \hat{\mathbf{S}}^2)
-$$
+```
 
 The eigenvalues are:
 
-$$
+```math
 \langle \hat{\mathbf{L}} \cdot \hat{\mathbf{S}} \rangle = \frac{\hbar^2}{2}[j(j+1) - l(l+1) - s(s+1)]
-$$
+```
 
 **What this means:** The energy depends on how $\mathbf{L}$ and $\mathbf{S}$ are aligned. Parallel alignment ($j = l + s$) has higher energy than antiparallel ($j = |l - s|$) for most atoms.
 
@@ -340,9 +340,9 @@ $$
 
 For the hydrogen atom, the spin-orbit splitting gives:
 
-$$
+```math
 \Delta E_{SO} = \frac{E_n \alpha^2}{n} \frac{1}{l(l+1/2)(l+1)}[j(j+1) - l(l+1) - 3/4]
-$$
+```
 
 where $\alpha \approx 1/137$ is the fine-structure constant.
 
@@ -354,9 +354,9 @@ where $\alpha \approx 1/137$ is the fine-structure constant.
 
 A charged particle with orbital angular momentum has magnetic moment:
 
-$$
+```math
 \boldsymbol{\mu}_L = -\frac{e}{2m_e}\hat{\mathbf{L}} = -\mu_B \frac{\hat{\mathbf{L}}}{\hbar}
-$$
+```
 
 where $\mu_B = e\hbar/(2m_e)$ is the **Bohr magneton**.
 
@@ -364,9 +364,9 @@ where $\mu_B = e\hbar/(2m_e)$ is the **Bohr magneton**.
 
 The electron's spin magnetic moment is:
 
-$$
+```math
 \boldsymbol{\mu}_S = -g_s\frac{e}{2m_e}\hat{\mathbf{S}} = -g_s\mu_B \frac{\hat{\mathbf{S}}}{\hbar}
-$$
+```
 
 where $g_s \approx 2$ is the electron g-factor (from the [Dirac equation](dirac-equation.md)).
 
@@ -374,15 +374,15 @@ where $g_s \approx 2$ is the electron g-factor (from the [Dirac equation](dirac-
 
 In an external magnetic field $\mathbf{B}$:
 
-$$
+```math
 \hat{H}_B = -\boldsymbol{\mu} \cdot \mathbf{B} = \frac{\mu_B}{\hbar}(\hat{\mathbf{L}} + g_s\hat{\mathbf{S}}) \cdot \mathbf{B}
-$$
+```
 
 For $\mathbf{B} = B\hat{z}$:
 
-$$
+```math
 \hat{H}_B = \frac{\mu_B B}{\hbar}(\hat{L}_z + g_s\hat{S}_z)
-$$
+```
 
 **What this means:** A magnetic field splits energy levels according to their $m$ values. This is the Zeeman effect—essential for atomic spectroscopy and MRI.
 

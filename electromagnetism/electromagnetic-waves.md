@@ -8,33 +8,33 @@ Electromagnetic waves are oscillating electric and magnetic fields that propagat
 
 In free space (no charges or currents), Maxwell's equations are:
 
-$$
+```math
 \nabla \cdot \mathbf{E} = 0, \quad \nabla \cdot \mathbf{B} = 0, \quad \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}, \quad \nabla \times \mathbf{B} = \mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}
-$$
+```
 
 Taking the curl of Faraday's law:
 
-$$
+```math
 \nabla \times (\nabla \times \mathbf{E}) = -\frac{\partial}{\partial t}(\nabla \times \mathbf{B}) = -\mu_0 \epsilon_0 \frac{\partial^2 \mathbf{E}}{\partial t^2}
-$$
+```
 
 Using the vector identity $\nabla \times (\nabla \times \mathbf{E}) = \nabla(\nabla \cdot \mathbf{E}) - \nabla^2 \mathbf{E}$ and $\nabla \cdot \mathbf{E} = 0$:
 
-$$
+```math
 \boxed{\nabla^2 \mathbf{E} = \mu_0 \epsilon_0 \frac{\partial^2 \mathbf{E}}{\partial t^2}}
-$$
+```
 
 Similarly for $\mathbf{B}$:
 
-$$
+```math
 \boxed{\nabla^2 \mathbf{B} = \mu_0 \epsilon_0 \frac{\partial^2 \mathbf{B}}{\partial t^2}}
-$$
+```
 
 **What this means:** Both $\mathbf{E}$ and $\mathbf{B}$ satisfy the wave equation with wave speed:
 
-$$
+```math
 c = \frac{1}{\sqrt{\mu_0 \epsilon_0}} = 3 \times 10^8 \text{ m/s}
-$$
+```
 
 This is the speed of light—Maxwell's great discovery.
 
@@ -44,13 +44,13 @@ This is the speed of light—Maxwell's great discovery.
 
 A plane wave propagating in the $+z$ direction:
 
-$$
+```math
 \mathbf{E} = E_0 \cos(kz - \omega t) \, \hat{\mathbf{x}}
-$$
+```
 
-$$
+```math
 \mathbf{B} = B_0 \cos(kz - \omega t) \, \hat{\mathbf{y}}
-$$
+```
 
 where:
 - $k = 2\pi/\lambda$ is the wave number
@@ -61,9 +61,9 @@ where:
 
 Substituting into the wave equation:
 
-$$
+```math
 \omega = ck \quad \Leftrightarrow \quad f\lambda = c
-$$
+```
 
 **What this means:** All electromagnetic waves in vacuum travel at the same speed $c$, regardless of frequency. There is no dispersion.
 
@@ -71,9 +71,9 @@ $$
 
 It's convenient to write:
 
-$$
+```math
 \mathbf{E} = E_0 \, e^{i(kz - \omega t)} \, \hat{\mathbf{x}}, \qquad \mathbf{B} = B_0 \, e^{i(kz - \omega t)} \, \hat{\mathbf{y}}
-$$
+```
 
 with the understanding that physical fields are the real parts.
 
@@ -81,40 +81,40 @@ with the understanding that physical fields are the real parts.
 
 For propagation in direction $\hat{\mathbf{k}}$:
 
-$$
+```math
 \mathbf{E} = \mathbf{E}_0 \, e^{i(\mathbf{k} \cdot \mathbf{r} - \omega t)}, \qquad \mathbf{B} = \mathbf{B}_0 \, e^{i(\mathbf{k} \cdot \mathbf{r} - \omega t)}
-$$
+```
 
 ## Properties of EM Waves
 
 ### Transverse Waves
 
 From $\nabla \cdot \mathbf{E} = 0$:
-$$
+```math
 \mathbf{k} \cdot \mathbf{E}_0 = 0
-$$
+```
 
 From $\nabla \cdot \mathbf{B} = 0$:
-$$
+```math
 \mathbf{k} \cdot \mathbf{B}_0 = 0
-$$
+```
 
 **What this means:** Both $\mathbf{E}$ and $\mathbf{B}$ are perpendicular to the direction of propagation. EM waves are transverse, not longitudinal.
 
 ### E and B are Perpendicular
 
 From Faraday's law:
-$$
+```math
 \mathbf{B}_0 = \frac{1}{\omega} \mathbf{k} \times \mathbf{E}_0 = \frac{1}{c} \hat{\mathbf{k}} \times \mathbf{E}_0
-$$
+```
 
 **What this means:** $\mathbf{E}$, $\mathbf{B}$, and $\hat{\mathbf{k}}$ form a right-handed orthogonal triad.
 
 ### Amplitude Relationship
 
-$$
+```math
 B_0 = \frac{E_0}{c}
-$$
+```
 
 **What this means:** The magnetic field amplitude is smaller than the electric field by a factor of $c$. In SI units, if $E_0 = 1$ V/m, then $B_0 = 3.3 \times 10^{-9}$ T.
 
@@ -122,43 +122,43 @@ $$
 
 ### Energy Density
 
-$$
+```math
 u = \frac{1}{2}\epsilon_0 E^2 + \frac{1}{2\mu_0} B^2
-$$
+```
 
 For a plane wave with $B = E/c$:
 
-$$
+```math
 \frac{1}{2\mu_0}B^2 = \frac{1}{2\mu_0}\frac{E^2}{c^2} = \frac{1}{2}\epsilon_0 E^2
-$$
+```
 
 **What this means:** Electric and magnetic energy densities are equal in an EM wave.
 
-$$
+```math
 u = \epsilon_0 E^2 = \frac{B^2}{\mu_0}
-$$
+```
 
 ### Poynting Vector
 
 The energy flux (power per unit area):
 
-$$
+```math
 \mathbf{S} = \frac{1}{\mu_0} \mathbf{E} \times \mathbf{B}
-$$
+```
 
 For a plane wave:
 
-$$
+```math
 S = \frac{E_0 B_0}{\mu_0} \cos^2(kz - \omega t) = \frac{E_0^2}{\mu_0 c} \cos^2(kz - \omega t)
-$$
+```
 
 ### Intensity
 
 The time-averaged power per unit area:
 
-$$
+```math
 I = \langle S \rangle = \frac{1}{2} \frac{E_0^2}{\mu_0 c} = \frac{1}{2} \epsilon_0 c E_0^2 = \frac{c}{2\mu_0} B_0^2
-$$
+```
 
 **What this means:** Intensity is proportional to the square of the amplitude. Doubling the field amplitude quadruples the intensity.
 
@@ -166,15 +166,15 @@ $$
 
 EM waves carry momentum density $\mathbf{g} = \mathbf{S}/c^2$. When absorbed, they exert pressure:
 
-$$
+```math
 P_{\text{abs}} = \frac{I}{c}
-$$
+```
 
 When perfectly reflected:
 
-$$
+```math
 P_{\text{ref}} = \frac{2I}{c}
-$$
+```
 
 **What this means:** Light exerts pressure. For sunlight ($I \approx 1400$ W/m²), the pressure is about $5 \times 10^{-6}$ Pa—tiny, but measurable and important for spacecraft and dust particles.
 
@@ -184,17 +184,17 @@ $$
 
 The electric field oscillates along a fixed direction:
 
-$$
+```math
 \mathbf{E} = E_0 \cos(kz - \omega t) \, \hat{\mathbf{x}}
-$$
+```
 
 ### Circular Polarization
 
 The electric field vector rotates:
 
-$$
+```math
 \mathbf{E} = E_0 [\cos(kz - \omega t) \, \hat{\mathbf{x}} + \sin(kz - \omega t) \, \hat{\mathbf{y}}]
-$$
+```
 
 - **Right circular:** $\mathbf{E}$ rotates clockwise when viewed from the receiver
 - **Left circular:** $\mathbf{E}$ rotates counterclockwise
@@ -205,9 +205,9 @@ $$
 
 The general case—$\mathbf{E}$ traces an ellipse:
 
-$$
+```math
 \mathbf{E} = E_x \cos(kz - \omega t) \, \hat{\mathbf{x}} + E_y \cos(kz - \omega t + \phi) \, \hat{\mathbf{y}}
-$$
+```
 
 Linear and circular are special cases.
 
@@ -231,9 +231,9 @@ Linear and circular are special cases.
 
 In a linear dielectric with permittivity $\epsilon$ and permeability $\mu$:
 
-$$
+```math
 v = \frac{1}{\sqrt{\mu \epsilon}} = \frac{c}{n}
-$$
+```
 
 where $n = \sqrt{\mu_r \epsilon_r}$ is the **refractive index**.
 
@@ -241,9 +241,9 @@ where $n = \sqrt{\mu_r \epsilon_r}$ is the **refractive index**.
 
 In real materials, $\epsilon$ (and hence $n$) depends on frequency:
 
-$$
+```math
 n = n(\omega)
-$$
+```
 
 This causes different frequencies to travel at different speeds, spreading pulses.
 
@@ -255,9 +255,9 @@ This causes different frequencies to travel at different speeds, spreading pulse
 
 In conducting media or materials with loss:
 
-$$
+```math
 \mathbf{E} = \mathbf{E}_0 \, e^{-\alpha z} e^{i(kz - \omega t)}
-$$
+```
 
 where $\alpha$ is the absorption coefficient (field decays exponentially).
 
@@ -267,39 +267,39 @@ where $\alpha$ is the absorption coefficient (field decays exponentially).
 
 At an interface between media with indices $n_1$ and $n_2$:
 
-$$
+```math
 n_1 \sin\theta_1 = n_2 \sin\theta_2
-$$
+```
 
 ### Fresnel Equations
 
 For incidence from medium 1 to 2:
 
 **s-polarization** (E perpendicular to plane of incidence):
-$$
+```math
 r_s = \frac{n_1 \cos\theta_1 - n_2 \cos\theta_2}{n_1 \cos\theta_1 + n_2 \cos\theta_2}
-$$
+```
 
 **p-polarization** (E in plane of incidence):
-$$
+```math
 r_p = \frac{n_2 \cos\theta_1 - n_1 \cos\theta_2}{n_2 \cos\theta_1 + n_1 \cos\theta_2}
-$$
+```
 
 ### Brewster's Angle
 
 At this angle, $r_p = 0$ (no p-polarized reflection):
 
-$$
+```math
 \tan\theta_B = \frac{n_2}{n_1}
-$$
+```
 
 ### Total Internal Reflection
 
 When $n_1 > n_2$ and $\theta_1 > \theta_c$:
 
-$$
+```math
 \sin\theta_c = \frac{n_2}{n_1}
-$$
+```
 
 All light is reflected—basis of fiber optics.
 

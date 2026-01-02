@@ -8,9 +8,9 @@ Lagrangian mechanics reformulates Newton's laws using energy rather than forces.
 
 Nature chooses the path that **extremizes** (usually minimizes) the **action**:
 
-$$
+```math
 S = \int_{t_1}^{t_2} L(q, \dot{q}, t) \, dt
-$$
+```
 
 where:
 - $q = (q_1, q_2, \ldots, q_n)$ are **generalized coordinates**
@@ -23,9 +23,9 @@ where:
 
 For most mechanical systems:
 
-$$
+```math
 L = T - V
-$$
+```
 
 where $T$ is kinetic energy and $V$ is potential energy.
 
@@ -35,9 +35,9 @@ where $T$ is kinetic energy and $V$ is potential energy.
 
 Requiring $\delta S = 0$ (the action is stationary under small path variations) yields:
 
-$$
+```math
 \boxed{\frac{d}{dt} \frac{\partial L}{\partial \dot{q}_i} - \frac{\partial L}{\partial q_i} = 0}
-$$
+```
 
 This is the **Euler-Lagrange equation**—one equation for each generalized coordinate $q_i$.
 
@@ -47,15 +47,15 @@ This is the **Euler-Lagrange equation**—one equation for each generalized coor
 
 Consider a path $q(t)$ and a small variation $q(t) + \epsilon \eta(t)$ with $\eta(t_1) = \eta(t_2) = 0$ (endpoints fixed):
 
-$$
+```math
 \delta S = \int_{t_1}^{t_2} \left( \frac{\partial L}{\partial q} \eta + \frac{\partial L}{\partial \dot{q}} \dot{\eta} \right) dt
-$$
+```
 
 Integration by parts on the second term:
 
-$$
+```math
 \delta S = \int_{t_1}^{t_2} \left( \frac{\partial L}{\partial q} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} \right) \eta \, dt
-$$
+```
 
 For $\delta S = 0$ for all $\eta(t)$, the bracket must vanish—giving the Euler-Lagrange equation.
 
@@ -63,19 +63,19 @@ For $\delta S = 0$ for all $\eta(t)$, the bracket must vanish—giving the Euler
 
 See [harmonic oscillator](harmonic-oscillator.md) for a comprehensive treatment. For a mass $m$ on a spring with spring constant $k$:
 
-$$
+```math
 T = \frac{1}{2} m \dot{x}^2, \qquad V = \frac{1}{2} k x^2
-$$
+```
 
-$$
+```math
 L = \frac{1}{2} m \dot{x}^2 - \frac{1}{2} k x^2
-$$
+```
 
 Euler-Lagrange equation:
 
-$$
+```math
 \frac{d}{dt} (m \dot{x}) - (-kx) = 0 \quad \Rightarrow \quad m \ddot{x} + kx = 0
-$$
+```
 
 This is the familiar $\ddot{x} = -\omega^2 x$ with $\omega = \sqrt{k/m}$.
 
@@ -83,19 +83,19 @@ This is the familiar $\ddot{x} = -\omega^2 x$ with $\omega = \sqrt{k/m}$.
 
 For a pendulum of length $\ell$ and mass $m$, using angle $\theta$ as the coordinate:
 
-$$
+```math
 T = \frac{1}{2} m \ell^2 \dot{\theta}^2, \qquad V = -mg\ell \cos\theta
-$$
+```
 
-$$
+```math
 L = \frac{1}{2} m \ell^2 \dot{\theta}^2 + mg\ell \cos\theta
-$$
+```
 
 Euler-Lagrange equation:
 
-$$
+```math
 m\ell^2 \ddot{\theta} + mg\ell \sin\theta = 0 \quad \Rightarrow \quad \ddot{\theta} = -\frac{g}{\ell} \sin\theta
-$$
+```
 
 **What this means:** We never had to decompose forces into components or worry about tension. The constraint (fixed length) is automatically handled by choosing $\theta$ as our coordinate.
 
@@ -115,9 +115,9 @@ Generalized coordinates $q_i$ can be any parameters that specify the system's co
 
 If a system has $N$ particles but $k$ constraints:
 
-$$
+```math
 \text{degrees of freedom} = 3N - k
-$$
+```
 
 **Example:** A particle constrained to a sphere ($x^2 + y^2 + z^2 = R^2$) has $3 - 1 = 2$ degrees of freedom, naturally parametrized by $(\theta, \phi)$.
 
@@ -125,9 +125,9 @@ $$
 
 Define the **generalized (canonical) momentum** conjugate to $q_i$:
 
-$$
+```math
 p_i = \frac{\partial L}{\partial \dot{q}_i}
-$$
+```
 
 **What this means:** This generalizes the concept of momentum. For a free particle with $L = \frac{1}{2}m\dot{x}^2$, we get $p = m\dot{x}$ (ordinary momentum). But for other coordinates, $p_i$ might be angular momentum or something else entirely.
 
@@ -143,9 +143,9 @@ $$
 
 **If the Lagrangian is invariant under a continuous symmetry, there is a corresponding conserved quantity.**
 
-$$
+```math
 \text{Symmetry} \longleftrightarrow \text{Conservation Law}
-$$
+```
 
 | Symmetry | Conserved Quantity |
 |----------|-------------------|
@@ -159,9 +159,9 @@ $$
 
 If $L$ doesn't depend on $q_i$ (but does depend on $\dot{q}_i$), then $q_i$ is **cyclic**:
 
-$$
+```math
 \frac{\partial L}{\partial q_i} = 0 \quad \Rightarrow \quad \frac{d}{dt} \frac{\partial L}{\partial \dot{q}_i} = 0 \quad \Rightarrow \quad p_i = \text{constant}
-$$
+```
 
 **What this means:** If a coordinate doesn't appear in the Lagrangian, its conjugate momentum is conserved. This is Noether's theorem in action.
 
@@ -169,15 +169,15 @@ $$
 
 Define the **energy function**:
 
-$$
+```math
 h = \sum_i \dot{q}_i \frac{\partial L}{\partial \dot{q}_i} - L
-$$
+```
 
 If $L$ has no explicit time dependence ($\partial L / \partial t = 0$):
 
-$$
+```math
 \frac{dh}{dt} = 0
-$$
+```
 
 **What this means:** When the Lagrangian doesn't change with time, $h$ is conserved. For most systems, $h = T + V$ = total energy.
 
@@ -185,9 +185,9 @@ $$
 
 If the kinetic energy is a homogeneous quadratic function of velocities:
 
-$$
+```math
 T = \frac{1}{2} \sum_{ij} M_{ij}(q) \dot{q}_i \dot{q}_j
-$$
+```
 
 then $h = T + V = E$ (total mechanical energy).
 
@@ -195,21 +195,21 @@ then $h = T + V = E$ (total mechanical energy).
 
 In special relativity, the free particle Lagrangian becomes:
 
-$$
+```math
 L = -m\sqrt{1 - v^2/c^2} \cdot c^2 = -mc^2\sqrt{1 - v^2/c^2}
-$$
+```
 
 In [natural units](../math-foundations/natural-units.md) with $c = 1$:
 
-$$
+```math
 L = -m\sqrt{1 - v^2}
-$$
+```
 
 The Euler-Lagrange equation gives:
 
-$$
+```math
 \frac{d}{dt} \frac{m v}{\sqrt{1 - v^2}} = 0
-$$
+```
 
 which is conservation of relativistic momentum $p = \gamma m v$.
 
@@ -217,9 +217,9 @@ which is conservation of relativistic momentum $p = \gamma m v$.
 
 The Lagrangian formulation leads directly to the [Hamiltonian formulation](hamiltonian-mechanics.md) via the **Legendre transformation**:
 
-$$
+```math
 H(q, p, t) = \sum_i p_i \dot{q}_i - L(q, \dot{q}, t)
-$$
+```
 
 where $\dot{q}_i$ is expressed in terms of $p_i$ by inverting $p_i = \partial L / \partial \dot{q}_i$.
 

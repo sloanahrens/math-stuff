@@ -17,9 +17,9 @@ These operations look unrelated, but they're actually different aspects of a sin
 
 A **0-form** is just a function $f(x)$.
 
-$$
+```math
 f: M \to \mathbb{R}
-$$
+```
 
 **What this means:** Temperature at each point, electric potential, any scalar quantity. The simplest differential form.
 
@@ -27,15 +27,15 @@ $$
 
 A **1-form** $\omega$ takes a vector and returns a number:
 
-$$
+```math
 \omega: V \to \mathbb{R}
-$$
+```
 
 In coordinates:
 
-$$
+```math
 \omega = \omega_1 \, dx^1 + \omega_2 \, dx^2 + \omega_3 \, dx^3 = \omega_\mu \, dx^\mu
-$$
+```
 
 **What this means:** A 1-form is like a machine that measures vectors. If $\omega = df$, it measures how much a vector points "uphill" in the function $f$.
 
@@ -43,9 +43,9 @@ $$
 
 The coordinate differentials $dx^\mu$ form a basis for 1-forms:
 
-$$
+```math
 dx^\mu \left( \frac{\partial}{\partial x^\nu} \right) = \delta^\mu_\nu
-$$
+```
 
 **What this means:** The 1-form $dx$ "picks out" the $x$-component of any vector. They're the natural dual basis to the coordinate vectors $\partial/\partial x^\mu$.
 
@@ -53,9 +53,9 @@ $$
 
 The gradient of a function $f$ is naturally a 1-form:
 
-$$
+```math
 df = \frac{\partial f}{\partial x^\mu} dx^\mu
-$$
+```
 
 **What this means:** Rather than a vector pointing uphill, $df$ is a 1-form that measures how fast $f$ changes along any direction. This is more fundamental—the "gradient vector" requires a metric to define.
 
@@ -63,15 +63,15 @@ $$
 
 A **2-form** $\omega$ takes two vectors and returns a number, antisymmetrically:
 
-$$
+```math
 \omega(u, v) = -\omega(v, u)
-$$
+```
 
 In coordinates:
 
-$$
+```math
 \omega = \frac{1}{2} \omega_{\mu\nu} \, dx^\mu \wedge dx^\nu
-$$
+```
 
 **What this means:** A 2-form measures "oriented area." If you swap the two vectors, the sign flips—like the orientation of a parallelogram.
 
@@ -79,15 +79,15 @@ $$
 
 The **wedge product** $\wedge$ combines forms antisymmetrically:
 
-$$
+```math
 dx^\mu \wedge dx^\nu = -dx^\nu \wedge dx^\mu
-$$
+```
 
 In particular:
 
-$$
+```math
 dx^\mu \wedge dx^\mu = 0
-$$
+```
 
 ### Properties
 
@@ -103,21 +103,21 @@ where $p$ and $q$ are the degrees of $\alpha$ and $\beta$.
 
 ### Example
 
-$$
+```math
 (2\, dx + 3\, dy) \wedge (dx - dy) = 2\, dx \wedge dx - 2\, dx \wedge dy + 3\, dy \wedge dx - 3\, dy \wedge dy
-$$
+```
 
-$$
+```math
 = 0 - 2\, dx \wedge dy - 3\, dx \wedge dy - 0 = -5\, dx \wedge dy
-$$
+```
 
 ## $p$-Forms in General
 
 A **$p$-form** is an antisymmetric tensor with $p$ lower indices:
 
-$$
+```math
 \omega = \frac{1}{p!} \omega_{\mu_1 \cdots \mu_p} \, dx^{\mu_1} \wedge \cdots \wedge dx^{\mu_p}
-$$
+```
 
 In $n$ dimensions:
 - 0-forms: 1 component (scalars)
@@ -131,19 +131,19 @@ In $n$ dimensions:
 
 The **exterior derivative** $d$ takes a $p$-form to a $(p+1)$-form:
 
-$$
+```math
 d\omega = \frac{\partial \omega_{\mu_1 \cdots \mu_p}}{\partial x^\nu} dx^\nu \wedge dx^{\mu_1} \wedge \cdots \wedge dx^{\mu_p}
-$$
+```
 
 ### Key Properties
 
-$$
+```math
 d(d\omega) = 0 \quad \text{(always!)}
-$$
+```
 
-$$
+```math
 d(\alpha \wedge \beta) = d\alpha \wedge \beta + (-1)^p \alpha \wedge d\beta
-$$
+```
 
 **What this means:** The equation $d^2 = 0$ encodes profound identities. It's why $\nabla \times (\nabla f) = 0$ and $\nabla \cdot (\nabla \times \mathbf{A}) = 0$.
 
@@ -159,13 +159,13 @@ The single operation $d$ replaces three different operations!
 
 ### $d^2 = 0$ Encodes Classical Identities
 
-$$
+```math
 d(df) = 0 \quad \Leftrightarrow \quad \nabla \times (\nabla f) = 0
-$$
+```
 
-$$
+```math
 d(dA) = 0 \quad \Leftrightarrow \quad \nabla \cdot (\nabla \times \mathbf{A}) = 0
-$$
+```
 
 **What this means:** These aren't separate theorems—they're all instances of $d^2 = 0$.
 
@@ -173,23 +173,23 @@ $$
 
 The **Hodge star** $\star$ maps $p$-forms to $(n-p)$-forms using the metric:
 
-$$
+```math
 \star: \Omega^p \to \Omega^{n-p}
-$$
+```
 
 In 3D Euclidean space:
 
-$$
+```math
 \star dx = dy \wedge dz, \quad \star dy = dz \wedge dx, \quad \star dz = dx \wedge dy
-$$
+```
 
-$$
+```math
 \star (dx \wedge dy) = dz, \quad \text{etc.}
-$$
+```
 
-$$
+```math
 \star 1 = dx \wedge dy \wedge dz, \quad \star(dx \wedge dy \wedge dz) = 1
-$$
+```
 
 **What this means:** The Hodge star relates forms of complementary degree. It's needed for operations like divergence, which in forms is $\star d \star$.
 
@@ -197,9 +197,9 @@ $$
 
 The **codifferential** $\delta = (-1)^p \star d \star$ (up to sign conventions):
 
-$$
+```math
 \delta: \Omega^p \to \Omega^{p-1}
-$$
+```
 
 Divergence is: $\nabla \cdot \mathbf{A} = \star d \star A$ (for $A$ a 1-form in 3D).
 
@@ -207,9 +207,9 @@ Divergence is: $\nabla \cdot \mathbf{A} = \star d \star A$ (for $A$ a 1-form in 
 
 The generalized **Stokes' theorem** unifies all integral theorems:
 
-$$
+```math
 \boxed{\int_M d\omega = \int_{\partial M} \omega}
-$$
+```
 
 where $\partial M$ is the boundary of the region $M$.
 
@@ -242,19 +242,19 @@ Electromagnetism becomes remarkably elegant in differential forms (see [Maxwell 
 
 Define the **Faraday 2-form**:
 
-$$
+```math
 F = E_x \, dt \wedge dx + E_y \, dt \wedge dy + E_z \, dt \wedge dz + B_x \, dy \wedge dz + B_y \, dz \wedge dx + B_z \, dx \wedge dy
-$$
+```
 
 Maxwell's equations become:
 
-$$
+```math
 dF = 0 \qquad \text{(homogeneous equations)}
-$$
+```
 
-$$
+```math
 d \star F = J \qquad \text{(inhomogeneous equations)}
-$$
+```
 
 **What this means:** All four Maxwell equations reduce to these two elegant statements. The first says $F$ is closed; the second relates $F$ to sources via the Hodge dual.
 
@@ -262,9 +262,9 @@ $$
 
 In general relativity, the **volume form** is:
 
-$$
+```math
 \epsilon = \sqrt{|g|} \, dx^0 \wedge dx^1 \wedge dx^2 \wedge dx^3
-$$
+```
 
 where $g = \det(g_{\mu\nu})$.
 
@@ -274,9 +274,9 @@ where $g = \det(g_{\mu\nu})$.
 
 Curvature can be expressed elegantly using forms:
 
-$$
+```math
 d\omega^a{}_b + \omega^a{}_c \wedge \omega^c{}_b = \Omega^a{}_b
-$$
+```
 
 where $\omega^a{}_b$ is the connection 1-form and $\Omega^a{}_b$ is the curvature 2-form.
 

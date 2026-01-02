@@ -29,17 +29,17 @@ For an isolated system with fixed $E$, $V$, $N$:
 
 **Fundamental postulate:** All accessible microstates are equally likely.
 
-$$
+```math
 P(\text{microstate}) = \frac{1}{\Omega(E, V, N)}
-$$
+```
 
 where $\Omega$ is the number of microstates with energy $E$.
 
 ### Boltzmann Entropy
 
-$$
+```math
 \boxed{S = k_B \ln \Omega}
-$$
+```
 
 where $k_B = 1.38 \times 10^{-23}$ J/K is Boltzmann's constant.
 
@@ -47,9 +47,9 @@ where $k_B = 1.38 \times 10^{-23}$ J/K is Boltzmann's constant.
 
 ### Temperature from Entropy
 
-$$
+```math
 \frac{1}{T} = \frac{\partial S}{\partial E}\bigg|_{V,N} = k_B \frac{\partial \ln\Omega}{\partial E}
-$$
+```
 
 **What this means:** Temperature is defined by how entropy changes with energy. Systems at equilibrium have equal temperatures because this maximizes total entropy.
 
@@ -61,15 +61,15 @@ For a system in thermal contact with a heat bath at temperature $T$:
 
 **Boltzmann distribution:**
 
-$$
+```math
 \boxed{P(n) = \frac{e^{-E_n/(k_B T)}}{Z}}
-$$
+```
 
 where the **partition function** is:
 
-$$
+```math
 \boxed{Z = \sum_n e^{-E_n/(k_B T)} = \sum_n e^{-\beta E_n}}
-$$
+```
 
 with $\beta = 1/(k_B T)$.
 
@@ -82,24 +82,24 @@ The Boltzmann factor $e^{-\beta E}$ arises from maximizing entropy subject to fi
 ### Thermodynamics from $Z$
 
 **Helmholtz free energy:**
-$$
+```math
 F = -k_B T \ln Z
-$$
+```
 
 **Average energy:**
-$$
+```math
 \langle E \rangle = -\frac{\partial \ln Z}{\partial \beta} = k_B T^2 \frac{\partial \ln Z}{\partial T}
-$$
+```
 
 **Entropy:**
-$$
+```math
 S = k_B(\ln Z + \beta \langle E \rangle) = -\frac{\partial F}{\partial T}
-$$
+```
 
 **Pressure:**
-$$
+```math
 P = -\frac{\partial F}{\partial V}
-$$
+```
 
 **What this means:** Once you compute $Z$, all thermodynamics follows by differentiation. The partition function is the central object.
 
@@ -107,16 +107,16 @@ $$
 
 For $N$ non-interacting particles in volume $V$:
 
-$$
+```math
 Z = \frac{1}{N!}\left(\frac{V}{\lambda^3}\right)^N
-$$
+```
 
 where $\lambda = \sqrt{2\pi\hbar^2/(mk_BT)}$ is the thermal de Broglie wavelength.
 
 This gives:
-$$
+```math
 PV = Nk_BT, \quad \langle E \rangle = \frac{3}{2}Nk_BT
-$$
+```
 
 —the ideal gas law and equipartition theorem.
 
@@ -128,21 +128,21 @@ For systems exchanging particles with a reservoir:
 
 **Grand partition function:**
 
-$$
+```math
 \boxed{\mathcal{Z} = \sum_N e^{\beta\mu N} Z_N = \sum_{N,n} e^{-\beta(E_{N,n} - \mu N)}}
-$$
+```
 
 where $\mu$ is the **chemical potential**.
 
 **Grand potential:**
-$$
+```math
 \Phi = -k_B T \ln \mathcal{Z}
-$$
+```
 
 **Average particle number:**
-$$
+```math
 \langle N \rangle = k_B T \frac{\partial \ln \mathcal{Z}}{\partial \mu}
-$$
+```
 
 **What this means:** The grand canonical ensemble describes open systems (gases in containers with holes, electrons in metals). The chemical potential controls average particle number.
 
@@ -161,9 +161,9 @@ In [quantum mechanics](../quantum-mechanics/quantum-mechanics.md), identical par
 
 For fermions, no two particles can occupy the same state (Pauli exclusion):
 
-$$
+```math
 \boxed{\langle n_i \rangle = \frac{1}{e^{\beta(E_i - \mu)} + 1}}
-$$
+```
 
 At $T = 0$: states below the **Fermi energy** $E_F = \mu(T=0)$ are filled; above are empty.
 
@@ -173,9 +173,9 @@ At $T = 0$: states below the **Fermi energy** $E_F = \mu(T=0)$ are filled; above
 
 For bosons, any number can share a state:
 
-$$
+```math
 \boxed{\langle n_i \rangle = \frac{1}{e^{\beta(E_i - \mu)} - 1}}
-$$
+```
 
 At low temperatures, bosons can macroscopically occupy the ground state: **Bose-Einstein condensation**.
 
@@ -185,9 +185,9 @@ At low temperatures, bosons can macroscopically occupy the ground state: **Bose-
 
 When $e^{\beta(\mu - E_i)} \ll 1$ (low density, high temperature), both reduce to:
 
-$$
+```math
 \langle n_i \rangle \approx e^{-\beta(E_i - \mu)}
-$$
+```
 
 —the Maxwell-Boltzmann distribution.
 
@@ -201,37 +201,37 @@ A cavity in thermal equilibrium contains electromagnetic radiation. What's the s
 
 Photons are bosons with $\mu = 0$ (photon number isn't conserved). The energy density per frequency:
 
-$$
+```math
 \boxed{u(\nu, T) = \frac{8\pi h\nu^3}{c^3}\frac{1}{e^{h\nu/(k_BT)} - 1}}
-$$
+```
 
 This is **Planck's law**.
 
 ### Limiting Cases
 
 **Low frequency (Rayleigh-Jeans):**
-$$
+```math
 u \approx \frac{8\pi \nu^2}{c^3} k_B T
-$$
+```
 
 **High frequency (Wien):**
-$$
+```math
 u \approx \frac{8\pi h\nu^3}{c^3} e^{-h\nu/(k_BT)}
-$$
+```
 
 ### Stefan-Boltzmann Law
 
 Total energy density:
 
-$$
+```math
 u = \frac{\pi^2 k_B^4}{15\hbar^3 c^3} T^4 = a T^4
-$$
+```
 
 Total power radiated per area:
 
-$$
+```math
 P = \sigma T^4, \quad \sigma = \frac{2\pi^5 k_B^4}{15h^3c^2} = 5.67 \times 10^{-8} \text{ W/(m}^2\text{K}^4)
-$$
+```
 
 **What this means:** Hot objects radiate more (∝ $T^4$). The CMB at 2.7 K is a near-perfect blackbody from the early universe.
 
@@ -241,9 +241,9 @@ $$
 
 **Statement:** The total entropy of an isolated system never decreases:
 
-$$
+```math
 \Delta S \geq 0
-$$
+```
 
 ### Statistical Interpretation
 
@@ -258,9 +258,9 @@ Entropy increases because:
 
 For a system of $N$ particles, typical fluctuations scale as:
 
-$$
+```math
 \frac{\Delta X}{\langle X \rangle} \sim \frac{1}{\sqrt{N}}
-$$
+```
 
 For $N \sim 10^{23}$, this is $\sim 10^{-12}$—utterly undetectable.
 
@@ -295,9 +295,9 @@ Near second-order transitions, systems show **critical phenomena**:
 
 The canonical partition function can be written as (see [path integrals](../classical-mechanics/path-integrals.md)):
 
-$$
+```math
 Z = \text{Tr}(e^{-\beta H}) = \int \mathcal{D}[x(\tau)] \, e^{-S_E/\hbar}
-$$
+```
 
 where $S_E$ is the Euclidean action and paths are periodic with period $\beta\hbar$.
 
@@ -306,9 +306,9 @@ where $S_E$ is the Euclidean action and paths are periodic with period $\beta\hb
 ### Wick Rotation
 
 The connection:
-$$
+```math
 e^{-iHt/\hbar} \xrightarrow{t \to -i\beta\hbar} e^{-\beta H}
-$$
+```
 
 Time evolution becomes the Boltzmann operator.
 
@@ -327,9 +327,9 @@ Time evolution becomes the Boltzmann operator.
 ### Legendre Transforms
 
 These potentials are related by Legendre transforms:
-$$
+```math
 F = E - TS, \quad G = F + PV, \quad \Phi = F - \mu N
-$$
+```
 
 **What this means:** Different potentials are useful for different experimental conditions (constant $T$ vs constant $E$, etc.).
 
@@ -339,9 +339,9 @@ $$
 
 The information-theoretic entropy:
 
-$$
+```math
 S = -k_B \sum_n P_n \ln P_n
-$$
+```
 
 is maximized by the Boltzmann distribution subject to $\langle E \rangle = $ const.
 
@@ -351,9 +351,9 @@ is maximized by the Boltzmann distribution subject to $\langle E \rangle = $ con
 
 More generally:
 
-$$
+```math
 S = -k_B \text{Tr}(\rho \ln \rho)
-$$
+```
 
 where $\rho$ is the density matrix—this works for quantum systems and reduces to the above for thermal states.
 

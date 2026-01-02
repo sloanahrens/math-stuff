@@ -10,9 +10,9 @@ Prerequisites: [probability](../math-foundations/probability-statistics.md), [lo
 
 The information content (or "surprisal") of an event with probability $p$ is:
 
-$$
+```math
 I = -\log_2 p = \log_2 \frac{1}{p}
-$$
+```
 
 measured in **bits**.
 
@@ -27,9 +27,9 @@ measured in **bits**.
 
 The **entropy** of a random variable $X$ with distribution $\{p_i\}$ is:
 
-$$
+```math
 \boxed{H(X) = -\sum_i p_i \log_2 p_i = \mathbb{E}[I(X)]}
-$$
+```
 
 **What this means:** Entropy is the average information content—the expected number of bits needed to describe an outcome.
 
@@ -42,9 +42,9 @@ $$
 
 For a binary variable with $P(X=1) = p$:
 
-$$
+```math
 H_2(p) = -p\log_2 p - (1-p)\log_2(1-p)
-$$
+```
 
 This function peaks at $p = 1/2$ where $H_2 = 1$ bit.
 
@@ -54,29 +54,29 @@ This function peaks at $p = 1/2$ where $H_2 = 1$ bit.
 
 For two random variables $X$ and $Y$:
 
-$$
+```math
 H(X, Y) = -\sum_{x,y} p(x,y) \log_2 p(x,y)
-$$
+```
 
 **Chain rule:**
-$$
+```math
 H(X, Y) = H(X) + H(Y|X) = H(Y) + H(X|Y)
-$$
+```
 
 ### Conditional Entropy
 
 The entropy of $Y$ given knowledge of $X$:
 
-$$
+```math
 H(Y|X) = \sum_x p(x) H(Y|X=x) = -\sum_{x,y} p(x,y) \log_2 p(y|x)
-$$
+```
 
 **What this means:** How much uncertainty remains about $Y$ after learning $X$.
 
 **Key inequality:**
-$$
+```math
 H(Y|X) \leq H(Y)
-$$
+```
 
 Conditioning reduces entropy (or leaves it unchanged if $X$ and $Y$ are independent).
 
@@ -86,9 +86,9 @@ Conditioning reduces entropy (or leaves it unchanged if $X$ and $Y$ are independ
 
 The mutual information between $X$ and $Y$:
 
-$$
+```math
 \boxed{I(X;Y) = H(X) + H(Y) - H(X,Y) = H(X) - H(X|Y) = H(Y) - H(Y|X)}
-$$
+```
 
 **What this means:** How much knowing $X$ tells you about $Y$ (and vice versa). It's the reduction in uncertainty about one variable given knowledge of the other.
 
@@ -120,9 +120,9 @@ $$
 
 The KL divergence (or relative entropy) from $Q$ to $P$:
 
-$$
+```math
 \boxed{D_{KL}(P \| Q) = \sum_i p_i \log_2 \frac{p_i}{q_i}}
-$$
+```
 
 **What this means:** The extra bits needed to encode data from $P$ using a code optimized for $Q$. It measures how "far" $Q$ is from $P$.
 
@@ -135,9 +135,9 @@ $$
 
 ### Cross-Entropy
 
-$$
+```math
 H(P, Q) = -\sum_i p_i \log_2 q_i = H(P) + D_{KL}(P \| Q)
-$$
+```
 
 **What this means:** The average bits needed to encode data from $P$ using a code optimized for $Q$. Minimizing cross-entropy is equivalent to minimizing KL divergence.
 
@@ -147,9 +147,9 @@ $$
 
 **Shannon's first theorem:** Data from a source with entropy $H$ can be compressed to an average of $H$ bits per symbol, but no fewer.
 
-$$
+```math
 \boxed{\text{Minimum average code length} = H(X)}
-$$
+```
 
 **What this means:** Entropy is the fundamental limit of lossless compression. See [data compression](data-compression.md) for algorithms that approach this limit.
 
@@ -157,9 +157,9 @@ $$
 
 A **prefix-free code** (no codeword is a prefix of another) allows unambiguous decoding. The Kraft inequality states that codeword lengths $\ell_i$ must satisfy:
 
-$$
+```math
 \sum_i 2^{-\ell_i} \leq 1
-$$
+```
 
 **Optimal code lengths:** For minimum average length, choose $\ell_i \approx -\log_2 p_i$. This gives average length $\approx H(X)$.
 
@@ -170,9 +170,9 @@ $$
 A communication channel adds noise. Given input $X$, the output $Y$ follows some conditional distribution $p(y|x)$.
 
 **Channel capacity:**
-$$
+```math
 \boxed{C = \max_{p(x)} I(X;Y)}
-$$
+```
 
 The maximum is over all input distributions.
 
@@ -188,9 +188,9 @@ The maximum is over all input distributions.
 
 The simplest noisy channel: each bit is flipped with probability $p$.
 
-$$
+```math
 C_{BSC} = 1 - H_2(p)
-$$
+```
 
 At $p = 0$ (no noise): $C = 1$ bit per transmission.
 At $p = 0.5$ (pure noise): $C = 0$ bits.
@@ -199,15 +199,15 @@ At $p = 0.5$ (pure noise): $C = 0$ bits.
 
 For additive white Gaussian noise with power $N$ and signal power $S$:
 
-$$
+```math
 C = \frac{1}{2}\log_2\left(1 + \frac{S}{N}\right) \text{ bits per sample}
-$$
+```
 
 Or in bandwidth $W$:
 
-$$
+```math
 C = W\log_2\left(1 + \frac{S}{N}\right) \text{ bits per second}
-$$
+```
 
 **What this means:** This is the Shannon-Hartley theorem—the theoretical limit for WiFi, cellular, and all communication systems.
 
@@ -216,23 +216,23 @@ $$
 ### Thermodynamic Entropy
 
 The Gibbs entropy:
-$$
+```math
 S = -k_B \sum_i p_i \ln p_i
-$$
+```
 
 is Shannon entropy times $k_B \ln 2$:
-$$
+```math
 S = k_B \ln(2) \cdot H
-$$
+```
 
 See [entropy](../thermodynamics/entropy.md) for the deep connections.
 
 ### Landauer's Principle
 
 Erasing one bit of information requires at least:
-$$
+```math
 E_{\min} = k_B T \ln 2
-$$
+```
 
 of energy, dissipated as heat. Information is physical.
 
@@ -243,9 +243,9 @@ The demon that sorts molecules must store information. Erasing this information 
 ### Quantum Information
 
 In quantum mechanics, the von Neumann entropy replaces Shannon entropy:
-$$
+```math
 S = -\text{Tr}(\rho \log_2 \rho)
-$$
+```
 
 Quantum information theory studies qubits, entanglement, and quantum error correction. Quantum computers can solve certain problems exponentially faster by exploiting superposition.
 

@@ -8,17 +8,17 @@ Solving electromagnetic problems often means finding potentials that satisfy Lap
 
 In charge-free regions:
 
-$$
+```math
 \nabla^2 \phi = 0
-$$
+```
 
 ### Poisson's Equation
 
 With charge density $\rho$:
 
-$$
+```math
 \nabla^2 \phi = -\frac{\rho}{\epsilon_0}
-$$
+```
 
 ### Boundary Conditions
 
@@ -44,15 +44,15 @@ Substituting into Laplace's equation separates it into ODEs for each factor.
 
 ### Cartesian Coordinates
 
-$$
+```math
 \nabla^2\phi = \frac{\partial^2\phi}{\partial x^2} + \frac{\partial^2\phi}{\partial y^2} + \frac{\partial^2\phi}{\partial z^2} = 0
-$$
+```
 
 Assume $\phi = X(x)Y(y)Z(z)$:
 
-$$
+```math
 \frac{X''}{X} + \frac{Y''}{Y} + \frac{Z''}{Z} = 0
-$$
+```
 
 Each term must be constant: $X'' = -k_x^2 X$, etc., with $k_x^2 + k_y^2 + k_z^2 = 0$.
 
@@ -64,9 +64,9 @@ Each term must be constant: $X'' = -k_x^2 X$, etc., with $k_x^2 + k_y^2 + k_z^2 
 
 For a box with $\phi = 0$ on all faces except $z = c$ where $\phi = V_0$:
 
-$$
+```math
 \phi(x,y,z) = \sum_{n,m=1}^{\infty} A_{nm} \sin\frac{n\pi x}{a}\sin\frac{m\pi y}{b}\frac{\sinh(\gamma_{nm}z)}{\sinh(\gamma_{nm}c)}
-$$
+```
 
 where $\gamma_{nm} = \sqrt{(n\pi/a)^2 + (m\pi/b)^2}$.
 
@@ -74,15 +74,15 @@ The coefficients $A_{nm}$ are determined by the boundary condition at $z = c$ vi
 
 ### Cylindrical Coordinates
 
-$$
+```math
 \nabla^2\phi = \frac{1}{s}\frac{\partial}{\partial s}\left(s\frac{\partial\phi}{\partial s}\right) + \frac{1}{s^2}\frac{\partial^2\phi}{\partial\phi^2} + \frac{\partial^2\phi}{\partial z^2} = 0
-$$
+```
 
 Assume $\phi = R(s)\Phi(\phi)Z(z)$:
 
-$$
+```math
 \frac{s}{R}\frac{d}{ds}\left(s\frac{dR}{ds}\right) + \frac{1}{\Phi}\frac{d^2\Phi}{d\phi^2} + s^2\frac{Z''}{Z} = 0
-$$
+```
 
 **Angular part:** $\Phi'' = -m^2\Phi$ gives $\Phi = e^{\pm im\phi}$. Single-valuedness requires integer $m$.
 
@@ -94,23 +94,23 @@ $$
 
 For a cylinder of radius $a$ with $\phi = 0$ on the curved surface and $\phi = V_0$ on one end:
 
-$$
+```math
 \phi(s,z) = \sum_{n=1}^{\infty} A_n J_0\left(\frac{x_{0n}s}{a}\right)\frac{\sinh(x_{0n}z/a)}{\sinh(x_{0n}L/a)}
-$$
+```
 
 where $x_{0n}$ are zeros of $J_0$.
 
 ### Spherical Coordinates
 
-$$
+```math
 \nabla^2\phi = \frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial\phi}{\partial r}\right) + \frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial\phi}{\partial\theta}\right) + \frac{1}{r^2\sin^2\theta}\frac{\partial^2\phi}{\partial\phi^2} = 0
-$$
+```
 
 **Azimuthal symmetry** ($\phi$-independent): The general solution is
 
-$$
+```math
 \boxed{\phi(r,\theta) = \sum_{\ell=0}^{\infty}\left(A_\ell r^\ell + \frac{B_\ell}{r^{\ell+1}}\right)P_\ell(\cos\theta)}
-$$
+```
 
 where $P_\ell$ are [Legendre polynomials](../math-foundations/special-functions.md).
 
@@ -126,15 +126,15 @@ Boundary conditions:
 
 Solution:
 
-$$
+```math
 \phi(r,\theta) = -E_0\left(r - \frac{R^3}{r^2}\right)\cos\theta
-$$
+```
 
 The induced surface charge:
 
-$$
+```math
 \sigma = -\epsilon_0\frac{\partial\phi}{\partial r}\bigg|_{r=R} = 3\epsilon_0 E_0 \cos\theta
-$$
+```
 
 ## The Method of Images
 
@@ -148,9 +148,9 @@ For charge $q$ at distance $d$ from an infinite grounded plane:
 
 **Image:** Charge $-q$ at distance $d$ on the other side.
 
-$$
+```math
 \phi(\mathbf{r}) = \frac{q}{4\pi\epsilon_0}\left(\frac{1}{|\mathbf{r} - \mathbf{r}_q|} - \frac{1}{|\mathbf{r} - \mathbf{r}_{\text{image}}|}\right)
-$$
+```
 
 **Induced charge:** $\sigma = -\epsilon_0 \partial\phi/\partial z|_{z=0} = -\frac{qd}{2\pi(x^2+y^2+d^2)^{3/2}}$
 
@@ -178,39 +178,39 @@ For charge $q$ near a planar interface between media $\epsilon_1$ and $\epsilon_
 
 For a localized charge distribution, at large $r$:
 
-$$
+```math
 \boxed{\phi(\mathbf{r}) = \frac{1}{4\pi\epsilon_0}\sum_{\ell=0}^{\infty}\frac{1}{r^{\ell+1}}\sum_{m=-\ell}^{\ell}q_{\ell m}Y_\ell^m(\theta,\phi)}
-$$
+```
 
 where the **multipole moments** are:
 
-$$
+```math
 q_{\ell m} = \int r'^\ell Y_\ell^{m*}(\theta',\phi')\rho(\mathbf{r}')d^3r'
-$$
+```
 
 ### First Few Multipoles
 
 **Monopole ($\ell = 0$):**
-$$
+```math
 q_{00} = \frac{1}{\sqrt{4\pi}}Q, \quad \phi_0 = \frac{Q}{4\pi\epsilon_0 r}
-$$
+```
 
 **Dipole ($\ell = 1$):**
-$$
+```math
 \phi_1 = \frac{1}{4\pi\epsilon_0}\frac{\mathbf{p}\cdot\hat{\mathbf{r}}}{r^2}
-$$
+```
 
 where $\mathbf{p} = \int \mathbf{r}'\rho(\mathbf{r}')d^3r'$ is the dipole moment.
 
 **Quadrupole ($\ell = 2$):**
-$$
+```math
 \phi_2 = \frac{1}{4\pi\epsilon_0}\frac{1}{2r^3}\sum_{ij}Q_{ij}\hat{r}_i\hat{r}_j
-$$
+```
 
 where the quadrupole tensor is:
-$$
+```math
 Q_{ij} = \int (3r'_i r'_j - r'^2\delta_{ij})\rho(\mathbf{r}')d^3r'
-$$
+```
 
 ### Physical Interpretation
 
@@ -236,39 +236,39 @@ $$
 
 The Green's function satisfies:
 
-$$
+```math
 \nabla^2 G(\mathbf{r}, \mathbf{r}') = \delta(\mathbf{r} - \mathbf{r}')
-$$
+```
 
 with $G = 0$ on the boundary.
 
 The solution to Poisson's equation with $\phi = f$ on boundary:
 
-$$
+```math
 \phi(\mathbf{r}) = \frac{1}{\epsilon_0}\int_V G(\mathbf{r}, \mathbf{r}')\rho(\mathbf{r}')d^3r' - \oint_S f\frac{\partial G}{\partial n'}dA'
-$$
+```
 
 ### Free-Space Green's Function
 
-$$
+```math
 G_0(\mathbf{r}, \mathbf{r}') = -\frac{1}{4\pi|\mathbf{r} - \mathbf{r}'|}
-$$
+```
 
 ### Green's Function for a Sphere
 
 For Dirichlet conditions on a sphere of radius $a$:
 
-$$
+```math
 G(\mathbf{r}, \mathbf{r}') = -\frac{1}{4\pi|\mathbf{r} - \mathbf{r}'|} + \frac{a}{4\pi r'|\mathbf{r} - (a^2/r'^2)\mathbf{r}'|}
-$$
+```
 
 This is the method of images in Green's function language.
 
 ### Expansion in Eigenfunctions
 
-$$
+```math
 G(\mathbf{r}, \mathbf{r}') = \sum_n \frac{\psi_n(\mathbf{r})\psi_n^*(\mathbf{r}')}{\lambda_n}
-$$
+```
 
 where $\psi_n$ are eigenfunctions of the Laplacian with the given boundary conditions.
 
@@ -278,9 +278,9 @@ where $\psi_n$ are eigenfunctions of the Laplacian with the given boundary condi
 
 Discretize on a grid. Approximate:
 
-$$
+```math
 \nabla^2\phi \approx \frac{\phi_{i+1} + \phi_{i-1} + \phi_{j+1} + \phi_{j-1} - 4\phi_{ij}}{h^2}
-$$
+```
 
 Set equal to $-\rho/\epsilon_0$ and solve the linear system.
 

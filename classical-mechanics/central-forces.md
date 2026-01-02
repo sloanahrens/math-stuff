@@ -6,9 +6,9 @@ Central forces—forces that point toward (or away from) a fixed center and depe
 
 A **central force** has the form:
 
-$$
+```math
 \mathbf{F} = F(r)\hat{\mathbf{r}}
-$$
+```
 
 where $F(r)$ depends only on the distance from the force center, and $\hat{\mathbf{r}}$ points radially.
 
@@ -23,15 +23,15 @@ where $F(r)$ depends only on the distance from the force center, and $\hat{\math
 
 For central forces, torque vanishes:
 
-$$
+```math
 \boldsymbol{\tau} = \mathbf{r} \times \mathbf{F} = \mathbf{r} \times F(r)\hat{\mathbf{r}} = 0
-$$
+```
 
 Therefore:
 
-$$
+```math
 \mathbf{L} = \mathbf{r} \times \mathbf{p} = \text{constant}
-$$
+```
 
 **Consequences:**
 1. Motion is confined to a plane (perpendicular to $\mathbf{L}$)
@@ -39,9 +39,9 @@ $$
 
 ### Kepler's Second Law
 
-$$
+```math
 \frac{dA}{dt} = \frac{L}{2m} = \text{constant}
-$$
+```
 
 **What this means:** Equal areas are swept out in equal times. Planets move faster when closer to the Sun.
 
@@ -49,31 +49,31 @@ $$
 
 If $F(r) = -dV/dr$ (conservative):
 
-$$
+```math
 E = \frac{1}{2}m\dot{r}^2 + \frac{1}{2}mr^2\dot{\theta}^2 + V(r) = \text{constant}
-$$
+```
 
 Using $L = mr^2\dot{\theta}$:
 
-$$
+```math
 E = \frac{1}{2}m\dot{r}^2 + \frac{L^2}{2mr^2} + V(r)
-$$
+```
 
 ## The Effective Potential
 
 ### Definition
 
-$$
+```math
 \boxed{V_{\text{eff}}(r) = V(r) + \frac{L^2}{2mr^2}}
-$$
+```
 
 The term $L^2/(2mr^2)$ is the **centrifugal potential**—it creates a barrier that prevents collapse to $r = 0$.
 
 ### Energy Equation
 
-$$
+```math
 E = \frac{1}{2}m\dot{r}^2 + V_{\text{eff}}(r)
-$$
+```
 
 **What this means:** The 2D problem reduces to 1D motion in the effective potential. Radial motion is like a particle moving in $V_{\text{eff}}(r)$.
 
@@ -93,35 +93,35 @@ $$
 
 For gravity: $V(r) = -GMm/r$
 
-$$
+```math
 V_{\text{eff}}(r) = -\frac{GMm}{r} + \frac{L^2}{2mr^2}
-$$
+```
 
 ### Circular Orbits
 
 At the minimum of $V_{\text{eff}}$:
 
-$$
+```math
 \frac{dV_{\text{eff}}}{dr} = 0 \quad \Rightarrow \quad r_c = \frac{L^2}{GMm^2}
-$$
+```
 
 **Orbital velocity:**
-$$
+```math
 v_c = \sqrt{\frac{GM}{r}}
-$$
+```
 
 **Orbital period:**
-$$
+```math
 T = 2\pi\sqrt{\frac{r^3}{GM}}
-$$
+```
 
 ### The Orbit Equation
 
 The trajectory $r(\theta)$ satisfies:
 
-$$
+```math
 \boxed{r = \frac{p}{1 + e\cos\theta}}
-$$
+```
 
 where:
 - $p = L^2/(GMm^2)$ is the **semi-latus rectum**
@@ -154,25 +154,25 @@ where:
 **Second Law:** Equal areas in equal times ($dA/dt = L/2m$).
 
 **Third Law:**
-$$
+```math
 \boxed{T^2 = \frac{4\pi^2}{GM}a^3}
-$$
+```
 
 **What this means:** The period squared is proportional to the semi-major axis cubed. This allows measuring masses from orbital observations.
 
 ### Orbital Energy and Angular Momentum
 
-$$
+```math
 E = -\frac{GMm}{2a}, \qquad L = m\sqrt{GMa(1-e^2)}
-$$
+```
 
 ### Vis-Viva Equation
 
 The speed at any point:
 
-$$
+```math
 v^2 = GM\left(\frac{2}{r} - \frac{1}{a}\right)
-$$
+```
 
 **What this means:** Given the position, this gives the speed without solving the full orbit.
 
@@ -180,9 +180,9 @@ $$
 
 Setting $E = 0$ for a parabolic trajectory:
 
-$$
+```math
 v_{\text{esc}} = \sqrt{\frac{2GM}{r}}
-$$
+```
 
 **From Earth's surface:** $v_{\text{esc}} \approx 11.2$ km/s
 
@@ -199,9 +199,9 @@ To transfer between circular orbits of radii $r_1$ and $r_2$:
 3. Burn to circularize
 
 **Delta-v required:**
-$$
+```math
 \Delta v_{\text{total}} = \sqrt{\frac{GM}{r_1}}\left(\sqrt{\frac{2r_2}{r_1+r_2}} - 1\right) + \sqrt{\frac{GM}{r_2}}\left(1 - \sqrt{\frac{2r_1}{r_1+r_2}}\right)
-$$
+```
 
 ### Gravity Assist
 
@@ -213,15 +213,15 @@ Using a planet's gravity to change velocity without fuel. The spacecraft gains (
 
 For two bodies of masses $m_1$ and $m_2$:
 
-$$
+```math
 \mu = \frac{m_1 m_2}{m_1 + m_2}
-$$
+```
 
 The relative motion satisfies:
 
-$$
+```math
 \mu \ddot{\mathbf{r}} = \mathbf{F}(r)
-$$
+```
 
 **What this means:** The two-body problem reduces to one body of reduced mass $\mu$ orbiting a fixed center. Both bodies actually orbit the common center of mass.
 
@@ -229,9 +229,9 @@ $$
 
 Total mass $M = m_1 + m_2$
 
-$$
+```math
 \mathbf{r}_1 = -\frac{m_2}{M}\mathbf{r}, \qquad \mathbf{r}_2 = \frac{m_1}{M}\mathbf{r}
-$$
+```
 
 For the Sun-Earth system, $m_{\text{Sun}} \gg m_{\text{Earth}}$, so $\mu \approx m_{\text{Earth}}$ and the Sun barely moves.
 
@@ -248,9 +248,9 @@ Real orbits precess due to:
 
 A circular orbit at $r_0$ is stable if:
 
-$$
+```math
 \left.\frac{d^2V_{\text{eff}}}{dr^2}\right|_{r_0} > 0
-$$
+```
 
 For power-law forces $F \propto r^n$: stable if $n > -3$.
 
@@ -260,9 +260,9 @@ For power-law forces $F \propto r^n$: stable if $n > -3$.
 
 For inverse-square forces, there's an additional conserved quantity:
 
-$$
+```math
 \mathbf{A} = \mathbf{v} \times \mathbf{L} - GMm\hat{\mathbf{r}}
-$$
+```
 
 **What this means:** This vector points toward perihelion and has constant magnitude $A = GMme$. Its conservation explains why Kepler orbits are closed (don't precess). This hidden symmetry leads to the "accidental" degeneracy in the [hydrogen atom](../quantum-mechanics/hydrogen-atom.md).
 

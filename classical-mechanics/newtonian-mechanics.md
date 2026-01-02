@@ -8,17 +8,17 @@ Newton's laws form the foundation of classical mechanics. They describe how forc
 
 > An object remains at rest or in uniform motion unless acted upon by a net external force.
 
-$$
+```math
 \mathbf{F}_{\text{net}} = 0 \quad \Rightarrow \quad \mathbf{v} = \text{constant}
-$$
+```
 
 **What this means:** This defines **inertial reference frames**—frames where free particles move in straight lines at constant speed. Newton's laws only hold in inertial frames.
 
 ### Second Law (F = ma)
 
-$$
+```math
 \boxed{\mathbf{F} = m\mathbf{a} = m\frac{d\mathbf{v}}{dt} = \frac{d\mathbf{p}}{dt}}
-$$
+```
 
 where $\mathbf{p} = m\mathbf{v}$ is **momentum**.
 
@@ -28,9 +28,9 @@ where $\mathbf{p} = m\mathbf{v}$ is **momentum**.
 
 > For every action, there is an equal and opposite reaction.
 
-$$
+```math
 \mathbf{F}_{12} = -\mathbf{F}_{21}
-$$
+```
 
 **What this means:** Forces come in pairs. When you push on a wall, it pushes back on you with equal force.
 
@@ -38,33 +38,33 @@ $$
 
 ### Position, Velocity, Acceleration
 
-$$
+```math
 \mathbf{v} = \frac{d\mathbf{r}}{dt}, \qquad \mathbf{a} = \frac{d\mathbf{v}}{dt} = \frac{d^2\mathbf{r}}{dt^2}
-$$
+```
 
 ### Constant Acceleration
 
 For constant $\mathbf{a}$:
 
-$$
+```math
 \mathbf{v}(t) = \mathbf{v}_0 + \mathbf{a}t
-$$
+```
 
-$$
+```math
 \mathbf{r}(t) = \mathbf{r}_0 + \mathbf{v}_0 t + \frac{1}{2}\mathbf{a}t^2
-$$
+```
 
-$$
+```math
 v^2 = v_0^2 + 2\mathbf{a} \cdot (\mathbf{r} - \mathbf{r}_0)
-$$
+```
 
 ### Projectile Motion
 
 Near Earth's surface with $\mathbf{g}$ downward:
 
-$$
+```math
 x(t) = v_0 \cos\theta \cdot t, \qquad y(t) = v_0 \sin\theta \cdot t - \frac{1}{2}gt^2
-$$
+```
 
 Range: $R = \frac{v_0^2 \sin(2\theta)}{g}$ (maximum at $\theta = 45°$)
 
@@ -72,15 +72,15 @@ Range: $R = \frac{v_0^2 \sin(2\theta)}{g}$ (maximum at $\theta = 45°$)
 
 ### Gravity (Near Earth)
 
-$$
+```math
 \mathbf{F} = m\mathbf{g}, \qquad g \approx 9.8 \text{ m/s}^2
-$$
+```
 
 ### Universal Gravitation
 
-$$
+```math
 \mathbf{F} = -\frac{GMm}{r^2}\hat{\mathbf{r}}
-$$
+```
 
 See [central forces](central-forces.md) for orbital mechanics.
 
@@ -88,9 +88,9 @@ See [central forces](central-forces.md) for orbital mechanics.
 
 Perpendicular to surface, adjusts to prevent interpenetration:
 
-$$
+```math
 N = mg\cos\theta \quad \text{(on incline)}
-$$
+```
 
 ### Friction
 
@@ -102,9 +102,9 @@ $$
 
 ### Spring Force (Hooke's Law)
 
-$$
+```math
 F = -kx
-$$
+```
 
 This leads to the [harmonic oscillator](harmonic-oscillator.md)—one of the most important systems in physics.
 
@@ -122,9 +122,9 @@ At high speed: $F_d = -\frac{1}{2}C_d \rho A v^2$
 
 ### Work
 
-$$
+```math
 W = \int_C \mathbf{F} \cdot d\mathbf{r}
-$$
+```
 
 For constant force: $W = \mathbf{F} \cdot \Delta\mathbf{r} = F d \cos\theta$
 
@@ -132,23 +132,23 @@ For constant force: $W = \mathbf{F} \cdot \Delta\mathbf{r} = F d \cos\theta$
 
 ### Kinetic Energy
 
-$$
+```math
 T = \frac{1}{2}mv^2
-$$
+```
 
 **Work-Energy Theorem:**
 
-$$
+```math
 W_{\text{net}} = \Delta T = T_f - T_i
-$$
+```
 
 ### Conservative Forces and Potential Energy
 
 A force is **conservative** if the work done is path-independent:
 
-$$
+```math
 \oint \mathbf{F} \cdot d\mathbf{r} = 0
-$$
+```
 
 Equivalently, $\mathbf{F} = -\nabla V$ for some potential energy $V$.
 
@@ -165,9 +165,9 @@ Equivalently, $\mathbf{F} = -\nabla V$ for some potential energy $V$.
 
 For conservative forces:
 
-$$
+```math
 E = T + V = \text{constant}
-$$
+```
 
 **What this means:** Energy transforms between kinetic and potential but is never created or destroyed. This is one of the most powerful principles in physics.
 
@@ -175,9 +175,9 @@ $$
 
 ### Linear Momentum
 
-$$
+```math
 \mathbf{p} = m\mathbf{v}
-$$
+```
 
 Newton's second law: $\mathbf{F} = \frac{d\mathbf{p}}{dt}$
 
@@ -185,17 +185,17 @@ Newton's second law: $\mathbf{F} = \frac{d\mathbf{p}}{dt}$
 
 If $\mathbf{F}_{\text{ext}} = 0$:
 
-$$
+```math
 \mathbf{p}_{\text{total}} = \sum_i m_i \mathbf{v}_i = \text{constant}
-$$
+```
 
 **What this means:** In an isolated system, total momentum is conserved. This follows from Newton's third law.
 
 ### Impulse
 
-$$
+```math
 \mathbf{J} = \int \mathbf{F} \, dt = \Delta\mathbf{p}
-$$
+```
 
 ### Collisions
 
@@ -209,23 +209,23 @@ $$
 
 ### Angular Momentum
 
-$$
+```math
 \mathbf{L} = \mathbf{r} \times \mathbf{p}
-$$
+```
 
 ### Torque
 
-$$
+```math
 \boldsymbol{\tau} = \mathbf{r} \times \mathbf{F} = \frac{d\mathbf{L}}{dt}
-$$
+```
 
 ### Conservation of Angular Momentum
 
 If $\boldsymbol{\tau}_{\text{ext}} = 0$:
 
-$$
+```math
 \mathbf{L} = \text{constant}
-$$
+```
 
 **What this means:** Angular momentum is conserved in the absence of external torques. This explains why planets orbit in planes, ice skaters spin faster when they pull in their arms, and gyroscopes maintain orientation.
 
@@ -233,9 +233,9 @@ $$
 
 ### Moment of Inertia
 
-$$
+```math
 I = \sum_i m_i r_i^2 = \int r^2 \, dm
-$$
+```
 
 | Object | Moment of Inertia |
 |--------|-------------------|
@@ -248,17 +248,17 @@ $$
 
 ### Rotational Dynamics
 
-$$
+```math
 \tau = I\alpha
-$$
+```
 
 where $\alpha = d\omega/dt$ is angular acceleration.
 
 ### Rotational Kinetic Energy
 
-$$
+```math
 T_{\text{rot}} = \frac{1}{2}I\omega^2
-$$
+```
 
 **Rolling without slipping:** $v = \omega R$, total energy $T = \frac{1}{2}mv^2 + \frac{1}{2}I\omega^2$
 
@@ -266,15 +266,15 @@ $$
 
 ### Definition
 
-$$
+```math
 \mathbf{R}_{\text{cm}} = \frac{1}{M}\sum_i m_i \mathbf{r}_i = \frac{1}{M}\int \mathbf{r} \, dm
-$$
+```
 
 ### Motion of Center of Mass
 
-$$
+```math
 M\mathbf{a}_{\text{cm}} = \mathbf{F}_{\text{ext}}
-$$
+```
 
 **What this means:** The center of mass moves as if all mass were concentrated there with all external forces applied to it. Internal forces don't affect CM motion.
 
@@ -284,9 +284,9 @@ $$
 
 In a frame accelerating at $\mathbf{a}_0$, add a **pseudo-force**:
 
-$$
+```math
 \mathbf{F}_{\text{pseudo}} = -m\mathbf{a}_0
-$$
+```
 
 ### Rotating Frame
 
@@ -321,9 +321,9 @@ Newton's laws work well but have limitations:
 
 [Lagrangian mechanics](lagrangian-mechanics.md) uses $L = T - V$ and extremizes the action:
 
-$$
+```math
 \delta \int L \, dt = 0
-$$
+```
 
 **Advantages:** Handles constraints naturally, works in any coordinates, connects symmetries to conservation laws (Noether's theorem).
 
@@ -331,9 +331,9 @@ $$
 
 [Hamiltonian mechanics](hamiltonian-mechanics.md) uses $H = T + V$ in phase space $(q, p)$:
 
-$$
+```math
 \dot{q} = \frac{\partial H}{\partial p}, \qquad \dot{p} = -\frac{\partial H}{\partial q}
-$$
+```
 
 **Advantages:** Natural framework for quantum mechanics, reveals geometric structure, powerful for statistical mechanics.
 

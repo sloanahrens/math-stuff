@@ -6,23 +6,23 @@ The Kerr metric is the unique stationary, axially symmetric vacuum solution to E
 
 In Boyer-Lindquist coordinates $(t, r, \theta, \phi)$, the line element is:
 
-$$
+```math
 ds^2 = -\left(1 - \frac{2Mr}{\Sigma}\right) dt^2 - \frac{4Mar\sin^2\theta}{\Sigma} \, dt \, d\phi + \frac{\Sigma}{\Delta} dr^2 + \Sigma \, d\theta^2 + \frac{A \sin^2\theta}{\Sigma} d\phi^2
-$$
+```
 
 where we define:
 
-$$
+```math
 \Sigma = r^2 + a^2 \cos^2\theta
-$$
+```
 
-$$
+```math
 \Delta = r^2 - 2Mr + a^2
-$$
+```
 
-$$
+```math
 A = (r^2 + a^2)^2 - a^2 \Delta \sin^2\theta
-$$
+```
 
 Here $M$ is the mass and $a = J/M$ is the spin parameter (angular momentum per unit mass).
 
@@ -42,9 +42,9 @@ The dimensionless spin is often written as $a_* = a/M$, with $|a_*| \leq 1$ for 
 
 The horizons occur where $\Delta = 0$:
 
-$$
+```math
 r_\pm = M \pm \sqrt{M^2 - a^2}
-$$
+```
 
 - $r_+$ is the **outer horizon** (event horizon)
 - $r_-$ is the **inner horizon** (Cauchy horizon)
@@ -57,15 +57,15 @@ For $a = M$ (extremal), both horizons coincide at $r = M$.
 
 The **static limit** occurs where $g_{tt} = 0$:
 
-$$
+```math
 r_E(\theta) = M + \sqrt{M^2 - a^2\cos^2\theta}
-$$
+```
 
 The region between the static limit and the outer horizon is the **ergosphere**:
 
-$$
+```math
 r_+ < r < r_E(\theta)
-$$
+```
 
 In the ergosphere, no observer can remain stationary—all must co-rotate with the black hole.
 
@@ -81,9 +81,9 @@ In the ergosphere, no observer can remain stationary—all must co-rotate with t
 
 A key feature of the Kerr metric is **frame dragging**: spacetime itself is dragged around by the rotating mass. The angular velocity of a zero angular momentum observer (ZAMO) is:
 
-$$
+```math
 \omega = -\frac{g_{t\phi}}{g_{\phi\phi}} = \frac{2Mar}{A}
-$$
+```
 
 This approaches $\omega \to a/(2Mr_+)$ at the horizon.
 
@@ -91,9 +91,9 @@ This approaches $\omega \to a/(2Mr_+)$ at the horizon.
 
 Unlike Schwarzschild, the Kerr singularity is not a point but a **ring** in the equatorial plane at:
 
-$$
+```math
 \Sigma = 0 \quad \Rightarrow \quad r = 0, \; \theta = \frac{\pi}{2}
-$$
+```
 
 The ring has coordinate radius $a$ and can theoretically be traversed (though the interior geometry is likely unstable).
 
@@ -103,9 +103,9 @@ The ergosphere enables **energy extraction** from a rotating black hole. A parti
 
 The maximum extractable energy is:
 
-$$
+```math
 E_{\text{max}} = M\left(1 - \frac{1}{\sqrt{2}}\right) \approx 0.29M
-$$
+```
 
 reducing the black hole to an irreducible mass $M_{\text{irr}} = M/\sqrt{2}$.
 

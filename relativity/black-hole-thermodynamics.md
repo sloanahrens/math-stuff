@@ -18,9 +18,9 @@ Bardeen, Carter, and Hawking (1973) discovered that black holes obey laws striki
 
 **Statement:** The surface gravity $\kappa$ is constant over the event horizon of a stationary black hole.
 
-$$
+```math
 \kappa = \text{const. on horizon}
-$$
+```
 
 For Schwarzschild: $\kappa = \frac{1}{4M}$ (in $G = c = 1$ units).
 
@@ -32,9 +32,9 @@ For Schwarzschild: $\kappa = \frac{1}{4M}$ (in $G = c = 1$ units).
 
 **Statement:** For small perturbations of a stationary black hole:
 
-$$
+```math
 \boxed{dM = \frac{\kappa}{8\pi}dA + \Omega_H dJ + \Phi_H dQ}
-$$
+```
 
 where:
 - $M$ = mass (energy)
@@ -52,9 +52,9 @@ where:
 
 **Statement (Hawking, 1971):** In any classical process, the total horizon area never decreases:
 
-$$
+```math
 \boxed{\frac{dA}{dt} \geq 0}
-$$
+```
 
 **Thermodynamic analog:** Entropy never decreases: $dS \geq 0$
 
@@ -74,9 +74,9 @@ $$
 
 Jacob Bekenstein (1972) argued that black hole entropy should be proportional to horizon area:
 
-$$
+```math
 S_{BH} \propto \frac{A}{\ell_P^2}
-$$
+```
 
 where $\ell_P = \sqrt{\hbar G/c^3} \approx 1.6 \times 10^{-35}$ m is the Planck length.
 
@@ -86,15 +86,15 @@ where $\ell_P = \sqrt{\hbar G/c^3} \approx 1.6 \times 10^{-35}$ m is the Planck 
 
 Stephen Hawking (1975) derived the exact coefficient by studying quantum fields near the horizon:
 
-$$
+```math
 \boxed{S_{BH} = \frac{k_B c^3 A}{4 G \hbar} = \frac{A}{4\ell_P^2}}
-$$
+```
 
 In [natural units](../math-foundations/natural-units.md) with $G = c = \hbar = k_B = 1$:
 
-$$
+```math
 \boxed{S_{BH} = \frac{A}{4}}
-$$
+```
 
 **What this means:** A black hole's entropy is enormous—proportional to the surface area in Planck units. A solar-mass black hole has entropy $\sim 10^{77}$, far exceeding any ordinary matter.
 
@@ -102,23 +102,23 @@ $$
 
 The horizon area is $A = 4\pi r_s^2 = 16\pi M^2$, so:
 
-$$
+```math
 S_{BH} = 4\pi M^2 = \frac{\pi r_s^2}{\ell_P^2}
-$$
+```
 
 ### For Kerr Black Holes
 
 The horizon area is (see [Kerr metric](kerr-metric.md)):
 
-$$
+```math
 A = 8\pi M r_+ = 8\pi M(M + \sqrt{M^2 - a^2})
-$$
+```
 
 where $a = J/M$. The entropy is:
 
-$$
+```math
 S_{BH} = 2\pi M(M + \sqrt{M^2 - a^2})
-$$
+```
 
 ## Hawking Temperature
 
@@ -126,15 +126,15 @@ $$
 
 Hawking showed that black holes are not truly black—they emit thermal radiation:
 
-$$
+```math
 \boxed{T_H = \frac{\hbar c^3}{8\pi G M k_B} = \frac{\kappa}{2\pi}}
-$$
+```
 
 In natural units:
 
-$$
+```math
 T_H = \frac{1}{8\pi M}
-$$
+```
 
 **What this means:** Black holes glow! The temperature is inversely proportional to mass—small black holes are hot, large ones are cold.
 
@@ -163,21 +163,21 @@ This is a semiclassical picture—the full quantum gravity description remains u
 
 A black hole radiates approximately as a blackbody with area $A$ and temperature $T_H$:
 
-$$
+```math
 \frac{dM}{dt} = -\sigma A T_H^4 \propto -\frac{1}{M^2}
-$$
+```
 
 Integrating:
 
-$$
+```math
 M(t) = M_0\left(1 - \frac{t}{t_{evap}}\right)^{1/3}
-$$
+```
 
 ### Evaporation Time
 
-$$
+```math
 \boxed{t_{evap} = \frac{5120 \pi G^2 M_0^3}{\hbar c^4} \approx 10^{67} \left(\frac{M_0}{M_\odot}\right)^3 \text{ years}}
-$$
+```
 
 **What this means:** A solar-mass black hole takes $10^{67}$ years to evaporate—vastly longer than the age of the universe. But a mountain-mass black hole ($10^{12}$ kg) would evaporate in about 10 billion years.
 
@@ -216,9 +216,9 @@ Recent work on the "island formula" and gravitational entropy suggests that info
 
 Bekenstein proposed the **Generalized Second Law (GSL)**:
 
-$$
+```math
 \boxed{\frac{d}{dt}(S_{matter} + S_{BH}) \geq 0}
-$$
+```
 
 The total entropy—ordinary matter plus black holes—never decreases.
 
@@ -236,23 +236,23 @@ The total entropy—ordinary matter plus black holes—never decreases.
 
 The surface gravity $\kappa$ is the acceleration experienced at the horizon as measured by a distant observer:
 
-$$
+```math
 \kappa = \lim_{r \to r_+} \frac{d\phi/dr}{\sqrt{-g_{tt}}}
-$$
+```
 
 where $\phi$ is the gravitational potential.
 
 ### For Schwarzschild
 
-$$
+```math
 \kappa = \frac{1}{4M} = \frac{c^4}{4GM}
-$$
+```
 
 ### For Kerr
 
-$$
+```math
 \kappa = \frac{r_+ - M}{2M r_+} = \frac{\sqrt{M^2 - a^2}}{2M(M + \sqrt{M^2 - a^2})}
-$$
+```
 
 **What this means:** Rapidly rotating black holes have lower surface gravity (and temperature). An extremal Kerr black hole ($a = M$) has $\kappa = 0$—it is "cold."
 
@@ -269,9 +269,9 @@ In the Euclidean (imaginary time) approach:
 
 The thermal interpretation of quantum field theory (see [path integrals](../classical-mechanics/path-integrals.md)) gives:
 
-$$
+```math
 T = \frac{1}{\beta} = \frac{\kappa}{2\pi}
-$$
+```
 
 **What this means:** The Hawking temperature emerges naturally from the geometric requirement that Euclidean space be smooth at the horizon.
 
@@ -281,9 +281,9 @@ $$
 
 Bekenstein argued that the maximum entropy in a region is bounded by its surface area:
 
-$$
+```math
 S \leq \frac{A}{4\ell_P^2}
-$$
+```
 
 **What this means:** Information about a 3D region is encoded on its 2D boundary—like a hologram. This is a profound statement about the nature of space and information.
 

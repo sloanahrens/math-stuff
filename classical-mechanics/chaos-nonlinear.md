@@ -14,23 +14,23 @@ Each point represents a complete state; evolution traces a trajectory.
 
 The equations of motion:
 
-$$
+```math
 \dot{q}_i = \frac{\partial H}{\partial p_i}, \quad \dot{p}_i = -\frac{\partial H}{\partial q_i}
-$$
+```
 
 define a vector field on phase space. Trajectories never cross (uniqueness of solutions).
 
 ### Liouville's Theorem
 
-$$
+```math
 \boxed{\frac{d\rho}{dt} = 0}
-$$
+```
 
 Phase space volume is conserved under Hamiltonian flow. This is equivalent to:
 
-$$
+```math
 \nabla \cdot \mathbf{v} = \sum_i \left(\frac{\partial \dot{q}_i}{\partial q_i} + \frac{\partial \dot{p}_i}{\partial p_i}\right) = 0
-$$
+```
 
 **What this means:** Hamiltonian systems are incompressible in phase space—volumes can stretch and fold but not shrink. Dissipative systems violate this.
 
@@ -40,17 +40,17 @@ $$
 
 A fixed point $\mathbf{x}^*$ satisfies:
 
-$$
+```math
 \dot{\mathbf{x}} = \mathbf{f}(\mathbf{x}^*) = 0
-$$
+```
 
 ### Linear Stability Analysis
 
 Near a fixed point, linearize:
 
-$$
+```math
 \dot{\boldsymbol{\xi}} = J \boldsymbol{\xi}
-$$
+```
 
 where $\boldsymbol{\xi} = \mathbf{x} - \mathbf{x}^*$ and $J_{ij} = \partial f_i/\partial x_j$ is the Jacobian.
 
@@ -84,9 +84,9 @@ A **bifurcation** is a qualitative change in dynamics as a parameter varies.
 
 ### Saddle-Node Bifurcation
 
-$$
+```math
 \dot{x} = r + x^2
-$$
+```
 
 - $r < 0$: two fixed points (stable and unstable)
 - $r = 0$: one fixed point (saddle-node)
@@ -94,9 +94,9 @@ $$
 
 ### Transcritical Bifurcation
 
-$$
+```math
 \dot{x} = rx - x^2
-$$
+```
 
 Two fixed points exchange stability at $r = 0$.
 
@@ -104,34 +104,34 @@ Two fixed points exchange stability at $r = 0$.
 
 **Supercritical:**
 
-$$
+```math
 \dot{x} = rx - x^3
-$$
+```
 
 - $r < 0$: one stable fixed point at $x = 0$
 - $r > 0$: $x = 0$ unstable, two stable at $x = \pm\sqrt{r}$
 
 **Subcritical:**
 
-$$
+```math
 \dot{x} = rx + x^3
-$$
+```
 
 Unstable branches exist for $r < 0$; system can jump discontinuously.
 
 ### Hopf Bifurcation
 
-$$
+```math
 \boxed{\text{A fixed point loses stability as eigenvalues cross the imaginary axis}}
-$$
+```
 
 Creates or destroys a limit cycle.
 
 **Example:**
 
-$$
+```math
 \dot{r} = \mu r - r^3, \quad \dot{\theta} = \omega
-$$
+```
 
 For $\mu > 0$: stable limit cycle with radius $\sqrt{\mu}$.
 
@@ -163,17 +163,17 @@ In 2D, if a trajectory stays in a bounded region without approaching a fixed poi
 
 **Chaos:** Nearby trajectories separate exponentially:
 
-$$
+```math
 |\delta\mathbf{x}(t)| \sim |\delta\mathbf{x}(0)| e^{\lambda t}
-$$
+```
 
 where $\lambda > 0$ is the Lyapunov exponent.
 
 ### Lyapunov Exponents
 
-$$
+```math
 \boxed{\lambda = \lim_{t \to \infty} \frac{1}{t} \ln\frac{|\delta\mathbf{x}(t)|}{|\delta\mathbf{x}(0)|}}
-$$
+```
 
 For an $n$-dimensional system, there are $n$ Lyapunov exponents $\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_n$.
 
@@ -198,25 +198,25 @@ Properties:
 
 ### The Lorenz System
 
-$$
+```math
 \dot{x} = \sigma(y - x)
-$$
+```
 
-$$
+```math
 \dot{y} = x(\rho - z) - y
-$$
+```
 
-$$
+```math
 \dot{z} = xy - \beta z
-$$
+```
 
 For $\sigma = 10$, $\rho = 28$, $\beta = 8/3$: chaotic with strange attractor (the "Lorenz butterfly").
 
 ### The Rossler Attractor
 
-$$
+```math
 \dot{x} = -y - z, \quad \dot{y} = x + ay, \quad \dot{z} = b + z(x - c)
-$$
+```
 
 Simpler geometry than Lorenz; single-scroll attractor.
 
@@ -232,9 +232,9 @@ Strange attractor → strange set
 
 ### The Logistic Map
 
-$$
+```math
 \boxed{x_{n+1} = rx_n(1 - x_n)}
-$$
+```
 
 | $r$ Range | Behavior |
 |-----------|----------|
@@ -250,17 +250,17 @@ As parameter increases, stable fixed point → period-2 → period-4 → ... →
 
 **Feigenbaum constant:**
 
-$$
+```math
 \delta = \lim_{n \to \infty} \frac{r_n - r_{n-1}}{r_{n+1} - r_n} \approx 4.669
-$$
+```
 
 This is universal for unimodal maps.
 
 ### The Henon Map
 
-$$
+```math
 x_{n+1} = 1 - ax_n^2 + y_n, \quad y_{n+1} = bx_n
-$$
+```
 
 For $a = 1.4$, $b = 0.3$: strange attractor with fractal structure.
 
@@ -274,9 +274,9 @@ Motion is confined to invariant tori in phase space.
 
 ### The KAM Theorem
 
-$$
+```math
 \boxed{\text{Most invariant tori survive small perturbations}}
-$$
+```
 
 More precisely: for a non-degenerate integrable Hamiltonian $H_0$ perturbed by $\epsilon H_1$:
 
@@ -294,9 +294,9 @@ More precisely: for a non-degenerate integrable Hamiltonian $H_0$ perturbed by $
 
 Tori break up when frequencies are commensurable:
 
-$$
+```math
 \mathbf{m} \cdot \boldsymbol{\omega} = 0
-$$
+```
 
 for integer vectors $\mathbf{m}$. This creates chains of islands and chaos.
 
@@ -306,9 +306,9 @@ for integer vectors $\mathbf{m}$. This creates chains of islands and chaos.
 
 Cover the set with boxes of size $\epsilon$. If $N(\epsilon)$ is the number needed:
 
-$$
+```math
 \boxed{D_0 = \lim_{\epsilon \to 0} \frac{\ln N(\epsilon)}{\ln(1/\epsilon)}}
-$$
+```
 
 For strange attractors, $D_0$ is typically non-integer.
 
@@ -325,9 +325,9 @@ For strange attractors, $D_0$ is typically non-integer.
 
 Relates dimension to Lyapunov exponents:
 
-$$
+```math
 D_{KY} = k + \frac{\sum_{i=1}^k \lambda_i}{|\lambda_{k+1}|}
-$$
+```
 
 where $k$ is largest integer such that $\sum_{i=1}^k \lambda_i \geq 0$.
 
@@ -343,9 +343,9 @@ Sensitive dependence: two nearly identical initial conditions diverge exponentia
 
 ### Driven Damped Pendulum
 
-$$
+```math
 \ddot{\theta} + \gamma\dot{\theta} + \omega_0^2\sin\theta = f\cos(\omega t)
-$$
+```
 
 Shows period-doubling to chaos as driving amplitude increases.
 

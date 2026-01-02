@@ -10,9 +10,9 @@ Prerequisites: [information theory](information-theory.md), [probability](../mat
 
 For a source with entropy $H(X)$:
 
-$$
+```math
 \boxed{\text{Average bits per symbol} \geq H(X)}
-$$
+```
 
 Equality is achievable in the limit of long sequences.
 
@@ -48,9 +48,9 @@ This is prefix-free. The code $\{0, 01, 10\}$ is NOT prefix-free because 0 is a 
 
 For a prefix-free code with codeword lengths $\ell_1, \ell_2, \ldots, \ell_n$:
 
-$$
+```math
 \sum_{i=1}^{n} 2^{-\ell_i} \leq 1
-$$
+```
 
 Conversely, if lengths satisfy this inequality, a prefix-free code with those lengths exists.
 
@@ -58,9 +58,9 @@ Conversely, if lengths satisfy this inequality, a prefix-free code with those le
 
 For a source with probabilities $\{p_i\}$, the optimal codeword length for symbol $i$ is:
 
-$$
+```math
 \ell_i^* = -\log_2 p_i
-$$
+```
 
 This gives average length exactly equal to entropy $H(X)$.
 
@@ -227,9 +227,9 @@ This is reversible and dramatically improves compression.
 
 **Rate-Distortion Theory:** For a given distortion level $D$, the minimum rate is:
 
-$$
+```math
 R(D) = \min_{p(\hat{x}|x): \mathbb{E}[d(X,\hat{X})] \leq D} I(X; \hat{X})
-$$
+```
 
 This tells you the fundamental tradeoff between quality and file size.
 

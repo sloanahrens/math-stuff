@@ -24,9 +24,9 @@ Given $f(a)$ and $f(b)$ with opposite signs:
 
 ### Newton-Raphson Method
 
-$$
+```math
 \boxed{x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}}
-$$
+```
 
 **Convergence:** Quadratic near root. Error squares: $\epsilon_{n+1} \sim \epsilon_n^2$
 
@@ -37,9 +37,9 @@ $$
 
 Approximate derivative using two points:
 
-$$
+```math
 x_{n+1} = x_n - f(x_n)\frac{x_n - x_{n-1}}{f(x_n) - f(x_{n-1})}
-$$
+```
 
 **Convergence:** Superlinear ($\sim 1.618$)
 
@@ -62,9 +62,9 @@ Solve $\frac{dy}{dt} = f(t, y)$ with $y(t_0) = y_0$.
 
 ### Euler's Method
 
-$$
+```math
 y_{n+1} = y_n + h f(t_n, y_n)
-$$
+```
 
 **Error:** $O(h)$ per step, $O(h)$ global (first-order)
 
@@ -74,23 +74,23 @@ Simple but inaccurate; rarely used in practice.
 
 **RK4 (Fourth-order Runge-Kutta):**
 
-$$
+```math
 \boxed{y_{n+1} = y_n + \frac{h}{6}(k_1 + 2k_2 + 2k_3 + k_4)}
-$$
+```
 
 where:
-$$
+```math
 k_1 = f(t_n, y_n)
-$$
-$$
+```
+```math
 k_2 = f(t_n + h/2, y_n + hk_1/2)
-$$
-$$
+```
+```math
 k_3 = f(t_n + h/2, y_n + hk_2/2)
-$$
-$$
+```
+```math
 k_4 = f(t_n + h, y_n + hk_3)
-$$
+```
 
 **Error:** $O(h^4)$ per step, $O(h^4)$ global
 
@@ -111,9 +111,9 @@ When timescales differ greatly, explicit methods require tiny steps.
 
 **Implicit methods** (e.g., backward Euler) are stable for stiff problems:
 
-$$
+```math
 y_{n+1} = y_n + h f(t_{n+1}, y_{n+1})
-$$
+```
 
 Requires solving nonlinear equation at each step.
 
@@ -123,15 +123,15 @@ For Hamiltonian systems, preserve phase space structure.
 
 **Leapfrog (Störmer-Verlet):**
 
-$$
+```math
 p_{n+1/2} = p_n - \frac{h}{2}\nabla V(q_n)
-$$
-$$
+```
+```math
 q_{n+1} = q_n + h \frac{p_{n+1/2}}{m}
-$$
-$$
+```
+```math
 p_{n+1} = p_{n+1/2} - \frac{h}{2}\nabla V(q_{n+1})
-$$
+```
 
 **What this means:** Energy may oscillate but doesn't drift—essential for long-term orbital mechanics.
 
@@ -142,26 +142,26 @@ $$
 Replace derivatives with difference quotients on a grid.
 
 **First derivative:**
-$$
+```math
 \frac{\partial u}{\partial x} \approx \frac{u_{i+1} - u_{i-1}}{2\Delta x} + O(\Delta x^2)
-$$
+```
 
 **Second derivative:**
-$$
+```math
 \frac{\partial^2 u}{\partial x^2} \approx \frac{u_{i+1} - 2u_i + u_{i-1}}{\Delta x^2} + O(\Delta x^2)
-$$
+```
 
 ### Heat Equation (Diffusion)
 
-$$
+```math
 \frac{\partial u}{\partial t} = \alpha \frac{\partial^2 u}{\partial x^2}
-$$
+```
 
 **FTCS (Forward Time, Centered Space):**
 
-$$
+```math
 u_i^{n+1} = u_i^n + r(u_{i+1}^n - 2u_i^n + u_{i-1}^n)
-$$
+```
 
 where $r = \alpha\Delta t/\Delta x^2$.
 
@@ -171,15 +171,15 @@ where $r = \alpha\Delta t/\Delta x^2$.
 
 ### Wave Equation
 
-$$
+```math
 \frac{\partial^2 u}{\partial t^2} = c^2 \frac{\partial^2 u}{\partial x^2}
-$$
+```
 
 **Explicit scheme:**
 
-$$
+```math
 u_i^{n+1} = 2u_i^n - u_i^{n-1} + r^2(u_{i+1}^n - 2u_i^n + u_{i-1}^n)
-$$
+```
 
 where $r = c\Delta t/\Delta x$.
 
@@ -187,9 +187,9 @@ where $r = c\Delta t/\Delta x$.
 
 ### Laplace/Poisson Equations
 
-$$
+```math
 \nabla^2 u = f
-$$
+```
 
 **Relaxation methods:**
 
@@ -197,9 +197,9 @@ $$
 *Gauss-Seidel:* Use new values as soon as available
 *SOR (Successive Over-Relaxation):* Accelerate with parameter $\omega$
 
-$$
+```math
 u_i^{new} = (1-\omega)u_i^{old} + \omega \cdot (\text{Gauss-Seidel update})
-$$
+```
 
 Optimal $\omega \approx 2 - O(1/N)$ for $N \times N$ grid.
 
@@ -226,9 +226,9 @@ Much higher accuracy for smooth solutions.
 For large sparse systems, direct methods are too slow.
 
 **Jacobi iteration:**
-$$
+```math
 x_i^{(k+1)} = \frac{1}{a_{ii}}\left(b_i - \sum_{j \neq i} a_{ij}x_j^{(k)}\right)
-$$
+```
 
 **Gauss-Seidel:** Use updated values immediately
 
@@ -248,9 +248,9 @@ $$
 
 Estimate integrals by averaging random samples:
 
-$$
+```math
 \boxed{\int f(x)dx \approx \frac{V}{N}\sum_{i=1}^N f(x_i)}
-$$
+```
 
 where $V$ is the volume and $x_i$ are random points.
 
@@ -262,9 +262,9 @@ where $V$ is the volume and $x_i$ are random points.
 
 Sample from distribution $p(x)$ instead of uniformly:
 
-$$
+```math
 \int f(x)dx = \int \frac{f(x)}{p(x)}p(x)dx \approx \frac{1}{N}\sum_{i=1}^N \frac{f(x_i)}{p(x_i)}
-$$
+```
 
 Choose $p(x) \propto |f(x)|$ to reduce variance.
 
@@ -316,9 +316,9 @@ Example: Forward vs backward recurrence for Bessel functions.
 
 ### Condition Number
 
-$$
+```math
 \kappa(A) = \|A\| \cdot \|A^{-1}\|
-$$
+```
 
 Measures sensitivity of solution to input perturbations.
 

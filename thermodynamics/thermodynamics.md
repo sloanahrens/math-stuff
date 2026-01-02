@@ -12,9 +12,9 @@ Thermodynamics describes the behavior of macroscopic systems through state varia
 
 ### First Law: Energy Conservation
 
-$$
+```math
 \boxed{dU = \delta Q - \delta W}
-$$
+```
 
 where:
 - $U$ is internal energy (a state function)
@@ -24,9 +24,9 @@ where:
 **What this means:** Energy is conserved. Heat and work are both forms of energy transfer. The notation $\delta$ (not $d$) indicates these are path-dependent, not exact differentials.
 
 **For reversible processes:**
-$$
+```math
 dU = T\,dS - P\,dV
-$$
+```
 
 This is the fundamental thermodynamic relation.
 
@@ -39,9 +39,9 @@ Several equivalent statements:
 **Kelvin-Planck:** No process can convert heat entirely into work.
 
 **Entropy:** For an isolated system:
-$$
+```math
 \boxed{\Delta S \geq 0}
-$$
+```
 
 with equality only for reversible processes.
 
@@ -51,9 +51,9 @@ with equality only for reversible processes.
 
 > As $T \to 0$, the entropy of a perfect crystal approaches zero.
 
-$$
+```math
 \lim_{T \to 0} S = 0
-$$
+```
 
 **What this means:** Absolute zero is unattainable in finite steps. At $T = 0$, a system is in its unique ground state (for non-degenerate systems).
 
@@ -73,60 +73,60 @@ A **state function** depends only on the current state, not on how the system go
 ### Internal Energy
 
 For an ideal gas:
-$$
+```math
 U = \frac{f}{2}nRT
-$$
+```
 
 where $f$ is degrees of freedom (3 for monatomic, 5 for diatomic at moderate $T$).
 
 ### Enthalpy
 
-$$
+```math
 H = U + PV
-$$
+```
 
 **What this means:** Enthalpy is the "heat content" at constant pressure. For isobaric processes, $\Delta H = Q_P$.
 
 ### Heat Capacities
 
-$$
+```math
 C_V = \left(\frac{\partial U}{\partial T}\right)_V, \qquad C_P = \left(\frac{\partial H}{\partial T}\right)_P
-$$
+```
 
 For ideal gases:
-$$
+```math
 C_P - C_V = nR
-$$
+```
 
 ## Free Energies
 
 ### Helmholtz Free Energy
 
-$$
+```math
 \boxed{F = U - TS}
-$$
+```
 
 **Natural variables:** $F = F(T, V)$
 
 **Differential:**
-$$
+```math
 dF = -S\,dT - P\,dV
-$$
+```
 
 **What this means:** At constant $T$ and $V$, systems minimize $F$. The maximum work extractable at constant $T$ equals $-\Delta F$.
 
 ### Gibbs Free Energy
 
-$$
+```math
 \boxed{G = U - TS + PV = H - TS}
-$$
+```
 
 **Natural variables:** $G = G(T, P)$
 
 **Differential:**
-$$
+```math
 dG = -S\,dT + V\,dP
-$$
+```
 
 **What this means:** At constant $T$ and $P$ (typical lab conditions), systems minimize $G$. This determines chemical equilibrium and phase transitions.
 
@@ -143,21 +143,21 @@ $$
 
 From the equality of mixed partial derivatives:
 
-$$
+```math
 \left(\frac{\partial T}{\partial V}\right)_S = -\left(\frac{\partial P}{\partial S}\right)_V
-$$
+```
 
-$$
+```math
 \left(\frac{\partial T}{\partial P}\right)_S = \left(\frac{\partial V}{\partial S}\right)_P
-$$
+```
 
-$$
+```math
 \left(\frac{\partial S}{\partial V}\right)_T = \left(\frac{\partial P}{\partial T}\right)_V
-$$
+```
 
-$$
+```math
 \left(\frac{\partial S}{\partial P}\right)_T = -\left(\frac{\partial V}{\partial T}\right)_P
-$$
+```
 
 **What this means:** These connect measurable quantities (like thermal expansion $\partial V/\partial T$) to entropy changes that are harder to measure directly.
 
@@ -176,14 +176,14 @@ $$
 ### Ideal Gas Laws
 
 **Equation of state:**
-$$
+```math
 PV = nRT
-$$
+```
 
 **Adiabatic process:**
-$$
+```math
 TV^{\gamma-1} = \text{const}, \qquad PV^\gamma = \text{const}
-$$
+```
 
 where $\gamma = C_P/C_V$.
 
@@ -193,17 +193,17 @@ where $\gamma = C_P/C_V$.
 
 A heat engine absorbs heat $Q_H$ from a hot reservoir, does work $W$, and exhausts heat $Q_C$ to a cold reservoir.
 
-$$
+```math
 \eta = \frac{W}{Q_H} = 1 - \frac{Q_C}{Q_H}
-$$
+```
 
 ### Carnot Engine
 
 The most efficient engine operating between temperatures $T_H$ and $T_C$:
 
-$$
+```math
 \boxed{\eta_{\text{Carnot}} = 1 - \frac{T_C}{T_H}}
-$$
+```
 
 **The Carnot cycle:**
 1. Isothermal expansion at $T_H$ (absorb $Q_H$)
@@ -216,23 +216,23 @@ $$
 ### Refrigerators and Heat Pumps
 
 **Coefficient of performance (refrigerator):**
-$$
+```math
 \text{COP} = \frac{Q_C}{W} \leq \frac{T_C}{T_H - T_C}
-$$
+```
 
 **Heat pump COP:**
-$$
+```math
 \text{COP} = \frac{Q_H}{W} \leq \frac{T_H}{T_H - T_C}
-$$
+```
 
 ## Phase Transitions
 
 ### Clausius-Clapeyron Equation
 
 Along a phase boundary:
-$$
+```math
 \frac{dP}{dT} = \frac{L}{T\Delta V}
-$$
+```
 
 where $L$ is the latent heat and $\Delta V$ is the volume change.
 
@@ -254,30 +254,30 @@ Above the critical temperature $T_c$, liquid and gas phases become indistinguish
 
 ### Chemical Potential
 
-$$
+```math
 \mu_i = \left(\frac{\partial G}{\partial N_i}\right)_{T,P,N_{j\neq i}}
-$$
+```
 
 At equilibrium, chemical potential is uniform throughout the system.
 
 ### Gibbs-Duhem Relation
 
-$$
+```math
 S\,dT - V\,dP + \sum_i N_i\,d\mu_i = 0
-$$
+```
 
 ### Equilibrium Constant
 
 For a reaction $aA + bB \rightleftharpoons cC + dD$:
 
-$$
+```math
 \Delta G = \Delta G^\circ + RT \ln Q
-$$
+```
 
 At equilibrium ($\Delta G = 0$):
-$$
+```math
 K = e^{-\Delta G^\circ/RT}
-$$
+```
 
 ## Connection to Other Areas
 
@@ -285,9 +285,9 @@ $$
 
 Classical thermodynamics is phenomenological—it doesn't explain *why* entropy increases. [Statistical mechanics](statistical-mechanics.md) provides the microscopic foundation:
 
-$$
+```math
 S = k_B \ln W
-$$
+```
 
 where $W$ is the number of microstates.
 

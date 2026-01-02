@@ -8,9 +8,9 @@ Complex analysis is the study of functions of complex variables. It provides pow
 
 A complex function $f: \mathbb{C} \to \mathbb{C}$ maps complex numbers to complex numbers. Writing $z = x + iy$ and $f(z) = u(x,y) + iv(x,y)$:
 
-$$
+```math
 f(z) = u(x, y) + iv(x, y)
-$$
+```
 
 where $u$ and $v$ are real-valued functions of two real variables.
 
@@ -26,9 +26,9 @@ where $u$ and $v$ are real-valued functions of two real variables.
 
 A function is **analytic** (or holomorphic) at a point if it has a complex derivative there. For $f(z) = u + iv$ to be analytic, it must satisfy the **Cauchy-Riemann equations**:
 
-$$
+```math
 \boxed{\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}, \qquad \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}}
-$$
+```
 
 **What this means:** These conditions ensure the derivative is the same regardless of the direction of approach in the complex plane. They're remarkably restrictive—analytic functions are infinitely differentiable and equal their Taylor series.
 
@@ -36,9 +36,9 @@ $$
 
 If $f = u + iv$ is analytic, then both $u$ and $v$ satisfy Laplace's equation:
 
-$$
+```math
 \nabla^2 u = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0
-$$
+```
 
 Functions satisfying Laplace's equation are called **harmonic**. The real and imaginary parts of any analytic function are harmonic conjugates.
 
@@ -50,9 +50,9 @@ Functions satisfying Laplace's equation are called **harmonic**. The real and im
 
 A **contour** $C$ is a piecewise smooth curve in $\mathbb{C}$. The contour integral is:
 
-$$
+```math
 \int_C f(z) \, dz = \int_a^b f(z(t)) z'(t) \, dt
-$$
+```
 
 where $z(t)$ parametrizes the contour from $t = a$ to $t = b$.
 
@@ -60,9 +60,9 @@ where $z(t)$ parametrizes the contour from $t = a$ to $t = b$.
 
 If $f(z)$ is analytic inside and on a simple closed contour $C$:
 
-$$
+```math
 \boxed{\oint_C f(z) \, dz = 0}
-$$
+```
 
 **What this means:** The integral around any closed loop is zero if the function is analytic everywhere inside. This is the complex analog of a conservative vector field.
 
@@ -70,15 +70,15 @@ $$
 
 If $f(z)$ is analytic inside and on a simple closed contour $C$, and $z_0$ is inside $C$:
 
-$$
+```math
 \boxed{f(z_0) = \frac{1}{2\pi i} \oint_C \frac{f(z)}{z - z_0} \, dz}
-$$
+```
 
 For derivatives:
 
-$$
+```math
 f^{(n)}(z_0) = \frac{n!}{2\pi i} \oint_C \frac{f(z)}{(z - z_0)^{n+1}} \, dz
-$$
+```
 
 **What this means:** The value of an analytic function inside a region is completely determined by its values on the boundary. This is extraordinarily powerful—knowing the boundary determines everything inside.
 
@@ -98,9 +98,9 @@ A point $z_0$ where $f(z)$ is not analytic is a **singularity**:
 
 Near an isolated singularity $z_0$, a function can be expanded as:
 
-$$
+```math
 f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n
-$$
+```
 
 The **principal part** consists of terms with $n < 0$. For a pole of order $m$, the series starts at $n = -m$.
 
@@ -108,23 +108,23 @@ The **principal part** consists of terms with $n < 0$. For a pole of order $m$, 
 
 The **residue** of $f(z)$ at $z_0$ is the coefficient $a_{-1}$ in the Laurent series:
 
-$$
+```math
 \text{Res}(f, z_0) = a_{-1} = \frac{1}{2\pi i} \oint_C f(z) \, dz
-$$
+```
 
 where $C$ is a small circle around $z_0$.
 
 **For a simple pole** ($m = 1$):
 
-$$
+```math
 \text{Res}(f, z_0) = \lim_{z \to z_0} (z - z_0) f(z)
-$$
+```
 
 **For a pole of order $m$**:
 
-$$
+```math
 \text{Res}(f, z_0) = \frac{1}{(m-1)!} \lim_{z \to z_0} \frac{d^{m-1}}{dz^{m-1}} \left[ (z - z_0)^m f(z) \right]
-$$
+```
 
 ## The Residue Theorem
 
@@ -132,9 +132,9 @@ $$
 
 If $f(z)$ is analytic inside and on a simple closed contour $C$ except for isolated singularities $z_1, z_2, \ldots, z_n$ inside $C$:
 
-$$
+```math
 \boxed{\oint_C f(z) \, dz = 2\pi i \sum_{k=1}^{n} \text{Res}(f, z_k)}
-$$
+```
 
 **What this means:** Any contour integral reduces to summing residues. This transforms difficult integrals into algebraic calculations.
 
@@ -144,14 +144,14 @@ Around a circle containing $z = 0$:
 
 The function has a pole of order 2 at $z = 0$. Using the formula:
 
-$$
+```math
 \text{Res}\left(\frac{e^z}{z^2}, 0\right) = \lim_{z \to 0} \frac{d}{dz}\left[z^2 \cdot \frac{e^z}{z^2}\right] = \lim_{z \to 0} e^z = 1
-$$
+```
 
 Therefore:
-$$
+```math
 \oint \frac{e^z}{z^2} dz = 2\pi i \cdot 1 = 2\pi i
-$$
+```
 
 ## Evaluating Real Integrals
 
@@ -167,14 +167,14 @@ For $\int_{-\infty}^{\infty} R(x) \, dx$ where $R(x) = P(x)/Q(x)$ with $\deg Q \
 
 The integrand is $\frac{1}{(x+i)(x-i)}$. Closing in the upper half-plane, the only pole inside is $z = i$:
 
-$$
+```math
 \text{Res}\left(\frac{1}{1+z^2}, i\right) = \frac{1}{2i}
-$$
+```
 
 Therefore:
-$$
+```math
 \int_{-\infty}^{\infty} \frac{dx}{1 + x^2} = 2\pi i \cdot \frac{1}{2i} = \pi
-$$
+```
 
 ### Integrals with Trigonometric Functions
 
@@ -182,9 +182,9 @@ For $\int_0^{2\pi} R(\cos\theta, \sin\theta) \, d\theta$:
 
 Substitute $z = e^{i\theta}$, so $\cos\theta = \frac{z + z^{-1}}{2}$, $\sin\theta = \frac{z - z^{-1}}{2i}$, $d\theta = \frac{dz}{iz}$:
 
-$$
+```math
 \int_0^{2\pi} R(\cos\theta, \sin\theta) \, d\theta = \oint_{|z|=1} R\left(\frac{z+z^{-1}}{2}, \frac{z-z^{-1}}{2i}\right) \frac{dz}{iz}
-$$
+```
 
 ### Integrals with Exponentials
 
@@ -197,14 +197,14 @@ For $\int_{-\infty}^{\infty} f(x) e^{iax} \, dx$ with $a > 0$:
 
 Pole at $z = i$ in the upper half-plane:
 
-$$
+```math
 \text{Res}\left(\frac{e^{iz}}{1+z^2}, i\right) = \frac{e^{-1}}{2i}
-$$
+```
 
 Therefore:
-$$
+```math
 \int_{-\infty}^{\infty} \frac{e^{ix}}{1 + x^2} dx = 2\pi i \cdot \frac{e^{-1}}{2i} = \frac{\pi}{e}
-$$
+```
 
 ## Branch Cuts and Multi-Valued Functions
 
@@ -212,9 +212,9 @@ $$
 
 Functions like $\sqrt{z}$, $\ln z$, and $z^{1/n}$ are multi-valued. Going around the origin once changes the value:
 
-$$
+```math
 \sqrt{re^{i\theta}} = \sqrt{r} e^{i\theta/2} \quad \text{becomes} \quad \sqrt{r} e^{i(\theta + 2\pi)/2} = -\sqrt{r} e^{i\theta/2}
-$$
+```
 
 ### Branch Cuts
 
@@ -232,9 +232,9 @@ A **branch cut** is a curve we agree not to cross, making the function single-va
 
 Use a keyhole contour avoiding the branch cut on the positive real axis:
 
-$$
+```math
 \int_0^\infty \frac{x^{a-1}}{1+x} dx = \frac{\pi}{\sin(\pi a)}
-$$
+```
 
 This is related to the [Gamma function](special-functions.md).
 
@@ -260,9 +260,9 @@ A **conformal map** preserves angles between curves. Any analytic function with 
 
 The general form:
 
-$$
+```math
 w = \frac{az + b}{cz + d}, \qquad ad - bc \neq 0
-$$
+```
 
 maps circles and lines to circles and lines. Three points determine the transformation uniquely.
 
@@ -287,9 +287,9 @@ The integral $\Gamma(z) = \int_0^\infty t^{z-1} e^{-t} dt$ converges only for $\
 
 Using $\Gamma(z+1) = z\Gamma(z)$, we can extend to all $z$ except non-positive integers:
 
-$$
+```math
 \Gamma(z) = \frac{\Gamma(z+1)}{z} = \frac{\Gamma(z+2)}{z(z+1)} = \cdots
-$$
+```
 
 ### Example: The Riemann Zeta Function
 

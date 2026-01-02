@@ -15,15 +15,15 @@ Einstein's 1905 theory rests on two postulates:
 
 A moving clock runs slower. If a clock at rest measures time $\Delta t_0$, an observer seeing it move at velocity $v$ measures:
 
-$$
+```math
 \boxed{\Delta t = \gamma \Delta t_0 = \frac{\Delta t_0}{\sqrt{1 - v^2/c^2}}}
-$$
+```
 
 where the **Lorentz factor** is:
 
-$$
+```math
 \gamma = \frac{1}{\sqrt{1 - v^2/c^2}}
-$$
+```
 
 **What this means:** Time itself passes at different rates for different observers. A muon created in the upper atmosphere traveling at $0.99c$ has $\gamma \approx 7$, so its 2.2 μs lifetime becomes 15 μs in Earth's frame—allowing it to reach the ground.
 
@@ -41,9 +41,9 @@ $$
 
 A moving object is shortened along its direction of motion:
 
-$$
+```math
 \boxed{L = \frac{L_0}{\gamma} = L_0 \sqrt{1 - v^2/c^2}}
-$$
+```
 
 where $L_0$ is the **proper length** (measured in the object's rest frame).
 
@@ -53,9 +53,9 @@ where $L_0$ is the **proper length** (measured in the object's rest frame).
 
 Events simultaneous in one frame are not simultaneous in another. If two events are separated by distance $\Delta x$ and are simultaneous in frame $S$, in frame $S'$ moving at velocity $v$:
 
-$$
+```math
 \Delta t' = -\gamma \frac{v \Delta x}{c^2}
-$$
+```
 
 **What this means:** "Now" is not universal. Two observers can disagree about which of two distant events happened first—and both are correct in their own frames.
 
@@ -65,9 +65,9 @@ $$
 
 Space and time unite into **spacetime**. An event has coordinates:
 
-$$
+```math
 x^\mu = (ct, x, y, z) = (x^0, x^1, x^2, x^3)
-$$
+```
 
 We often use [natural units](../math-foundations/natural-units.md) where $c = 1$, so $x^\mu = (t, x, y, z)$.
 
@@ -77,21 +77,21 @@ We often use [natural units](../math-foundations/natural-units.md) where $c = 1$
 
 The **invariant interval** between two events:
 
-$$
+```math
 \boxed{(\Delta s)^2 = -c^2(\Delta t)^2 + (\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2}
-$$
+```
 
 Or in natural units with metric signature $(-,+,+,+)$:
 
-$$
+```math
 (\Delta s)^2 = \eta_{\mu\nu} \Delta x^\mu \Delta x^\nu
-$$
+```
 
 where the **Minkowski metric** is:
 
-$$
+```math
 \eta_{\mu\nu} = \begin{pmatrix} -1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}
-$$
+```
 
 **What this means:** While observers disagree on $\Delta t$ and $\Delta x$ separately, they all agree on $(\Delta s)^2$. This is the relativistic analog of how rotated observers in 3D disagree on $\Delta x$ and $\Delta y$ but agree on the distance $\sqrt{(\Delta x)^2 + (\Delta y)^2}$.
 
@@ -109,7 +109,7 @@ $$
 
 For motion along the $x$-axis at velocity $v$:
 
-$$
+```math
 \boxed{
 \begin{aligned}
 t' &= \gamma \left( t - \frac{vx}{c^2} \right) \\
@@ -118,13 +118,13 @@ y' &= y \\
 z' &= z
 \end{aligned}
 }
-$$
+```
 
 In matrix form (with $c = 1$):
 
-$$
+```math
 \begin{pmatrix} t' \\ x' \\ y' \\ z' \end{pmatrix} = \begin{pmatrix} \gamma & -\gamma v & 0 & 0 \\ -\gamma v & \gamma & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} t \\ x \\ y \\ z \end{pmatrix}
-$$
+```
 
 **What this means:** This is how coordinates transform between frames. It mixes space and time—a boost in space affects the time coordinate and vice versa.
 
@@ -132,9 +132,9 @@ $$
 
 Define **rapidity** $\phi$ by $\tanh \phi = v/c$. Then $\gamma = \cosh \phi$ and $\gamma v = c \sinh \phi$, giving:
 
-$$
+```math
 \begin{pmatrix} ct' \\ x' \end{pmatrix} = \begin{pmatrix} \cosh \phi & -\sinh \phi \\ -\sinh \phi & \cosh \phi \end{pmatrix} \begin{pmatrix} ct \\ x \end{pmatrix}
-$$
+```
 
 **What this means:** This looks like a rotation, but with hyperbolic functions instead of trigonometric ones. Rapidities add simply: consecutive boosts of $\phi_1$ and $\phi_2$ give total rapidity $\phi_1 + \phi_2$.
 
@@ -150,17 +150,17 @@ This 6-parameter group is the symmetry group of special relativity.
 
 A **4-vector** transforms like spacetime coordinates under Lorentz transformations:
 
-$$
+```math
 A'^\mu = \Lambda^\mu{}_\nu A^\nu
-$$
+```
 
 ### Important 4-Vectors
 
 **4-velocity:**
 
-$$
+```math
 U^\mu = \frac{dx^\mu}{d\tau} = \gamma(c, \mathbf{v})
-$$
+```
 
 where $\tau$ is proper time. Note: $U^\mu U_\mu = -c^2$ (always!).
 
@@ -168,29 +168,29 @@ where $\tau$ is proper time. Note: $U^\mu U_\mu = -c^2$ (always!).
 
 **4-momentum:**
 
-$$
+```math
 p^\mu = mU^\mu = (E/c, \mathbf{p}) = (\gamma mc, \gamma m\mathbf{v})
-$$
+```
 
 The invariant:
 
-$$
+```math
 p^\mu p_\mu = -m^2 c^2
-$$
+```
 
 gives:
 
-$$
+```math
 \boxed{E^2 = (pc)^2 + (mc^2)^2}
-$$
+```
 
 **What this means:** This is the relativistic energy-momentum relation. For a particle at rest ($p = 0$), it gives $E = mc^2$. For massless particles ($m = 0$), it gives $E = pc$.
 
 **4-current:**
 
-$$
+```math
 J^\mu = (\rho c, \mathbf{J})
-$$
+```
 
 where $\rho$ is charge density and $\mathbf{J}$ is current density—see [Maxwell covariant](../electromagnetism/maxwell-covariant.md).
 
@@ -198,39 +198,39 @@ where $\rho$ is charge density and $\mathbf{J}$ is current density—see [Maxwel
 
 ### Total Energy
 
-$$
+```math
 E = \gamma mc^2
-$$
+```
 
 For small velocities ($v \ll c$):
 
-$$
+```math
 E \approx mc^2 + \frac{1}{2}mv^2
-$$
+```
 
 **What this means:** The total energy has two parts: rest energy $mc^2$ and kinetic energy. At low speeds, the kinetic part reduces to the classical $\frac{1}{2}mv^2$.
 
 ### Relativistic Momentum
 
-$$
+```math
 \mathbf{p} = \gamma m\mathbf{v}
-$$
+```
 
 As $v \to c$, momentum grows without bound ($\gamma \to \infty$), preventing massive objects from reaching light speed.
 
 ### Kinetic Energy
 
-$$
+```math
 K = E - mc^2 = (\gamma - 1)mc^2
-$$
+```
 
 ### Massless Particles
 
 For photons ($m = 0$):
 
-$$
+```math
 E = pc, \quad v = c
-$$
+```
 
 Photons always travel at $c$ and have momentum despite being massless.
 
@@ -238,9 +238,9 @@ Photons always travel at $c$ and have momentum despite being massless.
 
 If object A moves at velocity $u$ relative to B, and B moves at velocity $v$ relative to C (all along the same direction), then A's velocity relative to C is:
 
-$$
+```math
 \boxed{w = \frac{u + v}{1 + uv/c^2}}
-$$
+```
 
 **What this means:** Velocities don't simply add. Even if $u = 0.9c$ and $v = 0.9c$, the result is $w = 0.994c$—still less than $c$. You can never exceed light speed by combining subluminal velocities.
 
@@ -248,9 +248,9 @@ $$
 
 If $u = c$:
 
-$$
+```math
 w = \frac{c + v}{1 + cv/c^2} = \frac{c + v}{1 + v/c} = c
-$$
+```
 
 Light travels at $c$ in all frames, regardless of the source's motion.
 
@@ -260,9 +260,9 @@ Light travels at $c$ in all frames, regardless of the source's motion.
 
 For a source moving away at velocity $v$:
 
-$$
+```math
 \boxed{f_{obs} = f_{source} \sqrt{\frac{1 - v/c}{1 + v/c}}}
-$$
+```
 
 For approach, flip the sign of $v$.
 
@@ -272,9 +272,9 @@ For approach, flip the sign of $v$.
 
 Even for perpendicular motion, there's a redshift:
 
-$$
+```math
 f_{obs} = \frac{f_{source}}{\gamma}
-$$
+```
 
 **What this means:** This is purely relativistic—it's time dilation directly observed. A clock moving perpendicular to your line of sight ticks slowly, and its light is redshifted.
 
@@ -284,15 +284,15 @@ $$
 
 The **proper time** $\tau$ along a worldline is:
 
-$$
+```math
 d\tau = \frac{ds}{c} = dt\sqrt{1 - v^2/c^2} = \frac{dt}{\gamma}
-$$
+```
 
 Integrated:
 
-$$
+```math
 \tau = \int \frac{dt}{\gamma(t)}
-$$
+```
 
 **What this means:** Proper time is what a clock measures along its own worldline. Different paths through spacetime accumulate different proper times.
 

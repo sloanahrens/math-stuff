@@ -7,19 +7,19 @@ In relativistic physics, equations become much cleaner when we use **natural uni
 In SI units, fundamental equations carry factors of $c$ and $G$ that obscure the physics:
 
 **Einstein's mass-energy relation:**
-$$
+```math
 E = mc^2 \quad \longrightarrow \quad E = m
-$$
+```
 
 **Schwarzschild radius:**
-$$
+```math
 r_s = \frac{2GM}{c^2} \quad \longrightarrow \quad r_s = 2M
-$$
+```
 
 **Einstein field equations:**
-$$
+```math
 R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu} \quad \longrightarrow \quad R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} = 8\pi T_{\mu\nu}
-$$
+```
 
 The natural unit versions reveal the essential structure without dimensional clutter.
 
@@ -29,9 +29,9 @@ The natural unit versions reveal the essential structure without dimensional clu
 
 This equates units of **length** and **time**:
 
-$$
+```math
 c = 3 \times 10^8 \; \text{m/s} = 1 \quad \Rightarrow \quad 1 \text{ second} = 3 \times 10^8 \text{ meters}
-$$
+```
 
 Consequences:
 - Velocities become dimensionless fractions of $c$
@@ -43,14 +43,14 @@ Consequences:
 
 This further equates **mass** with **length** (and time):
 
-$$
+```math
 G = 6.67 \times 10^{-11} \; \text{m}^3 \text{kg}^{-1} \text{s}^{-2} = 1
-$$
+```
 
 With $c = 1$ already set:
-$$
+```math
 G = 1 \quad \Rightarrow \quad 1 \text{ kg} = 7.43 \times 10^{-28} \text{ meters}
-$$
+```
 
 This means:
 - Mass, length, and time all share a common unit
@@ -78,21 +78,21 @@ To restore SI units, multiply by appropriate powers of $c$ and $G$ to fix dimens
 
 ### The Conversion Factors
 
-$$
+```math
 c = 2.998 \times 10^8 \; \text{m/s}
-$$
+```
 
-$$
+```math
 G = 6.674 \times 10^{-11} \; \text{m}^3 \text{kg}^{-1} \text{s}^{-2}
-$$
+```
 
-$$
+```math
 \frac{G}{c^2} = 7.426 \times 10^{-28} \; \text{m/kg}
-$$
+```
 
-$$
+```math
 \frac{G}{c^3} = 2.477 \times 10^{-36} \; \text{s/kg}
-$$
+```
 
 ### Conversion Rules
 
@@ -117,14 +117,14 @@ Natural units: $r_s = 2M$
 
 Need: length from mass
 
-$$
+```math
 r_s = 2M \cdot \frac{G}{c^2} = \frac{2GM}{c^2}
-$$
+```
 
 For the Sun ($M_\odot = 2 \times 10^{30}$ kg):
-$$
+```math
 r_s = \frac{2 \times 6.67 \times 10^{-11} \times 2 \times 10^{30}}{(3 \times 10^8)^2} \approx 3 \text{ km}
-$$
+```
 
 ## Common Quantities in Both Systems
 
@@ -152,15 +152,15 @@ Some useful reference values:
 
 In quantum mechanics, setting $\hbar = 1$ simplifies equations by removing factors of Planck's reduced constant:
 
-$$
+```math
 \hbar = 1.055 \times 10^{-34} \; \text{J} \cdot \text{s} = 1
-$$
+```
 
 This equates units of **energy** and **frequency** (or equivalently, **momentum** and **inverse length**):
 
-$$
+```math
 \hbar = 1 \quad \Rightarrow \quad 1 \text{ Hz} = 1.055 \times 10^{-34} \text{ J} = 6.58 \times 10^{-16} \text{ eV}
-$$
+```
 
 **Key simplifications with $\hbar = 1$:**
 
@@ -184,16 +184,16 @@ $$
 **Example:** The ground state energy of hydrogen
 
 Natural units ($\hbar = 1$, but keeping $m_e$, $e$, and $c$):
-$$
+```math
 E_1 = -\frac{m_e \alpha^2}{2}
-$$
+```
 
 where $\alpha = e^2/(4\pi\epsilon_0 \hbar c) \approx 1/137$ is the fine structure constant.
 
 In SI units:
-$$
+```math
 E_1 = -\frac{m_e e^4}{2(4\pi\epsilon_0)^2 \hbar^2} = -13.6 \text{ eV}
-$$
+```
 
 ### Particle Physics: $\hbar = c = 1$
 
@@ -204,9 +204,9 @@ Setting both $\hbar = 1$ and $c = 1$ makes energy the fundamental dimension:
 
 **Useful conversion factors:**
 
-$$
+```math
 \hbar c = 197.3 \; \text{MeV} \cdot \text{fm}
-$$
+```
 
 This means:
 - $1 \text{ GeV}^{-1} = 0.197 \text{ fm} = 1.97 \times 10^{-16} \text{ m}$ (length)
@@ -217,17 +217,17 @@ This means:
 
 The ultimate natural system, defining:
 
-$$
+```math
 \ell_P = \sqrt{\frac{\hbar G}{c^3}} = 1.6 \times 10^{-35} \text{ m}
-$$
+```
 
-$$
+```math
 t_P = \sqrt{\frac{\hbar G}{c^5}} = 5.4 \times 10^{-44} \text{ s}
-$$
+```
 
-$$
+```math
 m_P = \sqrt{\frac{\hbar c}{G}} = 2.2 \times 10^{-8} \text{ kg}
-$$
+```
 
 In Planck units, all three constants equal 1 and quantum gravity effects become order unity.
 

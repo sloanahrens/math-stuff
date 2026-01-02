@@ -98,9 +98,9 @@ These constants have exact values by definition (SI 2019):
 
 ### Temperature-Energy Equivalence
 
-$$
+```math
 \boxed{k_B T = \frac{T}{11\,605 \text{ K}} \text{ eV}}
-$$
+```
 
 | Temperature | Energy |
 |-------------|--------|
@@ -119,9 +119,9 @@ $$
 
 ### Mass-Energy Equivalence
 
-$$
+```math
 \boxed{1 \text{ kg} \cdot c^2 = 8.988 \times 10^{16} \text{ J} = 5.610 \times 10^{29} \text{ MeV}}
-$$
+```
 
 | Mass | Energy Equivalent |
 |------|-------------------|
@@ -142,37 +142,37 @@ $$
 
 ### Quantum Mechanics
 
-$$
+```math
 \hbar c = 197.327 \text{ MeV·fm} \approx 200 \text{ MeV·fm}
-$$
+```
 
-$$
+```math
 \frac{e^2}{4\pi\epsilon_0} = 1.440 \text{ MeV·fm}
-$$
+```
 
-$$
+```math
 \frac{\hbar^2}{2m_e} = 3.810 \text{ eV·Å}^2
-$$
+```
 
 ### Relativity
 
-$$
+```math
 \frac{GM_\odot}{c^2} = 1.476 \text{ km}
-$$
+```
 
-$$
+```math
 \frac{GM_\odot}{c^3} = 4.926 \text{ μs}
-$$
+```
 
 ### Statistical Mechanics
 
-$$
+```math
 k_B = 8.617 \times 10^{-5} \text{ eV/K}
-$$
+```
 
-$$
+```math
 \frac{\hbar^2}{2m_e k_B} = 4.42 \times 10^{-3} \text{ K·cm}^2
-$$
+```
 
 ## Useful Approximations
 
@@ -191,9 +191,9 @@ $$
 
 ### Quick Conversions
 
-$$
+```math
 1 \text{ eV} \leftrightarrow 1.6 \times 10^{-19} \text{ J} \leftrightarrow 11{,}605 \text{ K} \leftrightarrow 8065 \text{ cm}^{-1} \leftrightarrow 242 \text{ THz}
-$$
+```
 
 ### Dimensional Analysis Helpers
 

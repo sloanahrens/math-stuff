@@ -8,9 +8,9 @@ Matter can exist in different phases—solid, liquid, gas, ferromagnet, supercon
 
 **First-order transitions:** First derivatives of free energy are discontinuous.
 
-$$
+```math
 S = -\left(\frac{\partial G}{\partial T}\right)_P, \quad V = \left(\frac{\partial G}{\partial P}\right)_T
-$$
+```
 
 - Latent heat: $L = T\Delta S$
 - Volume change: $\Delta V \neq 0$
@@ -18,9 +18,9 @@ $$
 
 **Second-order (continuous) transitions:** First derivatives continuous, second derivatives diverge.
 
-$$
+```math
 C_P = -T\left(\frac{\partial^2 G}{\partial T^2}\right)_P, \quad \kappa_T = -\frac{1}{V}\left(\frac{\partial^2 G}{\partial P^2}\right)_T
-$$
+```
 
 - No latent heat
 - Examples: ferromagnetic transition, superconducting transition, lambda point of helium
@@ -55,9 +55,9 @@ The ordered phase has lower symmetry than the Hamiltonian.
 
 **Ferromagnet:** Hamiltonian is rotationally symmetric, but magnetization picks a direction.
 
-$$
+```math
 H = -J\sum_{\langle ij\rangle}\mathbf{S}_i \cdot \mathbf{S}_j
-$$
+```
 
 **What this means:** The system spontaneously chooses one of many equivalent ground states.
 
@@ -67,9 +67,9 @@ $$
 
 Near a continuous transition, expand free energy in powers of order parameter:
 
-$$
+```math
 \boxed{F = F_0 + a(T)\phi^2 + b\phi^4 + \cdots}
-$$
+```
 
 where $a(T) = a_0(T - T_c)$ changes sign at the critical temperature $T_c$.
 
@@ -79,9 +79,9 @@ For $T > T_c$ ($a > 0$): Minimum at $\phi = 0$ (disordered phase).
 
 For $T < T_c$ ($a < 0$): Minima at:
 
-$$
+```math
 \boxed{\phi = \pm\sqrt{\frac{|a|}{2b}} = \pm\sqrt{\frac{a_0(T_c - T)}{2b}}}
-$$
+```
 
 The order parameter grows as $(T_c - T)^{1/2}$ below $T_c$.
 
@@ -89,9 +89,9 @@ The order parameter grows as $(T_c - T)^{1/2}$ below $T_c$.
 
 If a $\phi^3$ term is allowed (when symmetry permits):
 
-$$
+```math
 F = F_0 + a\phi^2 - c\phi^3 + b\phi^4
-$$
+```
 
 This produces a first-order transition with discontinuous jump in $\phi$.
 
@@ -99,9 +99,9 @@ This produces a first-order transition with discontinuous jump in $\phi$.
 
 Include spatial variations:
 
-$$
+```math
 F = \int d^dr \left[\frac{1}{2}(\nabla\phi)^2 + \frac{a}{2}\phi^2 + \frac{b}{4}\phi^4\right]
-$$
+```
 
 The gradient term penalizes spatial variations, setting a correlation length.
 
@@ -111,9 +111,9 @@ The gradient term penalizes spatial variations, setting a correlation length.
 
 Spins $s_i = \pm 1$ on a lattice with nearest-neighbor coupling:
 
-$$
+```math
 H = -J\sum_{\langle ij\rangle} s_i s_j - h\sum_i s_i
-$$
+```
 
 - $J > 0$: Ferromagnetic (spins want to align)
 - $h$: External magnetic field
@@ -124,23 +124,23 @@ No phase transition at finite temperature (fluctuations destroy order).
 
 Correlation length diverges as $T \to 0$:
 
-$$
+```math
 \xi = -\frac{1}{\ln(\tanh(J/k_BT))}
-$$
+```
 
 ### Exact Solution (2D)
 
 Onsager (1944) solved the 2D Ising model:
 
-$$
+```math
 \boxed{T_c = \frac{2J}{k_B \ln(1 + \sqrt{2})} \approx \frac{2.27J}{k_B}}
-$$
+```
 
 Below $T_c$: spontaneous magnetization
 
-$$
+```math
 M = \left(1 - \sinh^{-4}\frac{2J}{k_BT}\right)^{1/8}
-$$
+```
 
 ### 3D Ising
 
@@ -167,21 +167,21 @@ Define reduced temperature $t = (T - T_c)/T_c$:
 
 Not all exponents are independent:
 
-$$
+```math
 \alpha + 2\beta + \gamma = 2
-$$
+```
 
-$$
+```math
 \gamma = \beta(\delta - 1)
-$$
+```
 
-$$
+```math
 \gamma = \nu(2 - \eta)
-$$
+```
 
-$$
+```math
 2 - \alpha = d\nu
-$$
+```
 
 The last is the **hyperscaling relation** (valid below upper critical dimension).
 
@@ -202,9 +202,9 @@ The last is the **hyperscaling relation** (valid below upper critical dimension)
 
 ### The Key Insight
 
-$$
+```math
 \boxed{\text{Critical exponents depend only on dimension } d \text{ and symmetry, not microscopic details}}
-$$
+```
 
 Systems in the same **universality class** share the same exponents.
 
@@ -245,15 +245,15 @@ Under RG flow, coupling constants flow to **fixed points** where the system is s
 
 At a fixed point, the linearized RG transformation has eigenvalues $\lambda_i$.
 
-$$
+```math
 \text{Scaling dimension: } y_i = \frac{\ln\lambda_i}{\ln b}
-$$
+```
 
 where $b$ is the rescaling factor.
 
-$$
+```math
 \nu = \frac{1}{y_t}, \quad \beta = \frac{d - y_h}{y_t}
-$$
+```
 
 where $y_t$ and $y_h$ are the temperature and field scaling dimensions.
 
@@ -271,17 +271,17 @@ Ken Wilson showed (Nobel 1982) how RG explains:
 
 Replace interactions with an average (mean) field:
 
-$$
+```math
 \mathbf{S}_i \cdot \mathbf{S}_j \approx \langle\mathbf{S}\rangle \cdot \mathbf{S}_j + \mathbf{S}_i \cdot \langle\mathbf{S}\rangle - \langle\mathbf{S}\rangle^2
-$$
+```
 
 ### Self-Consistent Equation
 
 For the Ising model:
 
-$$
+```math
 m = \tanh\left(\frac{Jzm + h}{k_BT}\right)
-$$
+```
 
 where $z$ is the coordination number and $m = \langle s\rangle$.
 
@@ -300,15 +300,15 @@ Below $d_c$, fluctuations dominate and mean field fails.
 
 Mean field breaks down when fluctuations are comparable to order parameter:
 
-$$
+```math
 \left(\frac{\delta\phi}{\phi}\right)^2 \sim 1
-$$
+```
 
 This occurs within a temperature range:
 
-$$
+```math
 |t| < t_G \sim \left(\frac{T_c}{J^d/k_B}\right)^{4/(4-d)}
-$$
+```
 
 ## Specific Phase Transitions
 

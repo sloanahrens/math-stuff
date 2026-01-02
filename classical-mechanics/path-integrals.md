@@ -6,9 +6,9 @@ The path integral formulation, developed by Richard Feynman, provides an alterna
 
 In classical mechanics, a particle takes the path of least action. In quantum mechanics, **all paths contribute**, each weighted by a phase:
 
-$$
+```math
 e^{iS[x(t)]/\hbar}
-$$
+```
 
 where $S[x(t)]$ is the action along the path $x(t)$.
 
@@ -20,15 +20,15 @@ where $S[x(t)]$ is the action along the path $x(t)$.
 
 The **propagator** (or kernel) $K(x_f, t_f; x_i, t_i)$ gives the amplitude for a particle to go from $(x_i, t_i)$ to $(x_f, t_f)$:
 
-$$
+```math
 \boxed{K(x_f, t_f; x_i, t_i) = \int \mathcal{D}[x(t)] \, e^{iS[x(t)]/\hbar}}
-$$
+```
 
 The wave function evolves as:
 
-$$
+```math
 \psi(x_f, t_f) = \int_{-\infty}^{\infty} K(x_f, t_f; x_i, t_i) \, \psi(x_i, t_i) \, dx_i
-$$
+```
 
 **What this means:** The propagator is the quantum analog of "how likely is this transition?" Every possible path from $(x_i, t_i)$ to $(x_f, t_f)$ contributes, weighted by $e^{iS/\hbar}$.
 
@@ -36,15 +36,15 @@ $$
 
 The propagator satisfies:
 
-$$
+```math
 \left(i\hbar\frac{\partial}{\partial t_f} - \hat{H}\right) K(x_f, t_f; x_i, t_i) = 0
-$$
+```
 
 with initial condition:
 
-$$
+```math
 K(x_f, t_i; x_i, t_i) = \delta(x_f - x_i)
-$$
+```
 
 **What this means:** The path integral and Schrödinger formulations are equivalent—they give the same physics. The path integral just organizes the calculation differently.
 
@@ -54,23 +54,23 @@ $$
 
 Divide the time interval $[t_i, t_f]$ into $N$ slices of width $\epsilon = (t_f - t_i)/N$:
 
-$$
+```math
 t_i = t_0 < t_1 < t_2 < \cdots < t_N = t_f
-$$
+```
 
 At each intermediate time $t_k$, insert a complete set of position states:
 
-$$
+```math
 K = \int dx_1 \, dx_2 \cdots dx_{N-1} \, K(x_N, t_N; x_{N-1}, t_{N-1}) \cdots K(x_1, t_1; x_0, t_0)
-$$
+```
 
 ### Infinitesimal Propagator
 
 For small $\epsilon$, the propagator between adjacent times is:
 
-$$
+```math
 K(x_{k+1}, t_{k+1}; x_k, t_k) \approx \sqrt{\frac{m}{2\pi i\hbar\epsilon}} \exp\left[\frac{i}{\hbar}\epsilon L\left(\frac{x_{k+1} - x_k}{\epsilon}, \frac{x_{k+1} + x_k}{2}\right)\right]
-$$
+```
 
 where $L$ is the Lagrangian.
 
@@ -78,15 +78,15 @@ where $L$ is the Lagrangian.
 
 Taking $N \to \infty$ (and $\epsilon \to 0$), the discrete sum becomes:
 
-$$
+```math
 S = \int_{t_i}^{t_f} L(\dot{x}, x) \, dt
-$$
+```
 
 and the product of integrals becomes the functional integral:
 
-$$
+```math
 \int \mathcal{D}[x(t)] = \lim_{N \to \infty} \left(\frac{m}{2\pi i\hbar\epsilon}\right)^{N/2} \int dx_1 \cdots dx_{N-1}
-$$
+```
 
 **What this means:** The path integral sums over all continuous paths $x(t)$, weighted by $e^{iS/\hbar}$. The measure $\mathcal{D}[x(t)]$ includes the normalization.
 
@@ -94,17 +94,17 @@ $$
 
 ### Action
 
-$$
+```math
 S = \int_{t_i}^{t_f} \frac{1}{2}m\dot{x}^2 \, dt
-$$
+```
 
 ### Propagator
 
 The path integral is Gaussian and can be evaluated exactly:
 
-$$
+```math
 \boxed{K_0(x_f, t_f; x_i, t_i) = \sqrt{\frac{m}{2\pi i\hbar(t_f - t_i)}} \exp\left[\frac{im(x_f - x_i)^2}{2\hbar(t_f - t_i)}\right]}
-$$
+```
 
 **What this means:** The free particle propagator spreads out over time—a localized wave packet broadens. The phase depends on the classical action for the straight-line path.
 
@@ -118,15 +118,15 @@ See [harmonic oscillator](harmonic-oscillator.md) for a comprehensive treatment.
 
 ### Action
 
-$$
+```math
 S = \int_{t_i}^{t_f} \left(\frac{1}{2}m\dot{x}^2 - \frac{1}{2}m\omega^2 x^2\right) dt
-$$
+```
 
 ### Propagator
 
-$$
+```math
 K(x_f, t_f; x_i, t_i) = \sqrt{\frac{m\omega}{2\pi i\hbar\sin(\omega T)}} \exp\left[\frac{im\omega}{2\hbar\sin(\omega T)}\left((x_f^2 + x_i^2)\cos(\omega T) - 2x_f x_i\right)\right]
-$$
+```
 
 where $T = t_f - t_i$.
 
@@ -138,9 +138,9 @@ where $T = t_f - t_i$.
 
 When $S \gg \hbar$, the integral is dominated by paths where the action is stationary:
 
-$$
+```math
 \frac{\delta S}{\delta x(t)} = 0
-$$
+```
 
 This is exactly the classical equation of motion (Euler-Lagrange).
 
@@ -150,15 +150,15 @@ This is exactly the classical equation of motion (Euler-Lagrange).
 
 Expand around the classical path $x_{cl}(t)$:
 
-$$
+```math
 x(t) = x_{cl}(t) + y(t)
-$$
+```
 
 The action becomes:
 
-$$
+```math
 S[x] = S[x_{cl}] + \frac{1}{2}\int dt_1 \, dt_2 \, y(t_1) \frac{\delta^2 S}{\delta x(t_1)\delta x(t_2)}\bigg|_{x_{cl}} y(t_2) + \cdots
-$$
+```
 
 The leading term gives the classical phase; the Gaussian integral over $y$ gives quantum corrections.
 
@@ -168,9 +168,9 @@ The leading term gives the classical phase; the Gaussian integral over $y$ gives
 
 Replacing $t \to -i\tau$ (imaginary time):
 
-$$
+```math
 e^{iS/\hbar} \to e^{-S_E/\hbar}
-$$
+```
 
 where $S_E$ is the **Euclidean action**.
 
@@ -180,9 +180,9 @@ where $S_E$ is the **Euclidean action**.
 
 In [statistical mechanics](../thermodynamics/statistical-mechanics.md), the partition function is:
 
-$$
+```math
 Z = \text{Tr}(e^{-\beta H}) = \int \mathcal{D}[x(\tau)] \, e^{-S_E/\hbar}
-$$
+```
 
 with periodic boundary conditions $x(0) = x(\beta\hbar)$.
 
@@ -194,9 +194,9 @@ with periodic boundary conditions $x(0) = x(\beta\hbar)$.
 
 The path integral can also be written in phase space:
 
-$$
+```math
 K = \int \mathcal{D}[x]\mathcal{D}[p] \, \exp\left[\frac{i}{\hbar}\int dt \left(p\dot{x} - H(x,p)\right)\right]
-$$
+```
 
 **What this means:** This form directly connects to [Hamiltonian mechanics](hamiltonian-mechanics.md). Both position and momentum paths are integrated over.
 
@@ -204,9 +204,9 @@ $$
 
 For Hamiltonians quadratic in $p$ (like $H = p^2/2m + V(x)$), the $p$ integral is Gaussian:
 
-$$
+```math
 \int \mathcal{D}[p] \exp\left[\frac{i}{\hbar}\int dt \left(p\dot{x} - \frac{p^2}{2m}\right)\right] \propto \exp\left[\frac{i}{\hbar}\int dt \, \frac{m\dot{x}^2}{2}\right]
-$$
+```
 
 This recovers the Lagrangian form.
 
@@ -216,9 +216,9 @@ This recovers the Lagrangian form.
 
 If the action is invariant under a transformation $x \to x + \epsilon\delta x$:
 
-$$
+```math
 S[x + \epsilon\delta x] = S[x]
-$$
+```
 
 then the corresponding current is conserved.
 
@@ -234,9 +234,9 @@ Symmetries in path integrals lead to **Ward identities**—constraints on correl
 
 The path integral extends naturally to fields $\phi(x,t)$:
 
-$$
+```math
 Z = \int \mathcal{D}[\phi] \, e^{iS[\phi]/\hbar}
-$$
+```
 
 This is the foundation of modern particle physics.
 
